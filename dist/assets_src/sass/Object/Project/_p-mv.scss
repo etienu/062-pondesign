@@ -1,0 +1,273 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    セクション01 - MV
+//------------------------------------------------
+.p-mv {
+    position:relative;
+    //height: 100vh;
+    //height: 100%;
+    //background : g.$color-white;
+    overflow:hidden;
+    .p-mv__bg{
+        position: fixed;        
+        margin : auto;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        display:flex;
+        picture{
+            position:relative;
+            width: fit-content;
+            width: 100%;
+            img{
+                aspect-ratio: 1440/680;
+            }
+        }
+        #video-area{
+            width: 100%;
+            height: 100%;
+            video{
+                position:absolute;
+                object-fit : cover;
+                object-position : 0% 0;
+                min-width: 100%;
+                min-height: 100%;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);                
+            }            
+            //  フィルタ
+            &:before{
+                display: block;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-image: linear-gradient( 45deg, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 50% );
+                background-size: 4px 4px;
+                z-index: 1;
+            }    
+        }
+    }
+    .p-mv__pathobject{
+        position: absolute;
+        width: 100%;
+        height:100%;
+        display:flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        pointer-events: none;
+    }
+    .p-mv__body{
+        //position:relative;
+        height: 100vh;
+        display:flex;
+        flex-direction : column;
+        justify-content: space-between;
+    }
+    .p-mv__inner {
+        max-width: calc(100% - 160px );//g.$layout-width-comp;
+        width: calc(100% - 160px );
+        margin : auto;
+        margin-top : 170px;
+        margin-left: 160px;
+        display:flex;
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .p-mv__texts{
+            position : relative;
+            width : 100%;
+            color : g.$color-white;
+            text-align:left;
+            .genre{
+                @include g.fz(32,32);
+                @include g.ls(20);
+            }
+            h1,h2{
+                margin-top: 30px;
+                @include g.fz(140,126,600);
+                @include g.ls(5);
+            }
+            .sub{
+                margin-top: 10px;
+                @include g.fz(34,34);
+                @include g.ls(100);
+            }
+        }
+        .p-mv__buttonwrapper{
+            margin-top: 79px;
+        }
+    }
+    .c-animobj__scrolldown{
+        /*描画位置※位置は適宜調整してください*/
+        position:absolute;
+        bottom:27px;
+        left:20px;
+    }
+    .p-mv__newswrapper{
+        width: calc(100% - 30px );
+        //margin-top: 87px;
+        margin-bottom : 50px;
+        margin-right: 30px;
+        display:flex;
+        justify-content: flex-end;
+        .p-mv__newsbox{
+            position: relative;
+            max-width: 360px;
+            color: g.$color-key;
+            background-color: g.$color-black;
+            border : 1px solid g.$color-key;
+            //margin-inline : auto;
+            overflow:hidden;
+            span{
+                margin-left: 20px;
+                color : g.$color-white;
+                margin-right: 20px;
+            }
+            .loop,
+            .loop2{
+                width: fit-content;//100%;
+                white-space:nowrap;
+            }
+            .loop {
+                top: 0;
+                left: 0;
+                animation: loop 20s -3s linear infinite;
+            }
+            .loop2{
+                position: absolute;
+                left: 0;
+                animation: loop 20s -10s linear infinite;
+            }            
+            @keyframes loop {
+                0%{ transform: translateX(100%); }
+                100%{ transform: translateX(-100%); }
+            }            
+        }
+    }
+
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+}
+
+@include g.mq('-lg') {
+    
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {
+.p-mv {
+    .p-mv__bg{
+        #video-area{
+            overflow:hidden;
+            //  フィルタ
+            &:before{
+                display: block;
+                content: "";
+                position: absolute;
+                //top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-image: linear-gradient( 45deg, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 50% );
+                background-size: 4px 4px;
+            }
+            video{
+                position:absolute;
+                object-fit : cover;
+                object-position : 0% 0;
+                min-width: 100%;
+                min-height: 100%;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);                
+            }
+        }
+
+    }
+    .p-mv__pathobject{
+    }
+    .p-mv__body{
+    }
+    .p-mv__inner {
+        //max-width: calc(100% - 80px );//g.$layout-width-comp;
+        max-width: calc(100% - 40px );//g.$layout-width-comp;
+        width: fit-content;//100%;
+        margin : auto;
+        margin-top : 272px;
+        //margin-left: 0;
+        .p-mv__texts{
+            position : relative;
+            width : fit-content;//100%;
+            color : g.$color-white;
+            text-align:left;
+            .genre{
+                @include g.fz(22,22);
+                @include g.ls(20);
+            }
+            h1,h2{
+                margin-top: 20px;
+                @include g.fz(76,68.4,600);
+                @include g.ls(5);
+            }
+            .sub{
+                margin-top: 10px;
+                @include g.fz(22,29);
+                @include g.ls(60);
+            }
+        }
+        .p-mv__buttonwrapper{
+            margin-top: 30px;
+        }
+    }
+    .c-animobj__scrolldown{
+        /*描画位置※位置は適宜調整してください*/
+        position:absolute;
+        bottom:27px;
+        left:20px;
+    }
+    .p-mv__newswrapper{
+        max-width: 200px;
+        width: calc(100% - 30px );
+        //margin-top: 87px;
+        margin-bottom : 50px;
+        margin-right: 20px;
+        margin-left: auto;
+        .p-mv__newsbox{
+            max-width: 200px;
+            padding: 4px 0;
+            @include g.fz(12,12);
+            @include g.ls(5);
+            margin : auto;
+            display:flex;
+            align-items:center;
+            p{
+                display:block;
+            }
+        }
+    }
+
+}
+
+            
+}

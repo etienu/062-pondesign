@@ -1,0 +1,56 @@
+@use '../../global' as g;
+/* 各セクションのH2見だし */
+.c-title{
+    position : relative;
+    display : block;
+    color: g.$color-key;
+    //white-space:nowrap;
+    @include g.fz(80,80,bold);
+    @include g.ls(5);
+
+    &.--white{
+        color : g.$color-white;
+    }
+    &.--black{
+        color : g.$color-black;
+    }
+}
+
+.c-title__section{
+    position : relative;
+    display : block;
+    color: g.$color-key;
+    @include g.fz(80,80,bold);
+    @include g.ls(5);
+    &:after{
+        position : absolute;
+        content : "";
+        width: 80px;
+        height: 8px;
+        background-color: g.$color-key;
+        left : 0;
+        bottom: -16px;
+    }
+
+    &.--black{
+        color : g.$color-black;
+        &:after{
+            background-color: g.$color-black;
+        }
+    }
+}
+
+
+@include g.mq('-md') {
+
+.c-title__section{
+    @include g.fz(50,50,bold);
+    @include g.ls(5);
+    &:after{
+        width: 60px;
+        height: 6px;
+        bottom: -16px;
+    }    
+}
+    
+}

@@ -1,0 +1,33 @@
+    <!-- Header Start -->
+    <header class="l-header" data-js="header">
+        <div class="p-headerbar" id="header">
+            <div class="p-headerbar__inner">
+                <a href="#">
+                    <h1 class="logo enff">
+                        <picture>
+                            <source srcset="<%- dir['img'] %>/header/pc/logo.svg" media="(max-width: 768px)" width="96.7" height="12.36">
+                            <img src="<%- dir['img'] %>/header/pc/logo.svg" alt="<%- site['title'] %>" width="180" height="23">
+                        </picture>
+                    </h1>
+                </a>
+                
+                <nav class="p-headerbar__nav">
+                    <ul class="p-headerbar__menulist">
+                        <li class="p-headerbar__menuitem"><a href="#">STORY</a></li>
+                        <li class="p-headerbar__menuitem"><a href="#">TRAILER</a></li>
+                    </ul>
+                    <button class="c-button__cv --header">
+                        PLAY NOW
+                    </button>
+                </nav>
+            </div>
+            <!--2段目-->
+            <div class="p-headerbar__subinner">
+                <button class="p-headerbar__soundswitch" data-js="button" data-name="audioswitch" data-target="#mvmusic">
+                    SOUND OFF<span class="material-icons">volume_off</span>
+                </button>
+                <audio src="<%- dir['img'] %>/top/pc/mv.mp3" id="mvmusic" loop muted></audio>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->

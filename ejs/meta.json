@@ -1,0 +1,33 @@
+{
+    "dir": {
+        "css" : "assets/css",
+        "js" : "assets/js",
+        "lib" : "assets/lib",
+        "img" : "assets/images",
+        "font" : "assets/webfonts",
+        "base" : "../dist"
+    },
+    "site" :{
+        "title" : "PlanetHunters",
+        "description": "奪われた故郷の星を取り戻せ。"
+    },
+    "meta": {
+        "favicon": {
+            "shortcut": "assets/images/common/favicon/favicon.ico",
+            "apple": "assets/images/common/favicon/apple-touch-icon.png",
+            "android": "assets/images/common/favicon/android-touch-icon.png"
+        },
+        "ogp": {
+            "title": "PlanetHunters",
+            "url": "",
+            "description": "奪われた故郷の星を取り戻せ。壮大なSFファンタジー",
+            "image" : "assets/images/common/ogp.png"
+        },
+        "robots": "noindex,nofollow"
+    },
+    "top": {
+        "title": "PlanetHunters | 惑星を奪還せよ",
+        "description": "奪われた故郷の星を取り戻せ。",
+        "keyword": ""
+    }
+}

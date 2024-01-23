@@ -1,0 +1,92 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    ボタン
+//------------------------------------------------
+.c-button {
+    display: inline-block;
+    position : relative;
+    padding : 8px 10px;
+    @include g.fz( 15,15 );
+    color : g.$color-white;
+    border: 1px solid g.$color-blue;
+    background-color : g.$color-blue;
+    transition : background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    white-space:nowrap;
+    &:hover{
+        cursor:pointer;
+        background-color : g.$color-black;
+        color : g.$color-white;
+        opacity: 0.8;
+    }
+}
+
+
+.c-button__cv {
+    display: inline-block;
+    position : relative;
+    padding : 15px 43px 15px 39px;
+    background : g.$color-key;
+    color :g.$color-black;
+    @include g.fz( 15,15,bold );
+    @include g.ls( 5 );
+    transition : transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+    &.--header{
+    }
+    &.--mv{
+        @include g.fz( 18,20,bold );
+        padding : 20px 64px;
+    }
+    &.--cta{
+        @include g.fz( 18,25,bold );
+        padding : 20px 66px;
+    }
+    &:hover{
+        cursor:pointer;
+        //opacity: 0.8;
+        box-shadow: 0 0 16px g.$color-key;
+    }
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {
+.c-button {
+    display: block;
+    width: 100%;
+    padding : 18px 72px;
+}        
+
+.c-button__cv {
+    padding : 15px 43px 15px 39px;
+    @include g.fz( 15,15,bold );
+    @include g.ls( 5 );
+    &.--header{
+        display:none;
+    }
+    &.--mv{
+        @include g.fz( 16,16,bold );
+        padding : 20px 42px;
+    }
+    &.--cta{
+        @include g.fz( 16,16,bold );
+        padding : 20px 42px;
+    }
+    &.--footer{
+        width: 100%;
+        //padding : 20px 42px;
+    }
+}
+
+}

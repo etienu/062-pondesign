@@ -1,0 +1,7 @@
+{
+	"rules": {
+		"max-empty-lines": 1,
+		"declaration-empty-line-before": "never",
+		"block-closing-brace-empty-line-before": "never"		
+	}
+}

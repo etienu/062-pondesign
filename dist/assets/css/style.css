@@ -1,0 +1,4048 @@
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js!./dist/assets_src/sass/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! destyle.css v2.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 0;
+  text-align: inherit;
+}
+
+/**
+ * Reset radio and checkbox appearance to preserve their look in iOS.
+ */
+[type=checkbox] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
+[type=radio] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button[disabled],
+[type=button][disabled],
+[type=reset][disabled],
+[type=submit][disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Remove arrow in IE10 & IE11
+ */
+select::-ms-expand {
+  display: none;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable] {
+  outline: none;
+}
+
+/* Table */
+/* ============================================ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Misc */
+/* ============================================ */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/*!
+ * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2023 Fonticons, Inc.
+ *
+ * all.cssの読み込みが重すぎるので必用な物のみ抜粋
+ * @see https://www.volleyballer.jp/sango_fontawesome_css_weight_reduction/
+ */
+.fa {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+}
+
+.fa,
+.fa-classic,
+.fa-sharp,
+.fas,
+.fa-solid,
+.far,
+.fa-regular,
+.fab,
+.fa-brands {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas,
+.fa-classic,
+.fa-solid,
+.far,
+.fa-regular {
+  font-family: "Font Awesome 6 Free";
+}
+
+.fab,
+.fa-brands {
+  font-family: "Font Awesome 6 Brands";
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.08333em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.07143em;
+  vertical-align: 0.05357em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.04167em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.fa-chevron-up::before {
+  content: "\f077";
+}
+
+.fa-laptop-code::before {
+  content: "\f5fc";
+}
+
+.fa-wordpress:before {
+  content: "\f19a";
+}
+
+.fa-mobile-android-alt::before {
+  content: "\f3cf";
+}
+
+.fa-external-link-square-alt::before {
+  content: "\f360";
+}
+
+.fa-external-link-alt::before {
+  content: "\f35d";
+}
+
+.fa-envelope::before {
+  content: "\f0e0";
+}
+
+.fa-cart-shopping::before {
+  content: "\f07a";
+}
+
+.fa-arrow-right-to-bracket::before {
+  content: "\f090";
+}
+
+.fa-square-twitter:before {
+  content: "\f081";
+}
+
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-square-instagram:before {
+  content: "\e055";
+}
+
+.fa-instagram-square:before {
+  content: "\e055";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+.fa-facebook-f:before {
+  content: "\f39e";
+}
+
+.fa-facebook-messenger:before {
+  content: "\f39f";
+}
+
+.fa-square-facebook:before {
+  content: "\f082";
+}
+
+.fa-facebook-square:before {
+  content: "\f082";
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-square-youtube:before {
+  content: "\f431";
+}
+
+.fa-youtube-square:before {
+  content: "\f431";
+}
+
+.fa-youtube:before {
+  content: "\f167";
+}
+
+.fa-line:before {
+  content: "\f3c0";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("../webfonts/fontawesome/fa-brands-400.ttf") format("truetype");
+}
+.fab,
+.fa-brands {
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("../webfonts/fontawesome/fa-regular-400.ttf") format("truetype");
+}
+.far,
+.fa-regular {
+  font-weight: 400;
+}
+
+:root,
+:host {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("../webfonts/fontawesome/fa-solid-900.ttf") format("truetype");
+}
+.fas,
+.fa-solid {
+  font-weight: 900;
+}
+
+/*
+//  googlefonts
+//  Noto Serif JP
+@font-face {
+    font-family: 'Noto Serif JP';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../webfonts/googlefonts/NotoSerifJP/NotoSerifJP-Regular.woff2") format("woff2"),
+    url("../webfonts/googlefonts/NotoSerifJP/NotoSerifJP-Regular.woff") format("woff"),
+    url("../webfonts/googlefonts/NotoSerifJP/NotoSerifJP-Regular.otf") format("truetype");
+    font-display: swap;
+}
+*/
+/*  Noto Sans JP */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/googlefonts/Noto_Sans_JP/static/NotoSansJP-Medium.woff2") format("woff2"), url("../webfonts/googlefonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url("../webfonts/googlefonts/Noto_Sans_JP/static/NotoSansJP-Regular.woff2") format("woff2"), url("../webfonts/googlefonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 200;
+  font-display: block;
+  src: url("../webfonts/googlefonts/Noto_Sans_JP/static/NotoSansJP-Light.woff2") format("woff2"), url("../webfonts/googlefonts/Noto_Sans_JP/static/NotoSansJP-Light.ttf") format("truetype");
+  font-display: swap;
+}
+/*
+//  Lora
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../webfonts/googlefonts/Lora/static/Lora-Medium.woff2") format("woff2"),
+    url("../webfonts/googlefonts/Lora/static/Lora-Medium.woff") format("woff"),
+    url("../webfonts/googlefonts/Lora/static/Lora-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+*/
+/*
+//  Hind
+@font-face {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: //url("../webfonts/googlefonts/Hind/Hind-Medium.woff2") format("woff2"),
+//    url("../webfonts/googlefonts/Hind/Hind-Medium.woff") format("woff"),
+    url("../webfonts/googlefonts/Hind/Hind-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+*/
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url("../webfonts/googlefonts/Exo/Exo-SemiBold.woff2") format("woff2"), url("../webfonts/googlefonts/Exo/Exo-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("../webfonts/googlefonts/Exo/Exo-Bold.woff2") format("woff2"), url("../webfonts/googlefonts/Exo/Exo-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+/*
+本文：Noto Serif JP
+見出しなど：Noto Serif JP
+数字：Lora
+*/
+/*============================================================
+#   variables
+#   変数
+============================================================*/
+/*  基本となるコンテンツ幅 */
+/*  メニューバー二段目がある場合 */
+/*  未使用の場合0に */
+/* ------------------------------------------------------------
+// Font
+// ------------------------------------------------------------*/
+/*  数値 */
+/* $font-Futura: 'Futura';   //  Adobeフォントなので未使用 */
+/*  Futura代用 */
+/* googlefont */
+/*  基本 */
+/*  英数字用、日本語用の順 */
+/*  用途別フォント */
+/*  タイトルなどカッコつける文字 */
+/*  普通の文章 */
+/* --------------------------------------------
+//   フォントサイズ
+// --------------------------------------------*/
+/*  和文 */
+/*  英文 */
+/*==========================================================================
+box shadow
+box-shadowジェネレータ https://www.bad-company.jp/box-shadow
+==========================================================================*/
+/* 影の色 */
+/*----------------------------------------
+        色
+----------------------------------------*/
+/* 透明度8% */
+/*  文字色 */
+/* white */
+/* black */
+/* dark */
+/* 場面別 */
+/* 画面幅などの固定変数を使用 */
+/* --------------------------------
+// 単位をのぞいた数値を返します。
+// https://qiita.com/yuusuke510/items/9053ccf48cda4590ed7f
+// --------------------------------*/
+/* ------------------------------------------------
+// px->rem変換
+// $size : px
+// ------------------------------------------------*/
+/* ------------------------------------------------
+// px-> % 変換
+// $px : 計算したい数値
+// $pw : 親要素幅(parent width)
+// 15 / 110 = 0.1363 = 13.6%
+// ------------------------------------------------*/
+/* ------------------------------------------------
+// px->vw変換
+// $size : px
+// $viewport : デフォルト引数にカンプ幅を入れる
+// ------------------------------------------------*/
+/* ------------------------------------------------
+// 最大値指定
+// ------------------------------------------------*/
+/* ------------------------------------------------
+// PC用 
+// PCサイズ(1440px)基準、最小値・基準値(幅1440px時のサイズ)・最大値のclamp処理*/
+/* --------------------------------
+// SP用 
+// 最小基準のvwclamp処理
+// SPサイズ(375px)基準、最小値・基準値(幅375px時のサイズ)・最大値のclamp処理*/
+/* ------------------------------------------------
+// figmaとXDのline-heightはそのまま反映するのではなく
+// 行間の数値÷font-size
+// 行間50、文字サイズ36なら50÷36=1.38
+// line-height:1.38となる
+// $i_lineheight : 行間
+// $i_fontsize   : フォントサイズ
+// ------------------------------------------------*/
+/* ============================================================================
+// SVGをBase64コードに変換する
+// [Html] SVG塗りつぶしの色をBackground-Imageとして扱うときに変更する
+// https://code.i-harness.com/ja/q/cbfa3c
+// ============================================================================*/
+/* --------------------------------------------------------------------
+//
+// background-imageをwebp対応かどうかによって出し分けするmixin
+//
+// --------------------------------------------------------------------*/
+/* どちらも微妙な場合の分割 */
+/* 2023年 SP:0～599 TAB:600～1024 PC:1025px以上 */
+/*========================================
+        ブレイクポイント
+========================================*/
+/*  bootstrap5式 */
+/*
+//  BootStrap5基準
+//  キー : 値
+//　記述パターン
+//　 -xx : 0から指定サイズまで
+//　  xx : 指定サイズ区間のみ
+//　  xx-xx : 指定サイズから指定サイズの区間
+//　 xx- : 指定サイズ以上
+//
+//  主に使用するもの
+//　  1.-md : SPの最大幅(0～767)
+//　  2.md- : タブレット以上(768～無制限)
+//  演出と調整で使用
+//  md-lg : SP最大以上、タブレット幅の微妙な要素崩れの分岐
+//  md-xxl : PCカンプ幅の範囲でのみ表示する必用がある場合
+//  xl- : ノートPC幅では消し、デスクトップPC幅では表示したい場合
+//  xxl- : PCカンプ以上でサイドバーや広告を入れる場合
+*/
+/* 形式をpx変換すること */
+/*----------------------------------------
+//        メディアクエリ
+//----------------------------------------*/
+/*--------------------------------------------------
+# 全体に影響を及ぼす設定
+--------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Exo", "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-feature-settings: "palt";
+  /*  iphone対策 */
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  color: #141414;
+  background-color: #FFFFFF;
+  overflow-y: auto;
+  text-align: center;
+  overflow-wrap: break-word; /*  自動改行 */
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+/*--------------------------------
+  IE11対応
+--------------------------------*/
+_:lang(x)::-ms-backdrop, body {
+  font-family: "Segoe UI", Meiryo, sans-serif;
+}
+
+/*--------------------------------
+    全体で使用する 簡易指定クラス
+---------------------------------*/
+.enff {
+  font-family: "Exo", sans-serif;
+}
+.enff.--i {
+  font-style: italic;
+}
+
+/* hrefリンクの基本的なCSS */
+.alink {
+  color: #349BF4;
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+.alink:hover {
+  opacity: 0.7;
+}
+
+/*--------------------------------
+    基本タグの設定
+---------------------------------*/
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+body{
+//  低コストタブレット対応
+//  設定すると768～1080間で縮小発生しレスポンシブ不要になる
+//	min-width: 1080px;
+}
+*/
+/* iphoneの320pxで崩れないように
+   375px以下はbody幅を固定して縮小する、 */
+@media screen and (max-width: 375px) {
+  html {
+    min-width: 375px;
+  }
+}
+/*--------------------------------
+
+---------------------------------*/
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  body {
+    min-width: auto;
+  }
+}
+/*--------------------------------------------------
+    ヘッダー
+--------------------------------------------------*/
+/* ----------------------------------------
+// ヘッダー枠
+// 追従するfixedの枠組み。内容はp-headerbar
+// ----------------------------------------*/
+.l-header {
+  top: 0; /*  0にしないと上に隙間ができる */
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 500;
+  position: relative;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+  transition: opacity 0.2s;
+  /*  初期からfixed*/
+  position: fixed;
+  /*  フラグが立っている場合は上部に固定表示*/
+}
+.l-header .l-header__buttonswrapper {
+  text-shadow: none;
+}
+.l-header:not(.l-header.open)[data-float=true] {
+  color: black;
+  text-shadow: none;
+}
+.l-header.dwis-active {
+  position: fixed;
+  top: 0;
+}
+
+/* --------------------------------------------
+// ※デザインによって必要な場合
+// fixedでヘッダー分の空白を作る為に
+// ボディにヘッダーの幅分マージン入れる
+// --------------------------------------------*/
+body[data-float=true] {
+  /*      ヘッダーが透過せず、TOPイメージがヘッダーの下から始まっている場合*/
+  /*      ヘッダーが最初から透過、TOPイメージがY0から始まっている場合*/
+  /*      margin-top: 0;*/
+}
+body.dwis-active {
+  position: fixed;
+}
+
+/* ============================================
+// レスポンシブ
+// ============================================*/
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  /*  ヘッダーバーの高さ調整*/
+  .l-header {
+    height: 80px;
+  }
+  body {
+    /*      レスポンシブ時ヘッダーと被らせない場合*/
+  }
+}
+/*--------------------------------------------------
+    フッター
+--------------------------------------------------*/
+.l-footer {
+  position: relative;
+  /* 縦 */
+  /*
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  */
+}
+
+.l-wrapper {
+  width: 100%;
+  display: flex;
+}
+.l-wrapper.flex-start {
+  justify-content: flex-start;
+}
+.l-wrapper.flex-center {
+  justify-content: center;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .l-wrapper.flex-start {
+    justify-content: center;
+  }
+}
+.l-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.l-section.ofh {
+  overflow: hidden;
+}
+
+.l-heading {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.l-heading.--left {
+  justify-content: flex-start;
+}
+.l-heading.--right {
+  justify-content: flex-end;
+}
+.l-heading.--center {
+  justify-content: center;
+}
+.l-heading.ofh {
+  overflow: hidden;
+}
+
+.l-body {
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  /*  セクションによって隠したくない時もある為 */
+}
+.l-body.--ofh {
+  overflow: hidden;
+}
+
+.l-inner {
+  position: relative;
+  margin: auto;
+  max-width: 1110px; /*  カンプ幅 */
+  width: 100%;
+  /*  セクションによって隠したくない時もある為 */
+}
+.l-inner.--ofh {
+  overflow: hidden;
+}
+
+.l-btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.l-btn.--left {
+  justify-content: flex-start;
+}
+.l-btn.--right {
+  justify-content: flex-end;
+}
+.l-btn.--center {
+  justify-content: center;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+  .l-heading.--pc-left,
+  .l-inner.--pc-left,
+  .l-btn.--pc-left {
+    justify-content: flex-start;
+  }
+  .l-heading.--pc-right,
+  .l-inner.--pc-right,
+  .l-btn.--pc-right {
+    justify-content: flex-end;
+  }
+  .l-heading.--pc-center,
+  .l-inner.--pc-center,
+  .l-btn.--pc-center {
+    justify-content: center;
+  }
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 1279px) {
+ */
+@media screen and (max-width: 1279px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .l-heading.--sp-left,
+  .l-inner.--sp-left,
+  .l-btn.--sp-left {
+    justify-content: flex-start;
+  }
+  .l-heading.--sp-right,
+  .l-inner.--sp-right,
+  .l-btn.--sp-right {
+    justify-content: flex-end;
+  }
+  .l-heading.--sp-center,
+  .l-inner.--sp-center,
+  .l-btn.--sp-center {
+    justify-content: center;
+  }
+}
+/*-------------------------------------------
+//  ローディング
+//-------------------------------------------*/
+.l-loader {
+  /* 表示を一番上 */
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* 背景色（黒、不透明度80% */
+  background-color: #141414;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 選択不可 */
+  user-select: none;
+  transition: 1s opacity;
+}
+.l-loader.hide {
+  pointer-events: none;
+  opacity: 0;
+}
+.l-loader.delete {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.load-text {
+  color: white;
+  font-size: 16pt;
+  margin-top: 80px;
+}
+
+.load-blink {
+  animation: blink 1s linear infinite;
+}
+
+.trinity-rings-spinner, .trinity-rings-spinner * {
+  box-sizing: border-box;
+}
+
+.trinity-rings-spinner {
+  height: 66px;
+  width: 66px;
+  padding: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.trinity-rings-spinner .circle {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  border: 3px solid #ff1d5e;
+  opacity: 1;
+}
+
+.trinity-rings-spinner .circle:nth-child(1) {
+  height: 60px;
+  width: 60px;
+  animation: trinity-rings-spinner-circle1-animation 1.5s infinite linear;
+  border-width: 3px;
+}
+
+.trinity-rings-spinner .circle:nth-child(2) {
+  height: 39px;
+  width: 39px;
+  animation: trinity-rings-spinner-circle2-animation 1.5s infinite linear;
+  border-width: 2px;
+}
+
+.trinity-rings-spinner .circle:nth-child(3) {
+  height: 6px;
+  width: 6px;
+  animation: trinity-rings-spinner-circle3-animation 1.5s infinite linear;
+  border-width: 1px;
+}
+
+@keyframes trinity-rings-spinner-circle1-animation {
+  0% {
+    transform: rotateZ(20deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateZ(100deg) rotateY(360deg);
+  }
+}
+@keyframes trinity-rings-spinner-circle2-animation {
+  0% {
+    transform: rotateZ(100deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateX(360deg);
+  }
+}
+@keyframes trinity-rings-spinner-circle3-animation {
+  0% {
+    transform: rotateZ(100deg) rotateX(-360deg);
+  }
+  100% {
+    transform: rotateZ(-360deg) rotateX(360deg);
+  }
+}
+/* 各セクションのH2見だし */
+.c-title {
+  position: relative;
+  display: block;
+  color: #00FFF5;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+.c-title.--white {
+  color: #FFFFFF;
+}
+.c-title.--black {
+  color: #141414;
+}
+
+.c-title__section {
+  position: relative;
+  display: block;
+  color: #00FFF5;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+.c-title__section:after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 8px;
+  background-color: #00FFF5;
+  left: 0;
+  bottom: -16px;
+}
+.c-title__section.--black {
+  color: #141414;
+}
+.c-title__section.--black:after {
+  background-color: #141414;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .c-title__section {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+  .c-title__section:after {
+    width: 60px;
+    height: 6px;
+    bottom: -16px;
+  }
+}
+.c-hamburger {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  transition: opacity 0.3s;
+  background-color: #D136D1;
+}
+.c-hamburger.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+.c-hamburger .c-hamburger__inner {
+  width: 100%;
+  height: 100%;
+  transform: translateY(-1px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.c-hamburger span {
+  top: 1px;
+  width: 28px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  transition: width 0.3s, height 0.3s, transform 0.3s, opacity 0.5s;
+}
+.c-hamburger:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.c-hamburger[data-open=open] span:nth-child(1) {
+  transform: rotate(135deg) translate(5px, -6px);
+}
+.c-hamburger[data-open=open] span:nth-child(2) {
+  opacity: 0;
+}
+.c-hamburger[data-open=open] span:nth-child(3) {
+  transform: rotate(-135deg) translate(5px, 6px);
+}
+
+/* フォーム */
+.c-form {
+  display: block;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  border-radius: 20px;
+  background-color: #141414;
+  border: 5px solid #D136D1;
+}
+.c-form dl {
+  text-align: left;
+  padding: 0px 153px 0px;
+}
+.c-form dl .row:nth-child(n+2) {
+  margin-top: 30px;
+}
+.c-form dl .row dt {
+  font-weight: bold;
+  position: relative;
+}
+.c-form dl .row dt.required:after {
+  position: absolute;
+  content: "*必須";
+  margin-left: 9px;
+  bottom: 0;
+  font-size: 11.2px;
+  font-weight: bold;
+  line-height: 1.1517857143;
+  letter-spacing: 0.05em;
+  color: #D136D1;
+}
+.c-form dl .row dt label span {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  margin-left: 6px;
+}
+.c-form dl .row dd {
+  margin-top: 10px;
+}
+.c-form dl .row dd ul {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+.c-form dl .row dd ul li {
+  margin-left: 1px input;
+}
+.c-form dl .row dd ul li label {
+  margin-left: 1px;
+}
+.c-form dl .row dd input[type=text],
+.c-form dl .row dd input[type=email],
+.c-form dl .row dd input[type=tel],
+.c-form dl .row dd textarea, .c-form dl .row dd select {
+  background-color: #FFFFFF;
+  color: #141414;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #D9D9D9;
+  font-size: 16px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  text-align: left;
+  width: 100%;
+}
+.c-form dl .row dd input[type=text].w2,
+.c-form dl .row dd input[type=email].w2,
+.c-form dl .row dd input[type=tel].w2,
+.c-form dl .row dd textarea.w2, .c-form dl .row dd select.w2 {
+  max-width: 200px;
+}
+.c-form dl .row dd input[type=text].w3,
+.c-form dl .row dd input[type=email].w3,
+.c-form dl .row dd input[type=tel].w3,
+.c-form dl .row dd textarea.w3, .c-form dl .row dd select.w3 {
+  max-width: 300px;
+}
+.c-form dl .row dd input[type=text].w6,
+.c-form dl .row dd input[type=email].w6,
+.c-form dl .row dd input[type=tel].w6,
+.c-form dl .row dd textarea.w6, .c-form dl .row dd select.w6 {
+  max-width: 600px;
+}
+.c-form dl .row dd textarea {
+  height: 200px;
+}
+.c-form dl .row dd select:hover {
+  cursor: pointer;
+}
+.c-form .c-form__submitwrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .c-form {
+    font-size: 14px;
+    line-height: 1.1428571429;
+    border-radius: 16px;
+    border: 3px solid #D136D1;
+  }
+  .c-form dl {
+    text-align: left;
+    padding: 0px 24px 0px;
+  }
+  .c-form dl .row:nth-child(n+2) {
+    margin-top: 30px;
+  }
+  .c-form dl .row dt.required:after {
+    margin-left: 6px;
+    bottom: 1px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .c-form dl .row dd {
+    margin-top: 10px;
+  }
+  .c-form dl .row dd ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-left: 10px;
+  }
+  .c-form dl .row dd ul li label {
+    padding-left: 4px;
+  }
+  .c-form dl .row dd input[type=text],
+  .c-form dl .row dd input[type=email],
+  .c-form dl .row dd input[type=tel],
+  .c-form dl .row dd textarea, .c-form dl .row dd select {
+    font-size: 16px;
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+  }
+  .c-form dl .row dd input[type=text].w2, .c-form dl .row dd input[type=text].w3, .c-form dl .row dd input[type=text].w6,
+  .c-form dl .row dd input[type=email].w2,
+  .c-form dl .row dd input[type=email].w3,
+  .c-form dl .row dd input[type=email].w6,
+  .c-form dl .row dd input[type=tel].w2,
+  .c-form dl .row dd input[type=tel].w3,
+  .c-form dl .row dd input[type=tel].w6,
+  .c-form dl .row dd textarea.w2,
+  .c-form dl .row dd textarea.w3,
+  .c-form dl .row dd textarea.w6, .c-form dl .row dd select.w2, .c-form dl .row dd select.w3, .c-form dl .row dd select.w6 {
+    max-width: none;
+  }
+  .c-form .c-form__submitwrapper {
+    margin-top: 30px;
+  }
+}
+.c-button {
+  display: inline-block;
+  position: relative;
+  padding: 8px 10px;
+  font-size: 15px;
+  line-height: 1;
+  color: #FFFFFF;
+  border: 1px solid #349BF4;
+  background-color: #349BF4;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.c-button:hover {
+  cursor: pointer;
+  background-color: #141414;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.c-button__cv {
+  display: inline-block;
+  position: relative;
+  padding: 15px 43px 15px 39px;
+  background: #00FFF5;
+  color: #141414;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+}
+.c-button__cv.--mv {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.1111111111;
+  padding: 20px 64px;
+}
+.c-button__cv.--cta {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3888888889;
+  padding: 20px 66px;
+}
+.c-button__cv:hover {
+  cursor: pointer;
+  box-shadow: 0 0 16px #00FFF5;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .c-button {
+    display: block;
+    width: 100%;
+    padding: 18px 72px;
+  }
+  .c-button__cv {
+    padding: 15px 43px 15px 39px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+  .c-button__cv.--header {
+    display: none;
+  }
+  .c-button__cv.--mv {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 20px 42px;
+  }
+  .c-button__cv.--cta {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 20px 42px;
+  }
+  .c-button__cv.--footer {
+    width: 100%;
+  }
+}
+.c-gotoTopButton {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  right: 40px;
+  bottom: 40px;
+  transition: background 0.3s, color 0.3s, opacity 0.3s;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  filter: drop-shadow(0 0 2px #E8E8E8);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+}
+.c-gotoTopButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.c-gotoTopButton:hover .c-gotoTopButton__arrow {
+  transform: translate(0, 4px) rotate(45deg);
+}
+.c-gotoTopButton[data-disp=open] {
+  opacity: 1;
+  pointer-events: auto;
+}
+.c-gotoTopButton .c-gotoTopButton__inner {
+  position: relative;
+  margin: auto;
+}
+.c-gotoTopButton .c-gotoTopButton__arrow {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: translate(0, 8px) rotate(45deg);
+  transition: transform 0.3s;
+}
+.c-gotoTopButton .c-gotoTopButton__arrow:before, .c-gotoTopButton .c-gotoTopButton__arrow:after {
+  left: 0;
+  top: 0;
+  position: absolute;
+  content: "";
+  background-color: #EB51C2;
+}
+.c-gotoTopButton .c-gotoTopButton__arrow:before {
+  width: 12px;
+  height: 2px;
+}
+.c-gotoTopButton .c-gotoTopButton__arrow:after {
+  width: 2px;
+  height: 12px;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .c-gotoTopButton {
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .c-gotoTopButton .c-gotoTopButton__arrow {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+  .c-gotoTopButton .c-gotoTopButton__arrow:before {
+    width: 8px;
+    height: 2px;
+  }
+  .c-gotoTopButton .c-gotoTopButton__arrow:after {
+    width: 2px;
+    height: 8px;
+  }
+}
+.c-wave {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(1px);
+}
+.c-wave.--rev {
+  transform: translateY(-1px) rotate(180deg);
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+}
+.c-pathobject__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  pointer-events: none;
+}
+.c-pathobject__wrapper.--rev {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.c-pathobject__sec {
+  position: relative;
+  width: 430px;
+  height: 40px;
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  transform: translateY(1px);
+}
+.c-pathobject__sec.--rev {
+  transform: translateY(-1px) rotate(180deg);
+}
+.c-pathobject__sec.--black {
+  background-color: #000;
+}
+.c-pathobject__sec.--main {
+  background-color: #FFFFFF;
+}
+.c-pathobject__sec.--key {
+  background-color: #00FFF5;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .c-pathobject__sec {
+    position: relative;
+    width: 50vw;
+    height: 30px;
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(1px);
+  }
+  .c-pathobject__sec.--rev {
+    transform: translateY(-1px) rotate(180deg);
+  }
+  .c-pathobject__sec.--black {
+    background-color: #000;
+  }
+  .c-pathobject__sec.--main {
+    background-color: #FFFFFF;
+  }
+  .c-pathobject__sec.--key {
+    background-color: #00FFF5;
+  }
+}
+/*スクロールダウン全体の場所*/
+.c-animobj__scrolldown {
+  position: absolute;
+  /* 丸の描写 */
+  /*下からの距離が変化して丸の全体が上から下に動く*/
+  /*上から下にかけて丸が透過→不透明→透過する*/
+  /* 線の描写 */
+}
+.c-animobj__scrolldown span {
+  /*描画位置*/
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #00FFF5;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+.c-animobj__scrolldown:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  /*丸の形状*/
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00FFF5;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.c-animobj__scrolldown:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 2px;
+  height: 50px;
+  background: #00FFF5;
+}
+
+.p-headerbar {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #00FFF5;
+  background: linear-gradient(0deg, transparent 0%, black 100%);
+}
+.p-headerbar .p-headerbar__inner {
+  width: 100%;
+  max-width: calc(100% - 70px);
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.p-headerbar .logo {
+  width: auto;
+  height: auto;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+.p-headerbar .p-headerbar__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.p-headerbar .p-headerbar__menulist {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.p-headerbar .p-headerbar__menulist .p-headerbar__menuitem {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+.p-headerbar .p-headerbar__menulist .p-headerbar__menuitem:hover {
+  opacity: 0.8;
+}
+.p-headerbar .p-headerbar__subinner {
+  max-width: calc(100% - 70px);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: #FFFFFF;
+}
+.p-headerbar .p-headerbar__subinner .p-headerbar__soundswitch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.2307692308;
+  letter-spacing: 0;
+}
+.p-headerbar .p-headerbar__subinner .p-headerbar__soundswitch.--playing {
+  color: #00FFF5;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .p-headerbar .p-headerbar__inner {
+    width: 100%;
+    height: 60px;
+    max-width: calc(100% - 40px);
+  }
+  .p-headerbar .logo {
+    margin-left: 20px;
+    width: 120px;
+  }
+  .p-headerbar .logo picture {
+    display: flex;
+    align-items: center;
+  }
+  .p-headerbar .p-headerbar__menulist {
+    gap: 20px;
+  }
+  .p-headerbar .p-headerbar__menulist .p-headerbar__menuitem {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+  .p-headerbar .p-headerbar__subinner {
+    height: 20px;
+    max-width: calc(100% - 40px);
+  }
+  .p-headerbar .p-headerbar__subinner .p-headerbar__soundswitch {
+    gap: 6px;
+    font-size: 13px;
+    line-height: 1.0769230769;
+  }
+}
+.p-footer {
+  width: 100%;
+  background-color: #000;
+}
+.p-footer .p-footer__body {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.p-footer .p-footer__inner {
+  width: 100%;
+  max-width: calc(100% - 60px);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+}
+.p-footer .p-footer__snswrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.p-footer .p-footer__snswrapper .fb {
+  transform: translateY(4px);
+}
+.p-footer .p-footer__snswrapper #facebook {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.p-footer .p-footer__snswrapper .fa-line {
+  margin: auto;
+  font-size: 24px;
+  color: rgb(111, 207, 111);
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+.p-footer .p-footer__copylight {
+  margin: 0;
+  margin-top: 17px;
+  display: flex;
+  justify-content: center;
+}
+.p-footer .p-footer__copylight small {
+  font-size: 16px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .p-footer .p-footer__body {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .p-footer .p-footer__inner {
+    max-width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+  }
+  .p-footer .p-footer__inner .p-footer__snswrapper {
+    gap: 8px;
+    justify-content: space-between;
+  }
+  .p-footer .p-footer__menulists {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+  .p-footer .p-footer__menulists .listitem a {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s;
+  }
+  .p-footer .p-footer__menulists .listitem a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .p-footer .p-footer__copylight {
+    margin-top: 30px;
+    margin-bottom: 44px;
+  }
+  .p-footer .p-footer__copylight small {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.2727272727;
+    letter-spacing: 0.05em;
+  }
+}
+.p-mv {
+  position: relative;
+  overflow: hidden;
+}
+.p-mv .p-mv__bg {
+  position: fixed;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.p-mv .p-mv__bg picture {
+  position: relative;
+  width: fit-content;
+  width: 100%;
+}
+.p-mv .p-mv__bg picture img {
+  aspect-ratio: 1440/680;
+}
+.p-mv .p-mv__bg #video-area {
+  width: 100%;
+  height: 100%;
+}
+.p-mv .p-mv__bg #video-area video {
+  position: absolute;
+  object-fit: cover;
+  object-position: 0% 0;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.p-mv .p-mv__bg #video-area:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 50%);
+  background-size: 4px 4px;
+  z-index: 1;
+}
+.p-mv .p-mv__pathobject {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  pointer-events: none;
+}
+.p-mv .p-mv__body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.p-mv .p-mv__inner {
+  max-width: calc(100% - 160px);
+  width: calc(100% - 160px);
+  margin: auto;
+  margin-top: 170px;
+  margin-left: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.p-mv .p-mv__inner .p-mv__texts {
+  position: relative;
+  width: 100%;
+  color: #FFFFFF;
+  text-align: left;
+}
+.p-mv .p-mv__inner .p-mv__texts .genre {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+}
+.p-mv .p-mv__inner .p-mv__texts h1, .p-mv .p-mv__inner .p-mv__texts h2 {
+  margin-top: 30px;
+  font-size: 140px;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+}
+.p-mv .p-mv__inner .p-mv__texts .sub {
+  margin-top: 10px;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 1em;
+}
+.p-mv .p-mv__inner .p-mv__buttonwrapper {
+  margin-top: 79px;
+}
+.p-mv .c-animobj__scrolldown {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 27px;
+  left: 20px;
+}
+.p-mv .p-mv__newswrapper {
+  width: calc(100% - 30px);
+  margin-bottom: 50px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.p-mv .p-mv__newswrapper .p-mv__newsbox {
+  position: relative;
+  max-width: 360px;
+  color: #00FFF5;
+  background-color: #141414;
+  border: 1px solid #00FFF5;
+  overflow: hidden;
+}
+.p-mv .p-mv__newswrapper .p-mv__newsbox span {
+  margin-left: 20px;
+  color: #FFFFFF;
+  margin-right: 20px;
+}
+.p-mv .p-mv__newswrapper .p-mv__newsbox .loop,
+.p-mv .p-mv__newswrapper .p-mv__newsbox .loop2 {
+  width: fit-content;
+  white-space: nowrap;
+}
+.p-mv .p-mv__newswrapper .p-mv__newsbox .loop {
+  top: 0;
+  left: 0;
+  animation: loop 20s -3s linear infinite;
+}
+.p-mv .p-mv__newswrapper .p-mv__newsbox .loop2 {
+  position: absolute;
+  left: 0;
+  animation: loop 20s -10s linear infinite;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 1279px) {
+ */
+@media screen and (max-width: 1279px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .p-mv .p-mv__bg #video-area {
+    overflow: hidden;
+  }
+  .p-mv .p-mv__bg #video-area:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 50%);
+    background-size: 4px 4px;
+  }
+  .p-mv .p-mv__bg #video-area video {
+    position: absolute;
+    object-fit: cover;
+    object-position: 0% 0;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .p-mv .p-mv__inner {
+    max-width: calc(100% - 40px);
+    width: fit-content;
+    margin: auto;
+    margin-top: 272px;
+  }
+  .p-mv .p-mv__inner .p-mv__texts {
+    position: relative;
+    width: fit-content;
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .p-mv .p-mv__inner .p-mv__texts .genre {
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: 0.2em;
+  }
+  .p-mv .p-mv__inner .p-mv__texts h1, .p-mv .p-mv__inner .p-mv__texts h2 {
+    margin-top: 20px;
+    font-size: 76px;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: 0.05em;
+  }
+  .p-mv .p-mv__inner .p-mv__texts .sub {
+    margin-top: 10px;
+    font-size: 22px;
+    line-height: 1.3181818182;
+    letter-spacing: 0.6em;
+  }
+  .p-mv .p-mv__inner .p-mv__buttonwrapper {
+    margin-top: 30px;
+  }
+  .p-mv .c-animobj__scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    bottom: 27px;
+    left: 20px;
+  }
+  .p-mv .p-mv__newswrapper {
+    max-width: 200px;
+    width: calc(100% - 30px);
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  .p-mv .p-mv__newswrapper .p-mv__newsbox {
+    max-width: 200px;
+    padding: 4px 0;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  .p-mv .p-mv__newswrapper .p-mv__newsbox p {
+    display: block;
+  }
+}
+.p-submv {
+  position: relative;
+}
+.p-submv .p-submv__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.p-submv .p-submv__bg picture {
+  width: 100%;
+}
+.p-submv .p-submv__bg picture img {
+  aspect-ratio: 1440/190;
+}
+.p-submv .overlay {
+  mix-blend-mode: multiply;
+}
+.p-submv .p-submv__inner {
+  max-width: calc(100% - 330px);
+  width: 100%;
+  margin: auto;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-submv .p-submv__inner .p-submv__texts {
+  color: #FFFFFF;
+}
+.p-submv .p-submv__inner .p-submv__texts h2 {
+  padding-left: 3px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 1279px) {
+ */
+@media screen and (max-width: 1279px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .p-submv .p-submv__bg picture img {
+    aspect-ratio: 375/160;
+  }
+  .p-submv .p-submv__inner {
+    max-width: 100%;
+    height: 160px;
+  }
+  .p-submv .p-submv__inner .p-submv__texts {
+    color: #FFFFFF;
+  }
+  .p-submv .p-submv__inner .p-submv__texts h2 {
+    padding-right: 0;
+    margin-top: -3px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+  }
+}
+.p-spmenu__wrapper {
+  display: fixed;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.p-spmenu__wrapper[data-open=open] {
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.p-spmenu__wrapper[data-open=open] .p-spmenu {
+  right: 0;
+  opacity: 1;
+}
+.p-spmenu__wrapper[data-open=open] .p-spmenu__bg {
+  width: 100%;
+  background-color: RGBA(0, 0, 0, 0.5);
+}
+
+.p-spmenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: -100vw;
+  width: 53.3333333333vw;
+  height: 100%;
+  z-index: 600;
+  transition: right 0.3s, opacity 0.3s;
+  opacity: 0;
+  background-color: #D136D1;
+}
+
+.p-spmenu__bg {
+  position: fixed;
+  width: 0;
+  height: 100%;
+  z-index: 10;
+  background-color: RGBA(0, 0, 0, 0);
+  transition: background-color 0.3s;
+}
+
+.p-spmenu__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  margin-top: 110px;
+}
+.p-spmenu__inner ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(100% - 100px);
+  gap: 25px;
+  text-align: left;
+}
+.p-spmenu__inner ul li {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  width: 100%;
+}
+.p-spmenu__inner ul li a {
+  display: block;
+  width: 100%;
+  transition: text-shadow 0.3s;
+}
+.p-spmenu__inner ul li a:hover {
+  text-shadow: 2px 2px 0 rgb(200, 220, 50), -2px -2px 0 rgb(200, 220, 50), -2px 2px 0 rgb(200, 220, 50), 2px -2px 0 rgb(200, 220, 50), 0px 2px 0 rgb(200, 220, 50), -2px 0 rgb(200, 220, 50), -2px 0 0 rgb(200, 220, 50), 2px 0 0 rgb(200, 220, 50);
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+  .p-spmenu {
+    display: none;
+  }
+  .p-spmenu__bg {
+    display: none;
+  }
+}
+details {
+  width: 100%;
+}
+
+summary {
+  cursor: pointer;
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.p-accordion__summary-inner {
+  cursor: pointer;
+}
+.p-accordion__summary-inner [data-style=basic] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #d2beff;
+  font-weight: bold;
+  color: #002255;
+}
+.p-accordion__summary-inner .icon {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transform-origin: 45% 55%;
+  transition: transform 0.4s;
+}
+.p-accordion__summary-inner .icon:before, .p-accordion__summary-inner .icon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 3px;
+  background-color: #7050ff;
+  transition: opacity 0.4s;
+}
+.p-accordion__summary-inner .icon:before {
+  left: 0;
+  transform: rotate(45deg);
+}
+.p-accordion__summary-inner .icon:after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+.p-accordion__summary-inner .icon[data-type=plus] {
+  width: 18px;
+  height: 18px;
+  margin-left: 0px;
+  margin: auto;
+}
+.p-accordion__summary-inner .icon[data-type=plus]:before, .p-accordion__summary-inner .icon[data-type=plus]:after {
+  width: 18px;
+  height: 2px;
+  background-color: #141414;
+}
+.p-accordion__summary-inner .icon[data-type=plus]:before {
+  left: 0px;
+  top: 50%;
+  transform: rotate(0deg);
+}
+.p-accordion__summary-inner .icon[data-type=plus]:after {
+  left: 0%;
+  top: 50%;
+  transform: rotate(-90deg);
+}
+
+details[data-open=true] .icon {
+  transform: translate(2px, 0) rotate(180deg);
+}
+details[data-open=true] .icon[data-type=plus]:after {
+  opacity: 0;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 1279px) {
+ */
+@media screen and (max-width: 1279px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .p-accordion__summary-inner {
+    cursor: pointer;
+  }
+  .p-accordion__summary-inner .icon {
+    margin-left: 6px;
+  }
+  .p-accordion__summary-inner .icon[data-type=plus] {
+    width: 14px;
+    height: 14px;
+  }
+  .p-accordion__summary-inner .icon[data-type=plus]:before, .p-accordion__summary-inner .icon[data-type=plus]:after {
+    width: 14px;
+    height: 2px;
+  }
+}
+.p-story {
+  position: relative;
+}
+.p-story .p-story__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.p-story .p-story__bg img {
+  object-fit: contain;
+}
+.p-story .p-story__body {
+  margin-top: 140px;
+  margin-bottom: 123px;
+}
+.p-story .p-story__inner {
+  max-width: min(100% - 40px, 1110px);
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+.p-story .p-story__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 83px;
+}
+.p-story .p-story__box {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 80px;
+}
+.p-story .p-story__box.--rev .p-story__texts {
+  order: 1;
+}
+.p-story .p-story__box.--rev .p-story__image {
+  order: 0;
+  box-shadow: -7px 7px 0 #00FFF5;
+  transform: skew(3deg);
+}
+.p-story .p-story__texts {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 18px;
+}
+.p-story .p-story__texts .p-story__sectiontitle {
+  position: relative;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #00FFF5;
+}
+.p-story .p-story__texts .p-story__sectiontitle:after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 8px;
+  background-color: #00FFF5;
+  left: 0;
+  bottom: -16px;
+}
+.p-story .p-story__texts .p-story__title {
+  margin-top: 60px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+.p-story .p-story__texts .p-story__lead {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+.p-story .p-story__image {
+  height: min(35.2083333333vw, 507px);
+  box-shadow: 7px 7px 0 #00FFF5;
+  transform: skew(-3deg);
+}
+.p-story .p-story__image img {
+  width: min(30.3472222222vw, 437px);
+  aspect-ratio: 437/507;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 1279px) {
+ */
+@media screen and (max-width: 1279px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+  .p-story .p-story__body {
+    margin-top: 50px;
+    margin-bottom: 43px;
+  }
+  .p-story .p-story__inner {
+    max-width: calc(100% - 40px);
+  }
+  .p-story .p-story__list {
+    gap: 0;
+  }
+  .p-story .p-story__box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .p-story .p-story__box.--rev .p-story__texts {
+    order: 0;
+  }
+  .p-story .p-story__box.--rev .p-story__image {
+    order: 1;
+    transform: skew(5deg);
+  }
+  .p-story .p-story__texts {
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 18px;
+    width: calc(100% - 8px);
+  }
+  .p-story .p-story__texts .p-story__sectiontitle {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: #00FFF5;
+  }
+  .p-story .p-story__texts .p-story__sectiontitle:after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 8px;
+    background-color: #00FFF5;
+    left: 0;
+    bottom: -16px;
+  }
+  .p-story .p-story__texts .p-story__title {
+    margin-top: 45px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333333333;
+    letter-spacing: 0.05em;
+  }
+  .p-story .p-story__texts .p-story__lead {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+  .p-story .p-story__image {
+    order: 1;
+    width: min(100% - 60px, 600px);
+    height: auto;
+    margin: auto;
+    transform: skew(-5deg);
+  }
+  .p-story .p-story__image img {
+    width: 100%;
+    aspect-ratio: 357/414;
+  }
+}
+.p-cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.p-cta .p-cta__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.p-cta .p-cta__heading {
+  padding-top: 100px;
+}
+.p-cta .p-cta__heading h2 {
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.p-cta .p-cta__inner {
+  padding-top: 140px;
+  padding-bottom: 123px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.p-cta .p-cta__body {
+  max-width: min(100% - 40px, 1110px);
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+.p-cta .p-cta__btn {
+  margin-top: 25px;
+  padding-bottom: 100px;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 1279px) {
+ */
+@media screen and (max-width: 1279px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .p-cta .p-cta__heading {
+    padding-top: 70px;
+  }
+  .p-cta .p-cta__heading h2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+  .p-cta .p-cta__inner {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .p-cta .p-cta__body {
+    max-width: calc(100% - 40px);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+  }
+  .p-cta .p-cta__btn {
+    margin-top: 20px;
+    padding-bottom: 70px;
+  }
+}
+.p-trailer {
+  position: relative;
+  background-color: #00FFF5;
+}
+.p-trailer .p-trailer__heading {
+  margin-top: 110px;
+}
+.p-trailer .p-trailer__body {
+  margin-bottom: 110px;
+}
+.p-trailer .p-trailer__inner {
+  max-width: min(100% - 40px, 1110px);
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+.p-trailer .p-trailer__video {
+  margin-top: 70px;
+  width: 100%;
+  height: 560px;
+  background-color: black;
+}
+.p-trailer .p-trailer__video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (min-width: 768px) {
+ */
+@media screen and (min-width: 768px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 1279px) {
+ */
+@media screen and (max-width: 1279px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 991px) {
+ */
+@media screen and (max-width: 991px) {
+  /*  呼び出しもとの値が入る */
+}
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .p-trailer .p-trailer__heading {
+    margin-top: 50px;
+  }
+  .p-trailer .p-trailer__body {
+    margin-bottom: 50px;
+  }
+  .p-trailer .p-trailer__inner {
+    max-width: calc(100% - 40px);
+  }
+  .p-trailer .p-trailer__video {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    background-color: black;
+  }
+  .p-trailer .p-trailer__video iframe {
+    aspect-ratio: 1110/560;
+    width: 100%;
+    height: 100%;
+  }
+}
+/*--------------------------------------------------
+    u-display.scss
+    表示のON/OFF
+--------------------------------------------------*/
+.u-display__inline {
+  display: inline;
+}
+
+.u-display__inline-block {
+  display: inline-block;
+}
+
+.u-display__block {
+  display: block;
+}
+
+.u-display__sp {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (min-width: 768px) {
+   */
+}
+@media screen and (min-width: 768px) {
+  .u-display__sp {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-display__pc {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 991px) {
+   */
+}
+@media screen and (max-width: 991px) {
+  .u-display__pc {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-display__tab {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (min-width: 1280px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-display__tab {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-display__tab {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-display__tab-pc {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-display__tab-pc {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-display__sp-tab {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (min-width: 992px) {
+   */
+}
+@media screen and (min-width: 992px) {
+  .u-display__sp-tab {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-hidden__sp {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-hidden__sp {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-hidden__pc {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (min-width: 768px) {
+   */
+}
+@media screen and (min-width: 768px) {
+  .u-hidden__pc {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-hidden__pc2 {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (min-width: 1440px) {
+   */
+}
+@media screen and (min-width: 1440px) {
+  .u-hidden__pc2 {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-hidden__tab {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (min-width: 767px) and (max-width: 991px) {
+   */
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .u-hidden__tab {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-hidden__tab-pc {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (min-width: 768px) {
+   */
+}
+@media screen and (min-width: 768px) {
+  .u-hidden__tab-pc {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-hidden__sp-tab {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 991px) {
+   */
+}
+@media screen and (max-width: 991px) {
+  .u-hidden__sp-tab {
+    /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+.u-hidden__sp-tab2 {
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 1279px) {
+   */
+}
+@media screen and (max-width: 1279px) {
+  .u-hidden__sp-tab2 { /*  呼び出しもとの値が入る */
+    display: none !important;
+  }
+}
+
+/*-----------------------------------------------------
+//  margin付与
+//  PCのの時は良くても、SPで高さ調整したい場合
+//  ここでレスポンシブ高さをそれっぽく調整してしまうと
+//  __t80といった指定意味がなくなる。
+//  PCとSPで高さが変わらない場合は良いが、
+//  結局はセクションごとに指定した方が間違いない。
+//
+//  主な使用場面としては文章間のスペース等になる。
+//-----------------------------------------------------*/
+.u-ma {
+  margin: auto;
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb5 {
+  margin-bottom: 5px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb5 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 3px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt5 {
+  margin-top: 5px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt5 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 3px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb10 {
+  margin-bottom: 10px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb10 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 6px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt10 {
+  margin-top: 10px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt10 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 6px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb15 {
+  margin-bottom: 15px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb15 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 9px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt15 {
+  margin-top: 15px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt15 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 9px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb20 {
+  margin-bottom: 20px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb20 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 12px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt20 {
+  margin-top: 20px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt20 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 12px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb25 {
+  margin-bottom: 25px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb25 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 15px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt25 {
+  margin-top: 25px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt25 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 15px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb30 {
+  margin-bottom: 30px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb30 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 18px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt30 {
+  margin-top: 30px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt30 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 18px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb35 {
+  margin-bottom: 35px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb35 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 21px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt35 {
+  margin-top: 35px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt35 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 21px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb40 {
+  margin-bottom: 40px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb40 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 24px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt40 {
+  margin-top: 40px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt40 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 24px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb45 {
+  margin-bottom: 45px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb45 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 27px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt45 {
+  margin-top: 45px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt45 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 27px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb50 {
+  margin-bottom: 50px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb50 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 30px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt50 {
+  margin-top: 50px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt50 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 30px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb55 {
+  margin-bottom: 55px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb55 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 33px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt55 {
+  margin-top: 55px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt55 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 33px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb60 {
+  margin-bottom: 60px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb60 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 36px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt60 {
+  margin-top: 60px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt60 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 36px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb65 {
+  margin-bottom: 65px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb65 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 39px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt65 {
+  margin-top: 65px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt65 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 39px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb70 {
+  margin-bottom: 70px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb70 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 42px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt70 {
+  margin-top: 70px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt70 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 42px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb75 {
+  margin-bottom: 75px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb75 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 45px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt75 {
+  margin-top: 75px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt75 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 45px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb80 {
+  margin-bottom: 80px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb80 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 48px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt80 {
+  margin-top: 80px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt80 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 48px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb85 {
+  margin-bottom: 85px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb85 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 51px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt85 {
+  margin-top: 85px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt85 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 51px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb90 {
+  margin-bottom: 90px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb90 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 54px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt90 {
+  margin-top: 90px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt90 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 54px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb95 {
+  margin-bottom: 95px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb95 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 57px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt95 {
+  margin-top: 95px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt95 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 57px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb100 {
+  margin-bottom: 100px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb100 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 60px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt100 {
+  margin-top: 100px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt100 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 60px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb105 {
+  margin-bottom: 105px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb105 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 63px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt105 {
+  margin-top: 105px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt105 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 63px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb110 {
+  margin-bottom: 110px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb110 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 66px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt110 {
+  margin-top: 110px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt110 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 66px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb115 {
+  margin-bottom: 115px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb115 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 69px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt115 {
+  margin-top: 115px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt115 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 69px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb120 {
+  margin-bottom: 120px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb120 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 72px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt120 {
+  margin-top: 120px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt120 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 72px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb125 {
+  margin-bottom: 125px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb125 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 75px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt125 {
+  margin-top: 125px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt125 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 75px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb130 {
+  margin-bottom: 130px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb130 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 78px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt130 {
+  margin-top: 130px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt130 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 78px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb135 {
+  margin-bottom: 135px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb135 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 81px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt135 {
+  margin-top: 135px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt135 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 81px;
+  }
+}
+
+/* .u-mb5～.u-mb140まで作成 */
+.u-mb140 {
+  margin-bottom: 140px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mb140 {
+    /*  呼び出しもとの値が入る */
+    margin-bottom: 84px;
+  }
+}
+
+/* .u-mt5～.u-mt140まで作成 */
+.u-mt140 {
+  margin-top: 140px;
+  /*  map-get(マップ型変数,キー)で値を取得
+  @media screen and (max-width: 767px) {
+   */
+}
+@media screen and (max-width: 767px) {
+  .u-mt140 {
+    /*  呼び出しもとの値が入る */
+    margin-top: 84px;
+  }
+}
+
+.u-mt24 {
+  margin-bottom: 24px;
+}
+
+/* 個別調整が必要なもの */
+/*  map-get(マップ型変数,キー)で値を取得
+@media screen and (max-width: 767px) {
+ */
+@media screen and (max-width: 767px) {
+  /*  呼び出しもとの値が入る */
+  .u-mb60 {
+    margin-bottom: 30px;
+  }
+  .u-mb40 {
+    margin-bottom: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map*/

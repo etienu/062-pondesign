@@ -1,0 +1,43 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title><%- meta['title'] %></title>
+    <meta name="description" content="<%- page['description'] %>">
+	<meta name="keywords" content="<%- page['keyword'] %>">
+
+	<!--icon,Favicon -->
+	<link rel="shortcut icon" href="<%- meta_favicon['shortcut'] %>">
+    <link rel="apple-touch-icon" href="<%- meta_favicon['apple'] %>" sizes="180x180">
+    <link rel="icon" type="image/png" href="<%- meta_favicon['android'] %>" sizes="192x192">
+
+    <!-- OGP -->
+    <meta property='og:type' content='website'>
+    <meta property='og:title' content="<%- meta_ogp['title'] %>">
+    <meta property='og:url' content="<%- meta_ogp['url'] %>">
+    <meta property='og:description'
+    content="<%- meta_ogp['description'] %>">
+    <meta property="og:image" content="<%- meta_ogp['image'] %>">
+
+	<!-- noindex -->
+    <meta name="robots" content="<%- meta['robots'] %>">
+
+    <!-- URL正規化 -->
+    <link rel="canonical" href="\">
+
+	<!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
+	<script src="<%- dir['lib'] %>/gsap/gsap.min.js" defer></script>
+	<script src="<%- dir['lib'] %>/gsap/ScrollTrigger.min.js" defer></script>    
+	<script src="<%- dir['lib'] %>/swiper/swiper-bundle.min.js" defer></script>    
+	<script src="<%- dir['js'] %>/bundle.js?v=1" defer></script>
+    <!-- css  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="<%- dir['lib'] %>/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="<%- dir['css'] %>/style.css?v=1">
+
+	<!-- Font -->
+</head>
+<!-- Head : END -->

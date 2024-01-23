@@ -1,0 +1,98 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    top- セクション03 - CTA(Call to Action/行動喚起)
+//------------------------------------------------
+.p-cta {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    .p-cta__bg{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .p-cta__heading{
+        padding-top :100px;
+        h2{
+            @include g.fz(64,64,bold);
+            @include g.ls(5);
+            color :g.$color-white;
+        }
+    }
+    .p-cta__inner {
+        padding-top:140px;
+        padding-bottom: 123px;
+        width: 100%;
+        margin : auto;
+        display:flex;
+        justify-content: center;
+    }
+    .p-cta__body {
+        max-width: min( calc(100% - 40px), calc(g.$layout-width-inner) );
+        width: 100%;
+        margin : auto;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        color : g.$color-white;
+    }
+    .p-cta__btn{
+        margin-top : 25px;
+        padding-bottom :100px;
+    }
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+}
+
+@include g.mq('-lg') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {      
+    .p-cta {
+        .p-cta__bg{
+        }
+        .p-cta__heading{
+            padding-top :70px;
+            h2{
+                @include g.fz(32,32,bold);
+                @include g.ls(5);
+            }
+        }
+        .p-cta__inner {
+            padding-top:0;//140px;
+            padding-bottom: 0;//123px;
+            width: 100%;
+            margin : auto;
+            display:flex;
+            justify-content: center;
+        }
+        .p-cta__body {
+            max-width: calc(100% - 40px);
+            width: 100%;
+            margin : auto;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            color : g.$color-white;
+        }
+        .p-cta__btn{
+            margin-top : 20px;
+            padding-bottom :70px;
+        }
+    }    
+}
