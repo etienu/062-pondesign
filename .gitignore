@@ -3,3 +3,6 @@
 /.babelrc
 /*.bat
 /.styleintrrc*
+/ejs_stock
+.gitignore
+readme_dev.md

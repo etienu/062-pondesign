@@ -61,12 +61,9 @@ export default class tabGroup {
 
     //  指定タブのターゲットのdisplayを設定
     tab_setDisplay( i_tab, i_flag ) {
-        //this.activeTab( i_tab );
-
         let elm = this.getTarget( i_tab );
         if( elm ) elm.style.display = i_flag;
         //  gsapがセットされている
-        //console.log(elm.gsaptl_fadeinUp );
         if( elm.gsaptl_fadeinUp ){
             elm.gsaptl_fadeinUp.restart();
         }

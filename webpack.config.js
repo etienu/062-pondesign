@@ -7,7 +7,6 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // 出力元と出力先のディレクトリを定義
-//const srcRootPath = "dist/";
 const dir = {
     src: path.join(__dirname, 'dist/assets_src'),
     public: path.join(__dirname, 'dist/assets'),

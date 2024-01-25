@@ -11,7 +11,6 @@ const gulp = require("gulp");
 var watch = require('gulp-watch');
 const webp = require('gulp-webp');
 const rename = require('gulp-rename');
-//const { src, dest, series, parallel, watch } = require("gulp");
 const { src, dest, series, parallel } = require("gulp");
 //  画像圧縮
 const imageMin = require("gulp-imagemin");
@@ -142,15 +141,6 @@ exports.imagemin = imagemin;
 exports.imagewebp = imagewebp;
 exports.compejs = compileejs;
 exports.watchejs = watchejs;
-
-//----------------------------------------------------------------------
-//  監視
-//----------------------------------------------------------------------
-//gulp.task("watch", function() {
-//    return watch('ejs/**/*.ejs', function() {
-//        gulp.task(['compejs']);
-//    });
-//});
 
 /************************************************************************/
 /*  END OF FILE                                                         */
