@@ -1,0 +1,22 @@
+<%
+srcdir = "";
+if( arg['pageid'] == 'index'){
+    srcdir = "page/";
+}
+%>
+
+    <!-- section : CONTACT -->
+    <section class="l-section p-top-contact" id="contact">
+        <div class="l-body p-top-contact__body">
+            <div class="p-top-contact__inner">
+                <div class="l-heading --center p-top-contact__heading">
+                    <h2 class="c-title__section --key">CONTACT<span>お問い合わせ</span></h2>
+                </div>
+                <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。<br>
+                <div class="l-btn --center p-top-contact__btn">
+                    <a href="<%- srcdir %>contact.html" class="c-button__more --key">MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->

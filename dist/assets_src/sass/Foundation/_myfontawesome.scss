@@ -166,9 +166,24 @@
 }
 
 //  右矢印ブロック →] // × regular  solid
-.fa-arrow-right-to-bracket::before {
-    content: '\f090';
-}
+.fa-arrow-right-to-bracket::before {  content: '\f090'; }
+.fa-arrow-right::before { content: "\f061"; }
+.fa-angle-right::before { content: "\f105"; }
+.fa-circle-arrow-right::before { content: "\f0a9"; }
+.fa-building-circle-arrow-right::before { content: "\e4d1"; }
+
+//  左矢印
+.fa-arrow-left::before { content: "\f060"; }
+.fa-angle-left::before { content: "\f104"; }
+.fa-circle-arrow-left::before { content: "\f0a8"; }
+//  上矢印
+.fa-arrow-up::before { content: "\f062"; }
+.fa-angle-up::before { content: "\f106"; }
+.fa-circle-arrow-up::before { content: "\f0aa"; }
+//  下矢印
+.fa-angle-down::before { content: "\f107"; }
+.fa-arrow-down::before { content: "\f063"; }
+.fa-circle-arrow-down::before { content: "\f0ab"; }
   
 //<i class='fa-regular fa-arrow-right-to-bracket'></i>
 

@@ -8,8 +8,8 @@
         "base" : "../dist"
     },
     "site" :{
-        "title" : "PlanetHunters",
-        "description": "奪われた故郷の星を取り戻せ。"
+        "title" : "PON DESIGN",
+        "description": "お客様の夢を叶えるWebサイトを制作"
     },
     "meta": {
         "favicon": {
@@ -18,16 +18,61 @@
             "android": "assets/images/common/favicon/android-touch-icon.png"
         },
         "ogp": {
-            "title": "PlanetHunters",
-            "url": "",
-            "description": "奪われた故郷の星を取り戻せ。壮大なSFファンタジー",
+            "title": "PON DESIGN",
+            "url": "https://webdesigner-go.com/coding-practice/advanced/",
+            "description": "お客様の夢を叶えるWebサイトを制作",
             "image" : "assets/images/common/ogp.png"
         },
         "robots": "noindex,nofollow"
     },
     "top": {
-        "title": "PlanetHunters | 惑星を奪還せよ",
-        "description": "奪われた故郷の星を取り戻せ。",
-        "keyword": ""
-    }
+        "title": "PON DESIGN",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "TOP",
+        "submv-title-jp": "トップページ"
+    },
+    "news": {
+        "title": "NEWS お知らせ",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "NEWS",
+        "submv-title-jp": "お知らせ"
+    },
+    "single": {
+        "title": "Webデザインニュースサイト「ウェブマガジン」に取材いただきました",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "NEWS",
+        "submv-title-jp": "お知らせ"
+    },
+    "service": {
+        "title": "サービス",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "SERVICE",
+        "submv-title-jp": "サービス"
+    },
+    "works": {
+        "title": "制作実績",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "WORKS",
+        "submv-title-jp": "制作実績"
+    },
+    "company": {
+        "title": "私たちについて",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "COMPANY",
+        "submv-title-jp": "私たちについて"
+    },
+    "recruit": {
+        "title": "採用情報",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "RECRUIT",
+        "submv-title-jp": "採用情報"
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "description": "お客様の夢を叶えるWebサイトを制作",
+        "submv-title-en": "CONTACT",
+        "submv-title-jp": "お問い合わせ"
+    },
+
+    "temp": {}
 }

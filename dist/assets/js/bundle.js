@@ -755,7 +755,8 @@ var buttons = /*#__PURE__*/function () {
       //  ul liのメニューがクリックされたら閉じる
       elm['lia'].forEach(function (lia) {
         lia.addEventListener("click", function () {
-          _this2.hamburgerClose(i_item, elm);
+          //  画面見えてから遷移するのがダサイので閉じないでおく
+          //    this.hamburgerClose( i_item, elm );
         });
       });
     }
@@ -839,7 +840,7 @@ var buttons = /*#__PURE__*/function () {
       //  名称で分岐
       switch (i_name) {
         case "hamburger":
-          //this.regist_hamburger( i_item, i_name );
+          this.regist_hamburger(i_item, i_name);
           break;
         case "audioswitch":
           this.regist_audioswitch(i_item, i_name);
@@ -1175,7 +1176,10 @@ alinks.forEach(function (anchor) {
 
     //取得した要素の位置を取得するために、getBoundingClientRect()を呼び出し、ページ上の位置を計算。
     //headerの高さを引いて、スクロール位置がヘッダーの下になるように調整します。
-    var targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+    var targetPosition = 0;
+    if (target) {
+      targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+    }
 
     // window.scrollTo()を呼び出して、スクロール位置を設定します。behaviorオプションをsmoothに設定することで、スムーズなスクロールを実現します。
     window.scrollTo({
@@ -1265,18 +1269,18 @@ var swiperGroup = /*#__PURE__*/function () {
     }
 
     //----------------------------------------
-    //  個別 : studio
+    //  個別 : works
     //----------------------------------------
   }, {
-    key: "make_studio",
-    value: function make_studio(i_swiper, i_name) {
+    key: "make_works",
+    value: function make_works(i_swiper, i_name) {
       var sname = i_swiper + ' .swiper';
       //console.log( "sname"+sname );
       // swiperslider
       this.swipers[i_name] = new Swiper(sname, {
         loop: true,
         allowTouchMove: true,
-        //  ドラッグ友好
+        //  ドラッグ有効
         //  ページネーション
         pagination: {
           el: i_swiper + ' .swiper-pagination',
@@ -1294,7 +1298,7 @@ var swiperGroup = /*#__PURE__*/function () {
         //スライド間の距離を16pxに
         slidesPerView: 1,
         //スライダーのコンテナ上に1枚同時に表示
-        autoplay: false
+        autoplay: true
       });
       this.swipers[i_name].element = document.querySelector(sname);
     }
@@ -1308,9 +1312,10 @@ var swiperGroup = /*#__PURE__*/function () {
       this.swiperObjs[i_name] = i_swiper; //  HTML swiperタグ
       switch (i_name) {
         //case "trainer": this.make_trainer( ".p-trainer__swiper", i_name );  break;
-        case "studio":
-          this.make_studio(".p-studio__swiper", i_name);
+        case "works":
+          this.make_works(".p-top-works__swiper", i_name);
           break;
+        //case "studio": this.make_studio( ".p-studio__swiper", i_name );  break;
         //case "price": this.make_works( i_swiper, i_name );  break;
       }
       //this.swipers[i_name].element = i_swiper;    //  js swiperデータ

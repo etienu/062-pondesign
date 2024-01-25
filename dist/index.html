@@ -1,26 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title></title>
-    <meta name="description" content="奪われた故郷の星を取り戻せ。">
+    <title>PON DESIGN | PON DESIGN</title>
+    <meta name="description" content="お客様の夢を叶えるWebサイトを制作">
 	<meta name="keywords" content="">
 
-	<!--icon,Favicon -->
+	
 	<link rel="shortcut icon" href="assets/images/common/favicon/favicon.ico">
     <link rel="apple-touch-icon" href="assets/images/common/favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" type="image/png" href="assets/images/common/favicon/android-touch-icon.png" sizes="192x192">
 
     <!-- OGP -->
     <meta property='og:type' content='website'>
-    <meta property='og:title' content="PlanetHunters">
-    <meta property='og:url' content="">
+    <meta property='og:title' content="PON DESIGN">
+    <meta property='og:url' content="https://webdesigner-go.com/coding-practice/advanced/">
     <meta property='og:description'
-    content="奪われた故郷の星を取り戻せ。壮大なSFファンタジー">
+    content="お客様の夢を叶えるWebサイトを制作">
     <meta property="og:image" content="assets/images/common/ogp.png">
 
 	<!-- noindex -->
@@ -47,11 +49,10 @@
 <body>
     <!-- loading -->
     <div class="l-loader" data-js="loadingscreen">
-        <div class="trinity-rings-spinner">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>        
+
+          <div class="pixel-spinner">
+            <div class="pixel-spinner-inner"></div>
+          </div>
     
         <div class="load-text load-blink load-absolute">Loading...</div>
     </div>
@@ -60,227 +61,334 @@
     <header class="l-header" data-js="header">
         <div class="p-headerbar" id="header">
             <div class="p-headerbar__inner">
+
                 <a href="#">
                     <h1 class="logo enff">
+
                         <picture>
-                            <source srcset="assets/images/header/pc/logo.svg" media="(max-width: 768px)" width="96.7" height="12.36">
-                            <img src="assets/images/header/pc/logo.svg" alt="PlanetHunters" width="180" height="23">
+                            <source srcset="assets/images/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="12.96">
+                            <img src="assets/images/header/pc/logo.svg" alt="PON DESIGN" width="161" height="17">
                         </picture>
+
                     </h1>
+
                 </a>
                 
                 <nav class="p-headerbar__nav">
                     <ul class="p-headerbar__menulist">
-                        <li class="p-headerbar__menuitem"><a href="#">STORY</a></li>
-                        <li class="p-headerbar__menuitem"><a href="#">TRAILER</a></li>
+                        <li class="p-headerbar__menuitem"><a href="page/news.html">NEWS</a></li>
+                        <li class="p-headerbar__menuitem"><a href="page/service.html">SERVICE</a></li>
+                        <li class="p-headerbar__menuitem"><a href="page/works.html">WORKS</a></li>
+                        <li class="p-headerbar__menuitem"><a href="page/company.html">COMPANY</a></li>
+                        <li class="p-headerbar__menuitem"><a href="page/recruit.html">RECRUIT</a></li>
+                        <li class="p-headerbar__menuitem"><a href="page/contact.html">CONTACT</a></li>
                     </ul>
-                    <button class="c-button__cv --header">
-                        PLAY NOW
-                    </button>
                 </nav>
-            </div>
-            <!--2段目-->
-            <div class="p-headerbar__subinner">
-                <button class="p-headerbar__soundswitch" data-js="button" data-name="audioswitch" data-target="#mvmusic">
-                    SOUND OFF<span class="material-icons">volume_off</span>
-                </button>
-                <audio src="assets/images/top/pc/mv.mp3" id="mvmusic" loop muted></audio>
             </div>
         </div>
     </header>
     <!-- Header End -->
 
+    <!-- SPMENUとの被りを考慮し独立している -->
+    <button class="c-hamburger fixed u-display__sp"
+        data-js="button" data-name="hamburger"
+        data-headerid="header" data-menuid="spmenu"
+        data-menubgid="spmenubg">
+        <div class="c-hamburger__inner">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+    <!-- spMenu -->
+    <div class="p-spmenu__wrapper" id="spmenu">
+        <div class="p-spmenu__bg">
+        </div>
+        <div class="p-spmenu">
+        <div class="p-spmenu__inner">
+            <ul class="enff">
+                <li><a href="page/news.html"><span>NEWS</span></a></li>
+                <li><a href="page/service.html"><span>SERVICE</span></a></li>
+                <li><a href="page/works.html"><span>WORKS</span></a></li>
+                <li><a href="page/company.html"><span>COMPANY</span></a></li>
+                <li><a href="page/recruit.html"><span>RECRUIT</span></a></li>
+                <li><a href="page/contact.html"><span>CONTACT</span></a></li>
+            </ul>  
+        </div>
+        </div>
+    </div>
+    <!-- spMenu : END -->
+
     <!-- section : MV -->
     <section class="l-section p-mv" id="mv">
         <div class="p-mv__bg">
-            <div id="video-area">
-                <video id="video" poster="" webkit-playsinline playsinline muted autoplay loop>
-                <source src="assets/images/top/pc/video.mp4" type="video/mp4">
-                <p>動画を再生できる環境ではありません。</p>
-                </video>
-            </div>
-            
+            <picture>
+                <img src="assets/images/mv/pc/hero.png" alt="" width="1440" height="768">
+            </picture>
         </div>
         <div class="l-body p-mv__body">
             <div class="p-mv__inner">
                 <div class="p-mv__texts">
-                    <p class="genre">VR GAME</p>
                     <h2 class="enff" lang="en">
-                        <span>Planet<br>Hunters</span>
+                        <span>WEB DESIGN SPECIALIST</span>
                     </h2>
-                    <p class="sub">惑星を奪還せよ</p>
+                    <p class="sub">お客様の夢を叶える<br class="u-display__sp">Webサイトを制作</p>
                 </div>
-                <div class="l-btn --left p-mv__buttonwrapper">
-                    <a class="c-button__cv --mv" href="#"><span>PLAY NOW</span></a>
-                </div>
-            </div>
-            <div class="p-mv__newswrapper">
-                <div class="p-mv__newsbox">
-                    <p class="loop"><span>2030.02.20</span>バージョン5.6リリース：アバター・アイコンリリースしました。</p>
-                    <!--<p class="loop2"><span>2030.02.20</span>バージョン5.6リリース：アバター・アイコンリリースしました。</p>-->
+                <div class="l-btn --pc-center --sp-left p-mv__buttonwrapper">
+                    <a class="c-button__contact --mv" href="page/contact.html"><span>CONTACT</span></a>
                 </div>
             </div>
-            <div class="c-animobj__scrolldown">
-                <span>Scroll</span>
+            <div class="c-animobj__scrolldown --vertical">
+                <span>SCROLL</span>
             </div>
-        </div>
-        <div class="p-mv__pathobject">
-            <div class="c-pathobject__sec --black"></div>
         </div>
     </section>
     <!-- section:END -->
 
     <main class="l-main" id="top">
-    <!-- section : STORY -->
-    <section class="l-section p-story" id="story">
-        <div class="p-story__bg">
-            <picture>
-                <source srcset="assets/images/top/pc/webp/story_bg.webp" type="image/webp">
-                <img src="assets/images/top/pc/story_bg.jpg" alt="" width="1408" height="1408">
-            </picture>
+    <!-- section : NEWS -->
+    <section class="l-section p-top-news" id="news">
+        <div class="l-body p-top-news__body">
+            <div class="l-inner p-top-news__inner">
+                <div class="p-top-news__content">
+                    <div class="l-heading --pc-left --sp-center p-top-news__heading">
+                        <h2 class="c-title__section --key --pc-left --sp-center">NEWS<span>お知らせ</span></h2>
+                    </div>
+                    <ul class="p-top-news__list">
+                        <li class="p-top-news__box">
+                            <article class="p-top-news__article">
+                                <div class="p-top-news__info">
+                                    <time datetime="2030-02-01">2030.02.01</time>
+                                    <button class="p-top-news__category">お知らせ</button>
+                                </div>
+                                <a href="page/single.html" class="alink">
+                                    <p>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="p-top-news__box">
+                                <article class="p-top-news__article">
+                                <div class="p-top-news__info">
+                                    <time datetime="2030-01-25">2030.01.25</time>
+                                    <button class="p-top-news__category">制作実績</button>
+                                </div>
+                                <a href="page/single.html" class="alink">
+                                    <p>Smoothiesta様のWebサイトを制作いたしました</p>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="p-top-news__box">
+                            <article class="p-top-news__article">
+                                <div class="p-top-news__info">
+                                    <time datetime="2030-01-20">2030.01.20</time>
+                                    <button class="p-top-news__category">採用</button>
+                                </div>
+                                <a href="page/single.html" class="alink">
+                                    <p>Webデザイナーを１名募集中です！</p>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="l-body p-story__body">
-            <div class="p-story__inner">
-                <ul class="p-story__list">
-                    <li class="p-story__box">
-                        <div class="p-story__texts">
-                            <h2 class="c-title__section">STORY</h2>
-                            <h3 class="p-story__title">
-                                奪われた故郷の星を取り戻せ<br>壮大なSFファンタジー
-                            </h3>
-                            <p class="p-story__lead">
-                                銀河歴222年、惑星ネコチャンは、ボスネコ将軍の率いる軍の反乱により完全に制圧された。将軍の側近マンチカンは軍政府に従わない人間を辺境の星ニャゴーへ強制的に追放。食料や資源の乏しいニャゴーでは多くの難民が発生し飢餓に苦しんでいた。ニャゴーのスラム街で育った孤児の姉弟がいた。姉のミケと弟のタマは母親をボスネコ将軍に殺された事実を知る。母の復讐のため、そして故郷の惑星ネコチャンを奪還すべく、ミケとタマはいま行動に出る！
-                            </p>
-                        </div>
-                        <div class="p-story__image">
-                            <picture>
-                                <source srcset="assets/images/top/pc/webp/story1.webp" type="image/webp">
-                                <img src="assets/images/top/pc/story1.jpg" alt="" width="437" height="500">
-                            </picture>
-                        </div>
+    </section>
+    <!-- section:END -->
+
+    <!-- section : service -->
+    <section class="l-section p-top-service" id="service">
+        <div class="l-body p-top-service__body">
+            <div class="p-top-service__inner">
+                <div class="l-heading --center p-top-service__heading">
+                    <h2 class="c-title__section --center --key">SERVICE<span>事業内容</span></h2>
+                </div>
+                <ul class="p-top-service__list">
+                    <li class="p-top-service__box">
+                        <picture>
+                            <img src="assets/images/top/pc/service01.png" alt="work01" width="350" height="220">
+                        </picture>
+                        <h3>Webサイト制作</h3>
+                        <p>新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。</p>
                     </li>
-                    <li class="p-story__box --rev">
-                        <div class="p-story__texts">
-                            <h3 class="p-story__title">
-                                隠された陰謀を暴け<br>衝撃的な事実に驚愕
-                            </h3>
-                            <p class="p-story__lead">
-                                ミケとタマはネコジャラシ作戦により軍政府の最新鋭の小型船チュールを奪うことに成功。チュールのハイテンションワープ星間航行により惑星ネコチャンへあとわずか３時間で到着という時、小惑星帯アビシニアンで謎の救難信号を受信する。意外にも信号の発信源はボスネコ将軍だった。彼は今にも絶えそうなかすれた声で「私はおまえたちミケとタマの父親なのだ」と語る。その瞬間、ミケとタマの育ての親同然で仲間のはずのホワイトオッドアイがタマの背中を刀で切り裂いたのだった......
-                            </p>
-                        </div>
-                        <div class="p-story__image">
-                            <picture>
-                                <source srcset="assets/images/top/pc/webp/story2.webp" type="image/webp">
-                                <img src="assets/images/top/pc/story2.jpg" alt="" width="437" height="500">
-                            </picture>
-                        </div>
+                    <li class="p-top-service__box">
+                        <picture>
+                            <img src="assets/images/top/pc/service02.png" alt="work02" width="350" height="220">
+                        </picture>
+                        <h3>Webサイト運用</h3>
+                        <p>サイトの更新作業や独自のアクセス解析に基づいたサイト改善のご提案をいたします。</p>
+                    </li>
+                    <li class="p-top-service__box">
+                        <picture>
+                            <img src="assets/images/top/pc/service03.png" alt="work03" width="350" height="220">
+                        </picture>
+                        <h3>アプリ開発</h3>
+                        <p>スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </section>
-    <!-- section:END -->
-
-    <!-- section : CTA -->
-    <section class="l-section p-cta" id="cta">
-        <div class="p-cta__bg">
-            <!--
-            <picture>
-                <source srcset="/top/pc/webp/cta_bg.webp" type="image/webp">
-                <img src="/top/pc/cta_bg.jpg" alt="" width="1408" height="1408">
-            </picture>-->
-        </div>
-        <div class="c-pathobject__wrapper --rev">
-            <div class="c-pathobject__sec --black --rev"></div>
-        </div>
-        <div class="l-heading --center p-cta__heading">
-            <h2>ARE YOU READY TO FIGHT?</h2>
-        </div>
-        <div class="l-btn --center p-cta__btn">
-            <button class="c-button__cv --cta">PLAY NOW</button>
-        </div>
-        <div class="c-pathobject__wrapper">
-            <div class="c-pathobject__sec --key"></div>
-        </div>
-    </section>
-    <!-- section:END -->
-
-    <!-- section : トレーラー -->
-    <section class="l-section p-trailer" id="trailer">
-        <div class="l-body p-trailer__body">
-            <div class="l-inner p-trailer__inner">
-                <div class="l-heading --left p-trailer__heading">
-                    <h2 class="c-title__section --black">TRAILER</h2>
-                </div>
-                <div class="p-trailer__video">
-                    <iframe
-                    src="https://www.youtube.com/embed/gUQcMbcYOQ0?si=F4_ALyjgIEuMZOgk"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                <div class="l-btn --center p-top-service__btn">
+                    <a href="page/service.html" class="c-button__more --key">MORE</a>
                 </div>
             </div>
         </div>
     </section>
     <!-- section:END -->
 
-    <!-- section : CTA -->
-    <section class="l-section p-cta" id="cta">
-        <div class="p-cta__bg">
-            <!--
+    <!-- section : works -->
+    <section class="l-section p-top-works" id="works">
+        <div class="l-body p-top-works__body">
+            <div class="p-top-works__inner">
+                <div class="p-top-works__bg">
+                    <div class="p-top-works__bgfill"></div>
+                </div>
+                <!-- スワイパー-->
+                <div class="p-top-works__swiper">
+                    <div class="swiper" data-name="works">
+                        <div class="swiper-wrapper">
+                            <!-- Slides 1 -->
+                            <div class="swiper-slide">
+                                <picture class="p-works__image">
+                                    <img src="assets/images/works/pc/works01.jpg" alt="works1" width="750" height="540">
+                                </picture>
+                            </div>
+                            <!-- Slides 2 -->
+                            <div class="swiper-slide">
+                                <picture class="p-works__image">
+                                    <img src="assets/images/works/pc/works02.jpg" alt="works2" width="750" height="540">
+                                </picture>
+                            </div>
+                            <!-- Slides 3 -->
+                            <div class="swiper-slide">
+                                <picture class="p-works__image">
+                                    <img src="assets/images/works/pc/works03.jpg" alt="works3" width="750" height="540">
+                                </picture>
+                            </div>
+                        </div>
+                    </div><!-- swiper -->
+                        <!-- navigation buttons -->
+                        <div class="swiper-button-prev">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    <!-- pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="p-top-works__infowrapper">
+                    <div class="l-heading --center p-top-works__heading">
+                        <h2 class="c-title__section --key">WORKS<span>制作実績</span></h2>
+                    </div>
+                    <p>様々なジャンルのWebサイト制作が可能です。<br>
+                    ご購入やお申込み数の増加などを実現します！</p>
+                    <div class="l-btn --center p-top-works__btn">
+                        <a href="page/works.html" class="c-button__more --key">MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->
+
+
+    <!-- section : company -->
+    <section class="l-section p-top-company" id="company">
+        <div class="p-top-company__bg">
             <picture>
-                <source srcset="/top/pc/webp/cta_bg.webp" type="image/webp">
-                <img src="/top/pc/cta_bg.jpg" alt="" width="1408" height="1408">
-            </picture>-->
+                <source srcset="assets/images/company/sp/bg_circle_sp.png" media="(max-width: 768px)" width="375" height="574">
+                <img src="assets/images/company/pc/bg_company.png" alt="" width="1300" height="416">
+            </picture>
         </div>
-        <div class="c-pathobject__wrapper --rev">
-            <div class="c-pathobject__sec --key --rev"></div>
+        <div class="l-body p-top-company__body">
+            <div class="p-top-company__inner">
+                <div class="l-heading --center p-top-company__heading">
+    <h2 class="c-title__section --center --key">COMPANY<span>私たちについて</span></h2>
+                </div>
+                <h3>サイトのゴール =<br class="u-display__sp"> 夢を叶えること</h3>
+                <p>お客様の夢を叶えること。<br>
+                それがWebサイトのゴールであり、<br class="u-display__sp">私たちが目指すことです。<br>
+                だからこそちゃんと成果を出すサイトを<br class="u-display__sp">全力でお作りします。<br>
+                お客様の笑顔を見たい。<br>
+                夢を実現する手助けをさせてください。</p>
+                <div class="l-btn --center p-top-company__btn">
+                    <a href="page/company.html" class="c-button__more --key">MORE</a>
+                </div>
+            </div>
         </div>
-        <div class="l-heading --center p-cta__heading">
-            <h2>ARE YOU READY TO FIGHT?</h2>
+    </section>
+    <!-- section:END -->
+
+    <!-- section : recruit -->
+    <section class="l-section p-top-recruit" id="recruit">
+        <div class="l-body p-top-recruit__body">
+            <div class="l-inner p-top-recruit__inner">
+                <div class="p-top-recruit__infowrapper">
+                    <div class="l-heading --center p-top-recruit__heading">
+                        <h2 class="c-title__section --center --key">RECRUIT<span>採用情報</span></h2>
+                    </div>
+                    <p>私たちと一緒に働きませんか？<br>
+                    <div class="l-btn --center p-top-recruit__btn">
+                        <a href="page/contact.html"class="c-button__more --key">MORE</a>
+                    </div>
+                </div>
+                <div class="p-top-recruit__visualwrapper">
+                    <picture>
+                        <img src="assets/images/top/pc/recruit.png" alt="部下を指導する女性" width="666" height="346">
+                    </picture>
+                </div>
+            </div>
         </div>
-        <div class="l-btn --center p-cta__btn">
-            <button class="c-button__cv --cta">PLAY NOW</button>
-        </div>
-        <div class="c-pathobject__wrapper">
-            <div class="c-pathobject__sec --black"></div>
+    </section>
+    <!-- section:END -->
+
+
+
+    <!-- section : CONTACT -->
+    <section class="l-section p-top-contact" id="contact">
+        <div class="l-body p-top-contact__body">
+            <div class="p-top-contact__inner">
+                <div class="l-heading --center p-top-contact__heading">
+                    <h2 class="c-title__section --key">CONTACT<span>お問い合わせ</span></h2>
+                </div>
+                <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。<br>
+                <div class="l-btn --center p-top-contact__btn">
+                    <a href="page/contact.html" class="c-button__more --key">MORE</a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section:END -->
     </main>
 
+
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0" nonce="o5PYbrrW"></script>
+
 
     <!-- footer -->
     <footer id="footer" class="l-section p-footer">
         <div class="l-body p-footer__body">
             <div class="l-inner p-footer__inner">
-                <div class="p-footer__snswrapper">
-                    <!-- c-snsとか作った方がいい -->
-                    <div class="fb">
-                        <div class="fb-like" 
-                        data-href="https://www.your-domain.com/your-page.html" 
-                        data-width=""
-                        data-layout="button_count" 
-                        data-action="like" 
-                        data-size="small"  
-                        data-share="true">
+                <!-- トップに戻るボタン -->
+                <button class="c-gotoTopButton" data-js="gotoTopButton">
+                    <div class="c-gotoTopButton__inner">
+                        <div class="c-gotoTopButton__arrow">
+                            <i class="fa-solid fa-arrow-up"></i>
                         </div>
                     </div>
-                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    
-                    <!--LINE <i class="fa-brands fa-line"></i>-->
-                    <div class="line-it-button" data-lang="ja" data-type="share-b" data-env="REAL" data-url="https://developers.line.biz/ja/docs/line-social-plugins/install-guide/using-line-share-buttons/" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
-                    <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-                    
-                </div>
+                </button>
+                <!-- トップに戻るボタン : END -->                
+                <ul class="p-footer__menulist">
+                    <li class="p-footer__menuitem"><a href="#"   ><span>HOME</span>   </a></li>
+                    <li class="p-footer__menuitem"><a href="page/news.html"   ><span>NEWS</span>   </a></li>
+                    <li class="p-footer__menuitem"><a href="page/service.html"><span>SERVICE</span></a></li>
+                    <li class="p-footer__menuitem"><a href="page/works.html"  ><span>WORKS</span>  </a></li>
+                    <li class="p-footer__menuitem"><a href="page/company.html"><span>COMPANY</span></a></li>
+                    <li class="p-footer__menuitem"><a href="page/recruit.html"><span>RECRUIT</span></a></li>
+                    <li class="p-footer__menuitem"><a href="page/contact.html"><span>CONTACT</span></a></li>
+    
+                </ul>
                 <div class="p-footer__copylight">
-                    <small>©Necopon games</small>
-                </div>
-                <div class="l-btn u-display__sp">
-                    <button class="c-button__cv --footer">PLAY NOW</button>
+                    <a href="#"><small>© PON DESIGN</small></a>
                 </div>
             </div>
         </div>

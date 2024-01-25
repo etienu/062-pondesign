@@ -1,0 +1,230 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    ページ recruit
+//------------------------------------------------
+main{
+//    overflow:hidden;
+}
+.p-recruit {
+    position:relative;
+    background-image : url( "../images/recruit/pc/bg.png" );
+    background-repeat: repeat;
+    background-size: 400px;
+    background-position: 400px;
+
+    .p-recruit__body {
+        margin-top : 90px;
+        margin-bottom : 110px;
+    }
+    .p-recruit__inner {
+        max-width: min( calc(100% - 40px), calc(g.$layout-width-inner) );
+        width: 100%;
+        margin : auto;
+    }
+    .p-recruit__content{
+        width: 100%;
+        display: flex;
+        flex-direction : column;
+        .p-recruit__heading{
+            width: 100%;
+            h2{
+                @include g.fz(72,72);
+                @include g.ls(5);
+                span{
+                    @include g.fz(32,57.6);
+                    @include g.ls(5);
+                }
+            }
+            p{
+                margin-top: 20px;
+                @include g.fz(16,28.8);
+                @include g.ls(5);
+            }
+            display:flex;
+            flex-direction:column;
+        }
+        .p-recruit__visual{
+            margin-top: 40px;
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+        }
+        .p-recruit__infowrapper{
+            margin-top: 70px;
+        }
+        .p-recruit__info{
+            padding: 60px 95px;
+            margin-top : 22px;
+            width: 100%;
+            border : 1px solid g.$color-borderperple;
+            border-radius: 10px;
+            background-color: g.$color-white;
+            h3{
+                @include g.fz(24,43.2,bold);
+                @include g.ls(5);
+                margin-bottom: 30px;
+            }
+            margin-top: 30px;
+            width: 100%;
+            .row{
+                display:flex;
+                flex-direction:row;
+                align-items: center;
+                text-align: left;
+                width: 100%;
+                gap: 16px;
+                padding: 30px 0;
+                border-bottom : 1px solid g.$color-bordergray;
+                @include g.fz(15,27);
+                @include g.ls(5);
+                dt{
+                    width: 20%;
+                    padding: 0px 10px;
+                }
+                dd{
+                    display:flex;
+                    flex-direction : column;
+                    flex-grow : 1;
+                    padding: 0px 10px;
+                    gap: 10px;
+                    
+                }
+            }
+            .p-recruit__btn{
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                margin-top: 50px;
+                p{
+                    padding-top: 5px;
+                    @include g.fz(12,21.6);
+                    @include g.ls(5);
+                }
+            }
+        }
+        .p-recruit__moviewrapper{
+            margin-top : 140px;
+            width: 100%;
+            display : flex;
+            flex-direction : column;
+            iframe{
+                margin-top: 40px;
+                width: 100%;
+                height: 624px;
+            }
+        }
+    }
+
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+}
+
+@include g.mq('-lg') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {      
+.p-recruit {
+    .p-recruit__body {
+        margin-top : 60px;
+        margin-bottom : 80px;
+    }
+    .p-recruit__inner {
+        max-width: calc(100% - 30px);
+    }
+    .p-recruit__content{
+        .p-recruit__heading{
+            width: 100%;
+            h2{
+                @include g.fz(48,57.6);
+                @include g.ls(5);
+                span{
+                    @include g.fz(18,32.4,400);
+                    @include g.ls(5);
+                }
+            }
+            p{
+                margin-top: 16px;
+                @include g.fz(15,27);
+                @include g.ls(5);
+            }
+        }
+        .p-recruit__visual{
+            width: 100vw;
+            margin-left: 50%;
+            transform : translateX( -50vw );
+            margin-top: 40px;
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+        }
+        .p-recruit__infowrapper{
+            margin-top: 40px;
+        }
+        .p-recruit__info{
+            padding: 30px 20px;
+            margin-top : 22px;
+            width: 100%;
+            border : 1px solid g.$color-borderperple;
+            border-radius: 10px;
+            background-color: g.$color-white;
+            h3{
+                @include g.fz(20,36,bold);
+                @include g.ls(5);
+                margin-bottom: 40px;
+            }
+            margin-top: 30px;
+            width: 100%;
+            .row{
+                display:flex;
+                flex-direction:column;
+                align-items: flex-start;
+                width: 100%;
+                gap: 5px;
+                padding: 30px 0;
+                @include g.fz(15,27);
+                @include g.ls(5);
+                dt{
+                    width: 100%;
+                    padding: 0px;
+                    @include g.fz(14,25.2,bold);
+                    @include g.ls(5);
+                }
+                dd{
+                    width: 100%;
+                    display:flex;
+                    flex-direction : column;
+                    padding: 0px;
+                    gap: 10px;
+                    @include g.fz(14,25.2);
+                    @include g.ls(5);
+                }
+            }
+            .p-recruit__btn{
+                margin-top: 40px;
+                p{
+                }
+            }
+        }
+        .p-recruit__moviewrapper{
+            margin-top : 80px;
+            iframe{
+                margin-top: 30px;
+                width: 100%;
+                height: 194px;
+            }
+        }
+    }
+
+}
+            
+}

@@ -18,20 +18,19 @@
 
 .c-title__section{
     position : relative;
-    display : block;
+    display : inline-block;
     color: g.$color-key;
-    @include g.fz(80,80,bold);
-    @include g.ls(5);
-    &:after{
-        position : absolute;
-        content : "";
-        width: 80px;
-        height: 8px;
-        background-color: g.$color-key;
-        left : 0;
-        bottom: -16px;
+    @include g.fz(36,43.2,bold);
+    @include g.ls(2);
+    span{
+        display: block;
+        margin-top: 10px;
+        @include g.fz(13,15.6);
+        @include g.ls(5);
     }
-
+    &.--left{ text-align:left; }
+    &.--center{ text-align:center; }
+    &.--key{ color : g.$color-key; }
     &.--black{
         color : g.$color-black;
         &:after{
@@ -41,16 +40,23 @@
 }
 
 
-@include g.mq('-md') {
-
-.c-title__section{
-    @include g.fz(50,50,bold);
-    @include g.ls(5);
-    &:after{
-        width: 60px;
-        height: 6px;
-        bottom: -16px;
-    }    
+@include g.mq('md-') {
+    .c-title__section{
+        &.--pc-left  { text-align:left; }
+        &.--pc-center{ text-align:center; }
+        &.--pc-right { text-align:right; }
+    }
 }
+
+@include g.mq('-md') {
+.c-title__section{
+    @include g.fz(30,36,bold);
+    @include g.ls(5);
+
+    &.--sp-left  { text-align:left; }
+    &.--sp-center{ text-align:center;  }
+    &.--sp-right { text-align:right;  }
+
     
+}
 }

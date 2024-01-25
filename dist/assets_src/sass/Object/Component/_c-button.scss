@@ -2,6 +2,27 @@
 //------------------------------------------------
 //    ボタン
 //------------------------------------------------
+@mixin c-button-icon__arrowright() {
+    &:after{
+        display:inline-block;
+        position : absolute;
+        content : "";
+        right: 20px;
+        top : 50%;
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 4px 6px;
+        border-left-color: currentColor;
+        border-right: 0;
+        transform : translateY(-50%);
+        transition : transform 0.3s;
+    }
+
+}
+
 .c-button {
     display: inline-block;
     position : relative;
@@ -49,6 +70,66 @@
 }
 
 
+.c-button__more {
+    display: inline-block;
+    position : relative;
+    color :g.$color-white;
+    transition : transform 0.3s, background 0.3s, opacity 0.3s, box-shadow 0.3s;
+    //border : 1px solid g.$color-white;
+    border-radius: 40px;
+    @include g.fz( 14,19.6,bold );
+    padding : 18px 85px;
+
+    &.--key{
+        background : linear-gradient(-90deg, #7633A4 0%, #250D65 50%, #7633A4 100%);
+        background-size : 200% auto;
+    }
+
+    @include c-button-icon__arrowright();
+    &:hover{
+        cursor:pointer;
+        &:not(.--key){
+            opacity: 0.8;
+            box-shadow: 0 1px 4px g.$color-key;
+        }
+        &.--key{
+            background-position : right center;
+            //background : linear-gradient(-90deg, #7633A4 0%, #250D65 100%);
+        }
+        
+        &:after{
+            transform : translateX(2px) translateY(-50%);
+        }
+    }
+}
+
+
+.c-button__contact {
+    display: inline-block;
+    position : relative;
+    background-color : transparent;//RGBA(0,0,0,0.5);
+    color :g.$color-white;
+    transition :  border 0.3s, background-color 0.3s, transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+    border : 1px solid g.$color-white;
+    border-radius: 40px;
+    &.--mv{
+        @include g.fz( 14,19.6,bold );
+        padding : 18px 72px;
+    }
+    @include c-button-icon__arrowright();
+    &:hover{
+        cursor:pointer;
+        opacity: 0.8;
+        //box-shadow: 0 1px 4px g.$color-key;
+        //background-color : g.$color-key;
+        //border : 1px solid g.$color-key;
+        &:after{
+            transform : translateX(2px) translateY(-50%);
+        }
+    }
+}
+
+
 //----------------------------------------
 //  レスポンシブ
 //----------------------------------------
@@ -88,5 +169,12 @@
         //padding : 20px 42px;
     }
 }
+
+.c-button__more {
+    border-radius: 40px;
+    @include g.fz( 14,19.6,bold );
+    @include g.ls( 10 );
+}
+
 
 }

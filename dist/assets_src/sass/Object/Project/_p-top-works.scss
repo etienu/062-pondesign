@@ -1,0 +1,163 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    top - セクション4 works
+//------------------------------------------------
+.p-top-works {
+    position:relative;
+    background-color : g.$color-white;
+    .p-top-works__body {
+        margin-top : 60px;
+        margin-bottom : 40px;
+    }
+    .p-top-works__inner {
+        position:relative;
+        max-width: min( calc(100% - 40px), calc(g.$layout-width-comp - 140px ) );
+        width: 100%;
+        margin : auto;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .p-top-works__bg {
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        .p-top-works__bgfill {
+            width : g.per( 780, 1300 );
+            height: 100%;
+            background-color : g.$color-gray;
+            margin-left: auto;
+        }    
+    }
+    .p-top-works__swiper{
+        position:relative;
+        max-width: 750px;
+        max-height: 540px;
+        margin: 60px 0;
+        width: 100%;
+        .swiper{
+            .swiper-wrapper{
+
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next{
+            &:after{  display:none; }
+            font-size: 40px;
+            color :g.$color-perple;//darkgray;
+            i{
+                //background-color :white;
+                //border-radius:50%;
+            }
+        }
+        .swiper-button-prev{
+            i{
+                //transform:translateX( -50% );
+            }
+        }
+        .swiper-button-next{
+            i{
+                //transform:translateX( 50% );
+            }
+        }
+        .swiper-pagination{
+            //position:relative;
+            text-align:right;
+            padding-right: 8px;
+            bottom: -24px;
+        }
+}
+    .p-top-works__infowrapper{
+        position :relative;
+        max-width: 430px;
+        width :100%;
+        height: 100%;
+        margin : 46px 46px;
+        .p-top-works__heading{
+            width: 100%;
+        }
+        p{
+            margin-top : 30px;
+            @include g.fz(15,27);
+            @include g.ls(5);
+        }
+        .p-top-works__btn{
+            margin-top : 30px;
+        }
+    }
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+}
+
+@include g.mq('-lg') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {      
+    .p-top-works {
+        .p-top-works__body {
+            margin-top : 30px;
+            margin-bottom : 0px;
+        }
+        .p-top-works__inner {
+            position:relative;
+            max-width: calc(100% - 40px);
+            height: 100%;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+        }
+        .p-top-works__bg {
+            position:absolute;
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            align-items:flex-end;
+            .p-top-works__bgfill {
+                width : 100%;
+                height: g.per( 400, 560 );
+                margin-left: 0;
+                margin-top: auto;
+            }    
+        }
+        .p-top-works__swiper{
+            max-width: 750px;
+            max-height: 540px;
+            margin: 0px 0;
+            width: 100%;
+        }
+        .p-top-works__infowrapper{
+            position :relative;
+            max-width: 430px;
+            width :100%;
+            height: 100%;
+            margin : 46px 46px;
+            .p-top-works__heading{
+                width: 100%;
+            }
+            p{
+                margin-top : 30px;
+                @include g.fz(14,25.2);
+                @include g.ls(5);
+                text-align:left;
+            }
+            .p-top-works__btn{
+                margin-top : 30px;
+            }
+        }
+    }
+    }

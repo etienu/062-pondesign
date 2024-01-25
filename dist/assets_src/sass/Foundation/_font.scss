@@ -70,23 +70,41 @@
 */
 //  Josefin Sans
 
-//  Exo
+//  Montserrat
 @font-face {
-    font-family: 'Exo';
-    font-style:normal;
-    font-weight: 600;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
     font-display: block;
-    src: url("../webfonts/googlefonts/Exo/Exo-SemiBold.woff2") format("woff2"),
-    url("../webfonts/googlefonts/Exo/Exo-SemiBold.ttf") format("truetype");
+    src: url("../webfonts/googlefonts/Montserrat/Montserrat-Light.woff2") format("woff2"),
+    url("../webfonts/googlefonts/Montserrat/Montserrat-Light.ttf") format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family: 'Exo';
-    font-style:normal;
-    font-weight: 700;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
     font-display: block;
-    src: url("../webfonts/googlefonts/Exo/Exo-Bold.woff2") format("woff2"),
-    url("../webfonts/googlefonts/Exo/Exo-Bold.ttf") format("truetype");
+    src: url("../webfonts/googlefonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
+    url("../webfonts/googlefonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../webfonts/googlefonts/Montserrat/Montserrat-Medium.woff2") format("woff2"),
+    url("../webfonts/googlefonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-display: block;
+    src: url("../webfonts/googlefonts/Montserrat/Montserrat-Bold.woff2") format("woff2"),
+    url("../webfonts/googlefonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
     font-display: swap;
 }
 

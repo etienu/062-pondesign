@@ -1,0 +1,37 @@
+<%
+var href_home = '../index.html';
+var href_dir = '';
+if( arg['pageid'] =='index'){
+     href_home ='#';
+     href_dir = 'page/'
+}
+%>
+    <!-- footer -->
+    <footer id="footer" class="l-section p-footer">
+        <div class="l-body p-footer__body">
+            <div class="l-inner p-footer__inner">
+                <!-- トップに戻るボタン -->
+                <button class="c-gotoTopButton" data-js="gotoTopButton">
+                    <div class="c-gotoTopButton__inner">
+                        <div class="c-gotoTopButton__arrow">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+                    </div>
+                </button>
+                <!-- トップに戻るボタン : END -->                
+                <ul class="p-footer__menulist">
+                    <li class="p-footer__menuitem"><a href="<%- href_home %>"   ><span>HOME</span>   </a></li>
+                    <li class="p-footer__menuitem"><a href="<%- href_dir %>news.html"   ><span>NEWS</span>   </a></li>
+                    <li class="p-footer__menuitem"><a href="<%- href_dir %>service.html"><span>SERVICE</span></a></li>
+                    <li class="p-footer__menuitem"><a href="<%- href_dir %>works.html"  ><span>WORKS</span>  </a></li>
+                    <li class="p-footer__menuitem"><a href="<%- href_dir %>company.html"><span>COMPANY</span></a></li>
+                    <li class="p-footer__menuitem"><a href="<%- href_dir %>recruit.html"><span>RECRUIT</span></a></li>
+                    <li class="p-footer__menuitem"><a href="<%- href_dir %>contact.html"><span>CONTACT</span></a></li>
+    
+                </ul>
+                <div class="p-footer__copylight">
+                    <a href="<%- href_home %>"><small>© PON DESIGN</small></a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- /footer -->

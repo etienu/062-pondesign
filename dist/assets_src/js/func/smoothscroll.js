@@ -17,7 +17,10 @@ alinks.forEach((anchor) => {
 
         //取得した要素の位置を取得するために、getBoundingClientRect()を呼び出し、ページ上の位置を計算。
         //headerの高さを引いて、スクロール位置がヘッダーの下になるように調整します。
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        let targetPosition = 0;
+        if( target ){
+            targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        }
 
         // window.scrollTo()を呼び出して、スクロール位置を設定します。behaviorオプションをsmoothに設定することで、スムーズなスクロールを実現します。
         window.scrollTo({

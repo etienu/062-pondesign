@@ -85,6 +85,14 @@
     @include l-sec--flags();
 }
 
+//  汎用枠
+.l-wrapper{
+    position: relative;
+    width: 100%;
+    display:flex;
+    @include l-sec--flags();
+}
+
 //----------------------------------------
 //  レスポンシブ
 //----------------------------------------
@@ -94,7 +102,8 @@
 @include g.mq('md-') {
     .l-heading,
     .l-inner,
-    .l-btn{
+    .l-btn,
+    .l-wrapper{
         @include l-sec--pcflags();
     }
 }
@@ -111,7 +120,8 @@
 @include g.mq('-md') {      
     .l-heading,
     .l-inner,
-    .l-btn{
+    .l-btn,
+    .l-wrapper{
         @include l-sec--spflags();
     }
     

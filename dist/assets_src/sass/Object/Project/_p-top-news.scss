@@ -1,0 +1,161 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    top - セクション2 news
+//------------------------------------------------
+.p-top-news {
+    position:relative;
+    //padding-bottom : 30px;
+    background-color : g.$color-white;
+    .p-top-news__body {
+        margin-top : 70px;
+        margin-bottom : 70px;
+    }
+    .p-top-news__inner {
+        max-width: min( calc(100% - 40px), calc(g.$layout-width-inner) );
+        width: 100%;
+        margin : auto;
+        //color : g.$color-white;
+
+    }
+    .p-top-news__content {
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin : auto;
+        gap: 50px;
+    }
+
+    .p-top-news__heading{
+        width: g.per( 120, 1110 );
+    }
+
+    .p-top-news__list{
+        display: flex;
+        flex-direction : column;
+        align-items:center;
+        flex-grow:1;
+        width: 100%;
+        gap: 15px;
+    }
+    .p-top-news__box{
+        width: 100%;
+    }
+    .p-top-news__article{
+        width: 100%;
+        display:flex;
+        flex-direction:row;
+        text-align:left;
+        gap: 20px;
+        @include g.fz(14,25.2);
+        @include g.ls(5);
+        .p-top-news__info{
+            display:flex;
+            flex-direction:row;
+            gap: 20px;
+        }
+        .p-top-news__category{
+            background-color : g.$color-gray;
+            width: 100%;
+            min-width: 80px;
+            max-height: 26px;
+            border-radius: 40px;
+            white-space:nowrap;
+            @include g.fz(12,21.6);
+            @include g.ls(5);
+            display: flex;
+            justify-content : center;
+            align-items : center;
+        }
+        p{
+            width: 100%;
+            flex-grow:1;
+        }
+    }
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+}
+
+@include g.mq('-lg') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {      
+.p-top-news {
+    position:relative;
+    background-color : g.$color-white;
+    .p-top-news__body {
+        margin-top : 40px;
+        margin-bottom : 40px;
+    }
+    .p-top-news__inner {
+        max-width: calc(100% - 30px);
+        width: 100%;
+        margin : auto;
+    }
+    .p-top-news__content {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .p-top-news__heading{
+        width: 100%;
+    }
+
+    .p-top-news__list{
+        display: flex;
+        flex-direction : column;
+        align-items:center;
+        flex-grow:1;
+        width: 100%;
+        gap: 30px;
+    }
+    .p-top-news__box{
+        width: 100%;
+    }
+    .p-top-news__article{
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+        text-align:left;
+        gap: 6px;
+        @include g.fz(14,25.2);
+        @include g.ls(5);
+
+        .p-top-news__info{
+        }
+        time{
+        }
+        .p-top-news__category{
+            background-color : g.$color-gray;
+            width: 100%;
+            max-width : 80px;
+            max-height: 26px;
+            border-radius: 40px;
+            @include g.fz(12,21.6);
+            @include g.ls(5);
+            display: flex;
+            justify-content : center;
+            align-items : center;
+        }
+        p{
+            width: 100%;
+            flex-grow:1;
+        }
+    }
+}
+}

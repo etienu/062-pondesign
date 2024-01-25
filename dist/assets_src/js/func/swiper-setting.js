@@ -47,15 +47,15 @@ export default class swiperGroup {
 
 
     //----------------------------------------
-    //  個別 : studio
+    //  個別 : works
     //----------------------------------------
-    make_studio( i_swiper, i_name ) {
+    make_works( i_swiper, i_name ) {
         const sname = i_swiper + ' .swiper';
         //console.log( "sname"+sname );
         // swiperslider
         this.swipers[i_name] = new Swiper( sname, {
             loop: true,
-            allowTouchMove: true,  //  ドラッグ友好
+            allowTouchMove: true,  //  ドラッグ有効
             //  ページネーション
             pagination: {
                 el: i_swiper +' .swiper-pagination',
@@ -71,7 +71,7 @@ export default class swiperGroup {
             centeredSlides: true, //アクティブなスライドを中央に表示
             spaceBetween: 16,   //スライド間の距離を16pxに
             slidesPerView: 1,   //スライダーのコンテナ上に1枚同時に表示
-            autoplay: false
+            autoplay: true
         });
         this.swipers[i_name].element = document.querySelector(sname);
     }
@@ -85,7 +85,8 @@ export default class swiperGroup {
         switch( i_name )
         {
         //case "trainer": this.make_trainer( ".p-trainer__swiper", i_name );  break;
-        case "studio": this.make_studio( ".p-studio__swiper", i_name );  break;
+        case "works": this.make_works( ".p-top-works__swiper", i_name );  break;
+        //case "studio": this.make_studio( ".p-studio__swiper", i_name );  break;
         //case "price": this.make_works( i_swiper, i_name );  break;
         }
         //this.swipers[i_name].element = i_swiper;    //  js swiperデータ

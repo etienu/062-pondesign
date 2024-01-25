@@ -1,0 +1,15 @@
+<%
+    var nowpagename = arg.page['submv-title-en'];
+    var homeurl = "../"; // arg['baseUrl']
+    var articletitle = "Webデザインニュースサイト「ウェブマガジン」に取材いただきました";
+-%>
+        <div class="l-wrapper --pc-left --sp-center p-breadcrumb">
+            <div class="l-inner p-breadcrumb__inner">
+<% if( arg['pageid'] =="single"){ -%>
+                <a href="<%- homeurl %>" class="alink">HOME</a><span>></span><a href="news.html" class="alink">NEWS</a><span>></span><%- articletitle %>
+<% }else{ -%>
+                <a href="<%- homeurl %>" class="alink">HOME</a><span>></span><%- nowpagename %>
+<% } -%>
+
+            </div>
+        </div>

@@ -1,0 +1,133 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    top - セクション3 service
+//------------------------------------------------
+.p-service {
+    position:relative;
+    background-color : g.$color-white;
+    .p-service__body {
+        margin-top : 70px;
+        margin-bottom : 110px;
+    }
+    .p-service__inner {
+        max-width: min( calc(100% - 40px), calc(g.$layout-width-inner) );
+        width: 100%;
+        margin : auto;
+    }
+    .p-service__heading{
+        width: 100%;
+    }
+
+    .p-service__list{
+        margin-top: 30px;
+        display: flex;
+        flex-direction : column;
+        width: 100%;
+        gap: 60px;
+    }
+    .p-service__box{
+        width: 100%;
+        //max-width: 350px;
+        display:flex;
+        flex-direction:row;
+        gap: 50px;
+        picture{
+            display: flex;
+            max-width: 445px;
+            width: 100%;
+            img{
+                aspect-ratio: 445/280;
+            }
+        }
+        .p-service__info{
+            max-width: 615px;
+            width: 100%;
+            display:flex;
+            flex-direction : column;
+            justify-content: flex-start;
+            text-align:left;
+        }
+
+        h3{
+            margin-top : 15px;
+            @include g.fz(18,21.6,600);
+            @include g.ls(5);
+        }
+        p{
+            margin-top : 15px;
+            @include g.fz(15,27,300);
+            @include g.ls(5);
+            text-align:left;
+        }
+    }
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+}
+
+@include g.mq('-lg') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {      
+.p-service {
+    position:relative;
+    background-color : g.$color-white;
+    .p-service__body {
+        margin-top : 40px;
+        margin-bottom : 80px;
+    }
+    .p-service__inner {
+        max-width: calc(100% - 40px);
+        width: 100%;
+        margin : auto;
+    }
+    .p-service__heading{
+        width: 100%;
+    }
+
+    .p-service__list{
+        //margin-top: 30px;
+        gap: 40px;
+    }
+    .p-service__box{
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+        gap: 20px;
+        picture{
+            display: flex;
+            max-width: 100%;
+            img{
+                aspect-ratio: 345/217;
+            }
+        }
+        .p-service__info{
+            max-width: 100%;
+        }
+
+        h3{
+            margin-top : 0px;
+            text-align: center;
+        }
+        p{
+            margin-top : 15px;
+            @include g.fz(14,25.2,300);
+            @include g.ls(5);
+        }
+    }
+}
+    
+}

@@ -8,8 +8,8 @@
     justify-content: center;
     align-items:center;
 
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     right: 40px;
     bottom : 40px;
@@ -24,7 +24,7 @@
         cursor:pointer;
         opacity: 0.8;
         .c-gotoTopButton__arrow{
-            transform:translate(0, 4px) rotate(45deg);    
+            transform:translate(0, -2px);
         }
     }
     &[data-disp="open"]{
@@ -37,26 +37,17 @@
     }
     .c-gotoTopButton__arrow{
         position:relative;
-        width: 20px;
-        height: 20px;
-        transform:translate(0, 8px) rotate(45deg);
+        width: 16px;
+        height: 16px;
         transition : transform 0.3s;
-        &:before,
-        &:after{
-            left: 0;
-            top : 0;
-            position:absolute;
-            content:"";
-            background-color:g.$color-pink;
-        }
-        &:before{
-            width: 12px;
-            height: 2px;
-        }
-        &:after{
-            width:  2px;
-            height:12px;
-            //transform:rotate(45deg);
+        i{
+            display:block;
+            width: 16px;
+            height: 16px;
+            color : g.$color-black;
+            &:before{
+                transform : translateX(-50%);
+            }
         }
     }    
 }
@@ -77,26 +68,14 @@
 //----------------------------------------
 @include g.mq('-md') {
 .c-gotoTopButton {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     right: 20px;
     bottom : 20px;
     .c-gotoTopButton__arrow{
         position:relative;
         width: 16px;
         height: 16px;
-        &:before,
-        &:after{
-        }
-        &:before{
-            width: 8px;
-            height: 2px;
-        }
-        &:after{
-            width:  2px;
-            height:8px;
-            //transform:rotate(45deg);
-        }
     }    
 
 }

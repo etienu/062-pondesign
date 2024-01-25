@@ -81,7 +81,10 @@ export default class buttons {
         ham.addEventListener("click", () => { this.hamburgerToggle( i_item,elm ); });
         //  ul liのメニューがクリックされたら閉じる
         elm['lia'].forEach((lia) => {
-            lia.addEventListener("click", () => { this.hamburgerClose( i_item, elm ); });
+            lia.addEventListener("click", () => {
+            //  画面見えてから遷移するのがダサイので閉じないでおく
+            //    this.hamburgerClose( i_item, elm );
+            });
         });
     }
 
@@ -159,7 +162,7 @@ export default class buttons {
         //  名称で分岐
         switch( i_name ){
         case "hamburger" : 
-            //this.regist_hamburger( i_item, i_name );
+            this.regist_hamburger( i_item, i_name );
             break;
         case "audioswitch" : 
             this.regist_audioswitch( i_item, i_name );

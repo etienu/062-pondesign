@@ -94,7 +94,9 @@ function imagewebp(done) {
     src(path.resolve(dir.dist, "images/**"))
         // rename処理を追加
         .pipe(rename(function(path) {
-            path.basename += path.extname;
+            //path.basename += path.extname;    //  元拡張子を残す
+            //path.basename = "webp/"+path.basename;
+            path.basename;// += path.extname;   //元の拡張子を消す
         }))
         .pipe(webp({
             // オプションを追加

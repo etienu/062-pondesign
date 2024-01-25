@@ -1,0 +1,50 @@
+<%
+    var nowpage = 0;    //  現在のページ
+    //let url = new URL(window.location.href);  //  windowがない
+    //let value = url.searchParams.get("p");
+    //if( value ) nowpage = value;
+    var i = 0;
+    var incpath = arg[''];
+    var nary = [];
+    for( i = 0 ; i < 60 ; i++ ){
+        nary.push( { dy:"2030", dm:"01",dd:"14", cat:"お知らせ", title:"テキストが入りますテキストが入りますテキストが入りますテキストが入ります" } );
+    }
+    nary[0] = { dy:"2030", dm:"02",dd:"01", cat:"お知らせ", title:"Webデザインニュースサイト「ウェブマガジン」に取材いただきました" };
+    nary[1] = { dy:"2030", dm:"01",dd:"25", cat:"制作実績", title:"Smoothiesta様のWebサイトを制作いたしました" };
+    nary[2] = { dy:"2030", dm:"01",dd:"20", cat:"採用", title:"Webデザイナーを１名募集中です！" };
+    nary[3] = { dy:"2030", dm:"01",dd:"15", cat:"お知らせ", title:"（折り返しテキストの場合）テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります" };
+-%>
+    <!-- section : NEWS -->
+    <section class="l-section p-news" id="news">
+        <div class="l-body p-news__body">
+            <div class="l-inner p-news__inner">
+                <div class="p-news__content">
+                    <ul class="p-news__list">
+<% for( i = 0 ; i < 20 ; i ++ ){
+    var ai = nowpage*20+i;  //  記事番号(article index)
+    if( nary.length <= ai ) break;
+-%>
+                        <li class="p-news__box">
+<%- include(arg['incdir']+'/parts/_news_headline', { narg: nary[ai] }) %>
+                        </li>
+<% } -%>
+                    </ul>
+                    <div class="l-wrapper --center">
+<% if( 20 < nary.length ){ -%>
+                        <div class="p-news__pagination">
+<% for( i = 0 ; i < nary.length / 20 ; i ++ ){ -%>
+<% var pnflg = "";
+ if( nowpage == i ){ pnflg = " --nowpage"; }
+-%>
+                            <a href="news.html?p=<%- (i+1) %>">
+                                <div class="p-news__paginationbtn<%- pnflg %>"><%- (i+1) -%></div>
+                            </a>
+                            <% } -%>
+                        </div>
+<% } -%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->

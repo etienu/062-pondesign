@@ -1,0 +1,67 @@
+<%
+    var incdir = arg['incdir'];
+    var nowpage = 0;    //  現在のページ
+-%>
+    <!-- section : RECRUIT -->
+    <section class="l-section p-recruit" id="recruit">
+        <div class="l-body p-recruit__body">
+            <div class="l-inner p-recruit__inner">
+                <div class="p-recruit__content">
+                    <div class="l-heading p-recruit__heading">
+                        <h2 class="c-title__section">Enjoy <br class="u-display__sp">Creation for <br class="u-display__sp">Client
+                            <span>楽しむ心が良いモノを生む</span>
+                        </h2>
+                        <p>心を弾ましながら<br>
+                        夢いっぱいのサイトを作ろう！<br>
+                        お客様も自分もみんなが幸せになれるように</p>
+                    </div>
+                    <picture class="p-recruit__visual">
+                        <source srcset="<%- incdir %>assets/images/recruit/pc/recruit_hero.png" media="(max-width: 768px)" width="375" height="214">
+                        <img src="<%- incdir %>assets/images/recruit/pc/recruit_hero.png" alt="社内の日常風景" width="1440" height="824">
+                    </picture>
+                    <div class="p-recruit__infowrapper">
+                        <h2 class="c-title__section">募集中の職種</h2>
+                        <dl class="p-recruit__info">
+                            <h3>Webデザイナー</h3>
+                            <div class="row">
+                                <dt>雇用形態</dt>
+                                <dd>正社員</dd>
+                            </div>
+                            <div class="row">
+                                <dt>給与</dt>
+                                <dd>400万円〜600万円（経験・能力を考慮のうえ優遇）</dd>
+                            </div>
+                            <div class="row">
+                                <dt>仕事内容</dt>
+                                <dd>Webサイトの制作。サイトのデザインとコーディングを担当していただきます。</dd>
+                            </div>
+                            <div class="row">
+                                <dt>勤務時間</dt>
+                                <dd>10:00 〜 19:00（実働8時間、休憩1時間）</dd>
+                            </div>
+                            <div class="row">
+                                <dt>応募資格</dt>
+                                <dd>
+                                    <p>PhotoshopやXDなどのデザインツールの使い方を理解し、コーディングの基礎スキルがある方。実務未経験でも学校や独学で学習した方を歓迎します。</p>
+                                    <p>・デザインやコーディングを楽しめる方<br>
+                                        ・常にアンテナを張って積極的にトレンドや最新の技術を取り入れる方<br>
+                                        ・お客様と一緒に楽しみながら高い目標を目指せる方</p>
+                                </dd>
+                            </div>
+                            <div class="l-btn --center p-recruit__btn">
+                                <a href="contact.html" class="c-button__more --key">応募する</a>
+                            <p>求人サイトへ遷移します</p>
+                            </div>
+            
+                        </dl>
+                    </div>
+                    <div class="p-recruit__moviewrapper">
+                        <h3 class="c-title__section">社内ムービー</h3>
+                        <iframe
+                        src="https://www.youtube.com/embed/UQjKWQ1iHvE?si=U1WzT4VvovMZ56_H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->

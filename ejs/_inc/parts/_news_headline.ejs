@@ -1,0 +1,13 @@
+<%
+    var dt = narg['dy']+'-'+narg['dm']+'-'+narg['dd'];
+    var dtt= narg['dy']+'.'+narg['dm']+'.'+narg['dd'];
+-%>
+                            <article class="p-news__article">
+                                <div class="p-news__info">
+                                    <time datetime="<%- dt %>"><%- dtt %></time>
+                                    <button class="p-news__category"><%- narg['cat'] %></button>
+                                </div>
+                                <a href="single.html" class="alink">
+                                    <p><%- narg['title'] %></p>
+                                </a>
+                            </article>

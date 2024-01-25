@@ -4,8 +4,9 @@
     width: 60px;
     height: 60px;
     margin: 0;
+    //margin-right: 4px;
     transition: opacity 0.3s;
-    background-color: g.$color-perple;
+    //background-color: g.$color-perple;
     //  独立メニュー
     &.fixed{
         position: fixed;

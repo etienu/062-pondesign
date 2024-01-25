@@ -5,9 +5,9 @@
 /*  基本となるコンテンツ幅 */
 $layout-width-comp:1440px; //  デザインカンプ幅
 $layout-width-inner:1110px;//   インナー幅 : メイン
-$layout-width-comp-sp:390px; //  デザインカンプ幅-sp
-$header-height:110px;
-$header-height-sp:80px;
+$layout-width-comp-sp:375px; //  デザインカンプ幅-sp
+$header-height:86px;
+$header-height-sp:64px;
 
 /*  メニューバー二段目がある場合 */
 $header-second-height-sp:0px;  /*  未使用の場合0に */
@@ -31,18 +31,23 @@ $font-KosugiMaru: 'Kosugi Maru';
 $font-MPlus1p: 'M PLUS 1p';
 $font-YuMincho: 'Yu Mincho';
 $font-Josefin: 'Josefin Sans';
+$font-Montserrat: 'Montserrat';
 $font-Exo: 'Exo';
 
 /*  基本 */
-/*  英数字用、日本語用の順 */
-$baseFont: $font-Exo, 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+/*  英数字用、日本語用の順
+    ※全て英文字フォント対応したいが、カンプによって
+    デザインは英文字、文章は普通の日本語フォト英文字と分かれている事があるので
+    全自動対応すると逆に面倒くさい。要確認。
+    ・記事など一部の不確定文章のみであれば、自動対応でも構わない。
+ */
+$baseFont: $font-Montserrat,'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 //$baseFont: 'Zen Kaku Gothic Antique', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 
-
 /*  用途別フォント */
+$font-eng: $font-Montserrat, $baseFont;
 $font-title: $font-YuMincho, $baseFont; /*  タイトルなどカッコつける文字 */
 $font-lead: $baseFont; /*  普通の文章 */
-$font-eng: $font-Josefin, $baseFont;
 $font-number: $font-Futura, $baseFont;
 
 /* --------------------------------------------

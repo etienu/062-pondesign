@@ -61,7 +61,8 @@ _:lang(x)::-ms-backdrop, body {
 //  英文字
 .enff{
     //font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Exo', sans-serif;
+    //font-family: 'Exo', sans-serif;
+    font-family: g.$font-eng;
     &.--i{
         font-style : italic;
     }
@@ -69,11 +70,11 @@ _:lang(x)::-ms-backdrop, body {
 
 /* hrefリンクの基本的なCSS */
 .alink{
-    color : g.$color-hreflink;
-    text-decoration: underline;
+    //color : g.$color-hreflink;
     transition : opacity 0.3s;
     &:hover{
-        opacity: 0.7;
+        text-decoration: underline;
+        //opacity: 0.7;
     }
 }
 
@@ -88,9 +89,9 @@ img{
 }
 
 /*
-body{
 //  低コストタブレット対応
 //  設定すると768～1080間で縮小発生しレスポンシブ不要になる
+body{
 //	min-width: 1080px;
 }
 */
@@ -99,7 +100,8 @@ body{
    375px以下はbody幅を固定して縮小する、 */
 @media screen and ( max-width: 375px ){
     html {
-        min-width: 375px;
+        //min-width: 375px;
+        //overflow:hidden;
     }
 }
 /*--------------------------------

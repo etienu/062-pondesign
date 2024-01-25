@@ -1,0 +1,49 @@
+<%
+var incdir = arg['incdir'];
+var pagedir = "";
+if( arg['pageid'] == 'index' ){
+    incdir = "";
+    pagedir = "page/";
+}
+-%>
+    <!-- Header Start -->
+    <header class="l-header" data-js="header">
+        <div class="p-headerbar" id="header">
+            <div class="p-headerbar__inner">
+<% if(arg['pageid']=='index'){ %>
+                <a href="#">
+                    <h1 class="logo enff">
+<% }else if( arg['pageid']=='single' ){ %>
+                <a href="<%- incdir %>index.html">
+                    <div class="logo enff">
+<% }else{ %>
+                <a href="<%- incdir %>index.html">
+                    <h1 class="logo enff">
+<% } %>
+                        <picture>
+                            <source srcset="<%- incdir %><%- arg['dir']['img'] %>/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="12.96">
+                            <img src="<%- incdir %><%- arg['dir']['img'] %>/header/pc/logo.svg" alt="<%- arg['site']['title'] %>" width="161" height="17">
+                        </picture>
+<% if(arg['pageid']=='index'){ %>
+                    </h1>
+<% }else if( arg['pageid']=='single' ){ %>
+                    </div>
+<% }else{ %>
+                    </h1>
+<% } %>
+                </a>
+                
+                <nav class="p-headerbar__nav">
+                    <ul class="p-headerbar__menulist">
+                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>news.html">NEWS</a></li>
+                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>service.html">SERVICE</a></li>
+                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>works.html">WORKS</a></li>
+                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>company.html">COMPANY</a></li>
+                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>recruit.html">RECRUIT</a></li>
+                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->

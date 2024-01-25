@@ -1,0 +1,47 @@
+<%# ----------------------------------------------------
+#
+#   EJSテンプレート
+#
+------------------------------------------------------ -%>
+<%
+var ary = {
+    baseUrl   : './',
+    incdir    : '../',
+    pageid    : 'single',
+    page    : json['single'],
+    site    : json['site'],
+    dir     : json['dir'],
+    meta    : json['meta']
+ };
+-%>
+<%- include(ary['incdir']+'_inc/base/_data', { baseUrl : ary['baseUrl'] }) -%>
+<!DOCTYPE html>
+<html lang="ja">
+<%-
+  include(ary['incdir']+'_inc/base/_head', { arg: ary })
+%>
+
+<body>
+<%- include(ary['incdir']+'_inc/parts/_loading', { arg:ary }) -%>
+
+<%- include(ary['incdir']+'_inc/base/_header', { arg:ary }) -%>
+
+<%- include(ary['incdir']+'_inc/parts/_hamburger', { arg:ary }) -%>
+<%- include(ary['incdir']+'_inc/parts/_spmenu', { arg:ary }) -%>
+<%- include(ary['incdir']+'_inc/section/_submv', { arg:ary }) -%>
+<%- include(ary['incdir']+'_inc/parts/_breadcrumb', { arg:ary } ) -%>
+
+    <main class="l-main" id="top">
+<%- include(ary['incdir']+'_inc/section/_single', { arg:ary }) -%>
+
+<%- include(ary['incdir']+'_inc/section/_top_contact', { arg:ary }) -%>
+    </main>
+    <%# フッター用facebookボタンプラグイン %>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0" nonce="o5PYbrrW"></script>
+
+<%- include(ary['incdir']+'_inc/base/_footer', { arg:ary }) -%>
+
+</body>
+
+</html>

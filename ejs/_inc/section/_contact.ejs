@@ -1,0 +1,102 @@
+<%
+    var incdir = arg['incdir'];
+    var nowpage = 0;    //  現在のページ
+-%>
+    <!-- section : CONTACT -->
+    <section class="l-section p-contact" id="contact">
+        <div class="l-body p-contact__body">
+            <div class="l-inner p-contact__inner">
+                <div class="p-contact__content">
+                    <div class="l-heading p-contact__heading">
+                        <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
+                    </div>
+                    <form class="c-form p-contact__form" action="">
+                        <dl>
+                            <div class="row">
+                                <dt class="c-form__itemname required">お問い合わせ種別</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio1" name="registor" value="business" checked/>
+                                            <label for="registor_form_radio1">お仕事のご依頼・ご相談</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio2" name="registor" value="proprietor"/>
+                                            <label for="registor_form_radio2">お見積りのご依頼</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio3" name="registor" value="job-seeking"/>
+                                            <label for="registor_form_radio3">採用について</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio4" name="registor" value="other"/>
+                                            <label for="registor_form_radio4">その他</label>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_name">お名前</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" class="w3" id="registor_form_name" name="registor" required value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_company">会社名</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" class="w3" id="registor_form_company" name="registor" required value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_mail">メールアドレス</label>
+                                </dt>
+                                <dd>
+                                    <input type="email" class="w3" id="registor_form_mail" name="registor" required value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname">
+                                    <label form="registor_form_tel">電話番号<span>（半角数字ハイフンなし）</span></label>
+                                </dt>
+                                <dd>
+                                    <input type="tel" class="w2" id="registor_form_tel" name="registor" value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_textarea">お問い合わせ内容</label>
+                                </dt>
+                                <dd>
+                                    <textarea class="w6" id="registor_form_textarea" name="registor" required value="" placeholder="お問い合わせ内容を具体的にご記入くださいませ。"></textarea>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_where">PON DESIGNをどちらでお知りになりましたか？</label>
+                                </dt>
+                                <dd>
+                                    <select class="w3" id="registor_form_where" name="registor" required>
+                                        <option value>選択してください</option>
+                                        <option value="Google/Yahoo検索">Google/Yahoo検索</option>
+                                        <option value="SNS">SNS</option>
+                                        <option value="ブログ">ブログ</option>
+                                        <option value="友人や知人">友人や知人</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-form__submitwrapper">
+                            <button type="submit" class="c-button__more --key submit">送信する</button>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->

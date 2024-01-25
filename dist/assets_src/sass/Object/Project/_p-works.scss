@@ -1,0 +1,142 @@
+@use '../../global' as g;
+//------------------------------------------------
+//    top - セクション3 service
+//------------------------------------------------
+.p-works {
+    position:relative;
+    background-color : g.$color-white;
+    .p-works__body {
+        margin-top : 70px;
+        margin-bottom : 110px;
+    }
+    .p-works__inner {
+        max-width: min( calc(100% - 40px), calc(g.$layout-width-inner) );
+        width: 100%;
+        margin : auto;
+    }
+    .p-works__heading{
+        width: 100%;
+    }
+
+    .p-works__list{
+        margin-top: 30px;
+        display: grid;
+        grid-template-rows : 1fr;   //  縦
+        grid-template-columns: repeat( 3, 350px );  //  横
+        grid-auto-flow: row;
+        grid-auto-rows:object-fit;
+        column-gap: 30px; // 横間隔
+        row-gap: 30px; // 縦間隔
+        //gridアイテムの位置指定
+        grid-column : 1/3; // 横ライン
+        grid-row : 1/3; // 縦ライン
+    }
+    .p-works__box{
+        width: 100%;
+        max-width: 350px;
+        display:flex;
+        flex-direction:column;
+        a{
+            display:flex;
+            flex-direction:column;
+            gap: 15px;
+            transition : opacity 0.3s, box-shadow 0.3s;
+            &:hover{
+                opacity : 0.8;
+                box-shadow : 0 0px 16px RGBA(0,0,0,0.3),
+                0 0px 6px RGBA(0,0,0,0.6);
+            }
+        }
+        picture{
+            display: flex;
+            max-width: 350px;
+            width: 100%;
+            img{
+                aspect-ratio: 350/238;
+            }
+        }
+        .p-works__info{
+            max-width: 100%;
+            width: 100%;
+        }
+
+        h3{
+            @include g.fz(16,28.8,400);
+            @include g.ls(5);
+        }
+    }
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+    .p-works {
+        .p-works__list{
+            grid-template-rows : 1fr;   //  縦
+            grid-template-columns: repeat( 2, 350px );  //  横
+            justify-content:center;
+        }
+    }
+}
+
+@include g.mq('-lg') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {      
+.p-works {
+    position:relative;
+    background-color : g.$color-white;
+    .p-works__body {
+        margin-top : 40px;
+        margin-bottom : 80px;
+    }
+    .p-works__inner {
+        max-width: calc(100% - 40px);
+        width: 100%;
+        margin : auto;
+    }
+    .p-works__heading{
+        width: 100%;
+    }
+
+    .p-works__list{
+        width: 100%;
+        margin-top: 0px;
+        grid-template-rows : 1fr;   //  縦
+        grid-template-columns: repeat( 1, 100% );  //  横
+    }
+    .p-works__box{
+        width: 100%;
+        max-width: 100%;
+        display:flex;
+        flex-direction:column;
+        a{
+        }
+        picture{
+            //display: flex;
+            max-width: 100%;
+            //width: 100%;
+            img{
+                //width: 100%;
+                //height: 100%;
+                //aspect-ratio: 350/238;
+            }
+        }
+
+        h3{
+        }
+    }
+}
+    
+}

@@ -1,0 +1,25 @@
+<%
+var incdir = arg['incdir'];
+if( arg['pageid'] == 'index' ){
+    incdir = "";
+}
+%>
+    <!-- section : SUBMV -->
+    <section class="l-section p-submv" id="submv">
+        <div class="p-submv__bg">
+            <picture>
+                <img src="<%- incdir %>assets/images/mv/pc/hero.png" alt="" width="1440" height="768">
+            </picture>
+        </div>
+        <div class="l-body p-submv__body">
+            <div class="p-submv__inner">
+                <div class="p-submv__texts">
+                    <div class="p-submv__title enff" lang="en">
+                        <span><%- arg['page']['submv-title-en'] %></span>
+                    </div>
+                    <p class="sub"><%- arg['page']['submv-title-jp'] %></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->

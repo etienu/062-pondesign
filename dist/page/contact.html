@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>お問い合わせ | PON DESIGN</title>
+    <meta name="description" content="お客様の夢を叶えるWebサイトを制作">
+	<meta name="keywords" content="">
+
+	
+	<link rel="shortcut icon" href="../assets/images/common/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="../assets/images/common/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="../assets/images/common/favicon/android-touch-icon.png" sizes="192x192">
+
+    <!-- OGP -->
+    <meta property='og:type' content='website'>
+    <meta property='og:title' content="PON DESIGN">
+    <meta property='og:url' content="https://webdesigner-go.com/coding-practice/advanced/">
+    <meta property='og:description'
+    content="お客様の夢を叶えるWebサイトを制作">
+    <meta property="og:image" content="../assets/images/common/ogp.png">
+
+	<!-- noindex -->
+    <meta name="robots" content="noindex,nofollow">
+
+    <!-- URL正規化 -->
+    <link rel="canonical" href="\">
+
+	<!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
+	<script src="../assets/lib/gsap/gsap.min.js" defer></script>
+	<script src="../assets/lib/gsap/ScrollTrigger.min.js" defer></script>    
+	<script src="../assets/lib/swiper/swiper-bundle.min.js" defer></script>    
+	<script src="../assets/js/bundle.js?v=1" defer></script>
+    <!-- css  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css?v=1">
+
+	<!-- Font -->
+</head>
+<!-- Head : END -->
+
+<body>
+    <!-- loading -->
+    <div class="l-loader" data-js="loadingscreen">
+
+          <div class="pixel-spinner">
+            <div class="pixel-spinner-inner"></div>
+          </div>
+    
+        <div class="load-text load-blink load-absolute">Loading...</div>
+    </div>
+
+    <!-- Header Start -->
+    <header class="l-header" data-js="header">
+        <div class="p-headerbar" id="header">
+            <div class="p-headerbar__inner">
+
+                <a href="../index.html">
+                    <h1 class="logo enff">
+
+                        <picture>
+                            <source srcset="../assets/images/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="12.96">
+                            <img src="../assets/images/header/pc/logo.svg" alt="PON DESIGN" width="161" height="17">
+                        </picture>
+
+                    </h1>
+
+                </a>
+                
+                <nav class="p-headerbar__nav">
+                    <ul class="p-headerbar__menulist">
+                        <li class="p-headerbar__menuitem"><a href="news.html">NEWS</a></li>
+                        <li class="p-headerbar__menuitem"><a href="service.html">SERVICE</a></li>
+                        <li class="p-headerbar__menuitem"><a href="works.html">WORKS</a></li>
+                        <li class="p-headerbar__menuitem"><a href="company.html">COMPANY</a></li>
+                        <li class="p-headerbar__menuitem"><a href="recruit.html">RECRUIT</a></li>
+                        <li class="p-headerbar__menuitem"><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- SPMENUとの被りを考慮し独立している -->
+    <button class="c-hamburger fixed u-display__sp"
+        data-js="button" data-name="hamburger"
+        data-headerid="header" data-menuid="spmenu"
+        data-menubgid="spmenubg">
+        <div class="c-hamburger__inner">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+    <!-- spMenu -->
+    <div class="p-spmenu__wrapper" id="spmenu">
+        <div class="p-spmenu__bg">
+        </div>
+        <div class="p-spmenu">
+        <div class="p-spmenu__inner">
+            <ul class="enff">
+                <li><a href="news.html"><span>NEWS</span></a></li>
+                <li><a href="service.html"><span>SERVICE</span></a></li>
+                <li><a href="works.html"><span>WORKS</span></a></li>
+                <li><a href="company.html"><span>COMPANY</span></a></li>
+                <li><a href="recruit.html"><span>RECRUIT</span></a></li>
+                <li><a href="contact.html"><span>CONTACT</span></a></li>
+            </ul>  
+        </div>
+        </div>
+    </div>
+    <!-- spMenu : END -->
+
+    <!-- section : SUBMV -->
+    <section class="l-section p-submv" id="submv">
+        <div class="p-submv__bg">
+            <picture>
+                <img src="../assets/images/mv/pc/hero.png" alt="" width="1440" height="768">
+            </picture>
+        </div>
+        <div class="l-body p-submv__body">
+            <div class="p-submv__inner">
+                <div class="p-submv__texts">
+                    <div class="p-submv__title enff" lang="en">
+                        <span>CONTACT</span>
+                    </div>
+                    <p class="sub">お問い合わせ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->
+        <div class="l-wrapper --pc-left --sp-center p-breadcrumb">
+            <div class="l-inner p-breadcrumb__inner">
+                <a href="../" class="alink">HOME</a><span>></span>CONTACT
+
+            </div>
+        </div>
+
+    <main class="l-main" id="top">
+    <!-- section : CONTACT -->
+    <section class="l-section p-contact" id="contact">
+        <div class="l-body p-contact__body">
+            <div class="l-inner p-contact__inner">
+                <div class="p-contact__content">
+                    <div class="l-heading p-contact__heading">
+                        <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
+                    </div>
+                    <form class="c-form p-contact__form" action="">
+                        <dl>
+                            <div class="row">
+                                <dt class="c-form__itemname required">お問い合わせ種別</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio1" name="registor" value="business" checked/>
+                                            <label for="registor_form_radio1">お仕事のご依頼・ご相談</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio2" name="registor" value="proprietor"/>
+                                            <label for="registor_form_radio2">お見積りのご依頼</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio3" name="registor" value="job-seeking"/>
+                                            <label for="registor_form_radio3">採用について</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="registor_form_radio4" name="registor" value="other"/>
+                                            <label for="registor_form_radio4">その他</label>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_name">お名前</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" class="w3" id="registor_form_name" name="registor" required value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_company">会社名</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" class="w3" id="registor_form_company" name="registor" required value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_mail">メールアドレス</label>
+                                </dt>
+                                <dd>
+                                    <input type="email" class="w3" id="registor_form_mail" name="registor" required value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname">
+                                    <label form="registor_form_tel">電話番号<span>（半角数字ハイフンなし）</span></label>
+                                </dt>
+                                <dd>
+                                    <input type="tel" class="w2" id="registor_form_tel" name="registor" value=""/>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_textarea">お問い合わせ内容</label>
+                                </dt>
+                                <dd>
+                                    <textarea class="w6" id="registor_form_textarea" name="registor" required value="" placeholder="お問い合わせ内容を具体的にご記入くださいませ。"></textarea>
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="c-form__itemname required">
+                                    <label form="registor_form_where">PON DESIGNをどちらでお知りになりましたか？</label>
+                                </dt>
+                                <dd>
+                                    <select class="w3" id="registor_form_where" name="registor" required>
+                                        <option value>選択してください</option>
+                                        <option value="Google/Yahoo検索">Google/Yahoo検索</option>
+                                        <option value="SNS">SNS</option>
+                                        <option value="ブログ">ブログ</option>
+                                        <option value="友人や知人">友人や知人</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="c-form__submitwrapper">
+                            <button type="submit" class="c-button__more --key submit">送信する</button>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->
+
+    </main>
+
+
+    <!-- footer -->
+    <footer id="footer" class="l-section p-footer">
+        <div class="l-body p-footer__body">
+            <div class="l-inner p-footer__inner">
+                <!-- トップに戻るボタン -->
+                <button class="c-gotoTopButton" data-js="gotoTopButton">
+                    <div class="c-gotoTopButton__inner">
+                        <div class="c-gotoTopButton__arrow">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+                    </div>
+                </button>
+                <!-- トップに戻るボタン : END -->                
+                <ul class="p-footer__menulist">
+                    <li class="p-footer__menuitem"><a href="../index.html"   ><span>HOME</span>   </a></li>
+                    <li class="p-footer__menuitem"><a href="news.html"   ><span>NEWS</span>   </a></li>
+                    <li class="p-footer__menuitem"><a href="service.html"><span>SERVICE</span></a></li>
+                    <li class="p-footer__menuitem"><a href="works.html"  ><span>WORKS</span>  </a></li>
+                    <li class="p-footer__menuitem"><a href="company.html"><span>COMPANY</span></a></li>
+                    <li class="p-footer__menuitem"><a href="recruit.html"><span>RECRUIT</span></a></li>
+                    <li class="p-footer__menuitem"><a href="contact.html"><span>CONTACT</span></a></li>
+    
+                </ul>
+                <div class="p-footer__copylight">
+                    <a href="../index.html"><small>© PON DESIGN</small></a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- /footer -->
+
+</body>
+
+</html>
