@@ -1758,6 +1758,7 @@ pixel-spinner, .pixel-spinner * {
   z-index: 999;
 }
 .c-hamburger .c-hamburger__inner {
+  display: block;
   width: 100%;
   height: 100%;
   transform: translateY(-1px);
@@ -1767,7 +1768,7 @@ pixel-spinner, .pixel-spinner * {
   align-items: center;
   gap: 4px;
 }
-.c-hamburger span {
+.c-hamburger .bar {
   top: 1px;
   width: 28px;
   height: 4px;
@@ -1779,13 +1780,13 @@ pixel-spinner, .pixel-spinner * {
   cursor: pointer;
   opacity: 0.8;
 }
-.c-hamburger[data-open=open] span:nth-child(1) {
+.c-hamburger[data-open=open] .bar:nth-child(1) {
   transform: rotate(135deg) translate(5px, -6px);
 }
-.c-hamburger[data-open=open] span:nth-child(2) {
+.c-hamburger[data-open=open] .bar:nth-child(2) {
   opacity: 0;
 }
-.c-hamburger[data-open=open] span:nth-child(3) {
+.c-hamburger[data-open=open] .bar:nth-child(3) {
   transform: rotate(-135deg) translate(5px, 6px);
 }
 
@@ -2164,10 +2165,12 @@ pixel-spinner, .pixel-spinner * {
   pointer-events: auto;
 }
 .c-gotoTopButton .c-gotoTopButton__inner {
+  display: block;
   position: relative;
   margin: auto;
 }
 .c-gotoTopButton .c-gotoTopButton__arrow {
+  display: block;
   position: relative;
   width: 16px;
   height: 16px;

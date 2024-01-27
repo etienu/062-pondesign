@@ -36,9 +36,6 @@ var anim_gsap = /*#__PURE__*/function () {
     value: function eventRegistration(i_common) {
       //  共有変数クラスの確保
       this.common = i_common;
-      //this.registanim__intro__txtmarker();
-      //this.registanim__heading_eff();
-
       this.set_fadein();
       this.set_fadein_up();
       this.set_scrolldisp();
@@ -200,8 +197,6 @@ var anim_gsap = /*#__PURE__*/function () {
       var elms = document.querySelectorAll('[data-eff="fadein"]');
       if (elms.length <= 0) return;
       elms.forEach(function (elm) {
-        //let tarid = "#"+elm.dataset.targetid;
-        //let tar = document.querySelector(tarid);
         gsap.fromTo(elm,
         // アニメーションさせる要素
         {
@@ -252,24 +247,6 @@ var anim_gsap = /*#__PURE__*/function () {
 
         //  要素にセットしておく
         elm.gsaptl_fadeinUp = tl;
-
-        /*
-            gsap.fromTo(
-                elm, // アニメーションさせる要素
-                { autoAlpha: 0, y:60 },
-                {
-                    duration : 0.5,
-                    y: 0, // アニメーション後の縦位置(上に100px)
-                    autoAlpha: 1, // アニメーション後に出現(透過率0)
-                    scrollTrigger: {
-                      trigger: elm, // アニメーションが始まるトリガーとなる要素
-                      //toggleActions: "play none none reverse", // 上スクロールで戻る
-                      start: "top 90%", // アニメーションの開始位置
-                      //markers: true, // マーカー表示
-                    },
-                }
-            );  
-        */
       });
     }
 
@@ -311,15 +288,8 @@ var anim_gsap = /*#__PURE__*/function () {
       var elms = document.querySelectorAll('[data-eff="txtmarker"]');
       if (elms.length <= 0) return;
       elms.forEach(function (elm) {
-        //let elmafter = getComputedStyle(elm, "::after");
-        //console.log( elmafter);
-        //gsap.set(elmafter, { opacity: 0 });
-        //gsap.set(elm, { opacity: 0 });
         var tl = gsap.timeline();
-        tl.
-        //to( elm,
-        //    { autoAlpha:1, y:0, duration:.5, stagger:.1 })
-        to(elm, {
+        tl.to(elm, {
           autoAlpha: 1,
           y: 0,
           duration: 0.5,
@@ -334,10 +304,7 @@ var anim_gsap = /*#__PURE__*/function () {
         }).to(elm, {
           '--translateX': '0%',
           duration: 0.5
-        })
-        //.to( elm,
-        //    { '--translateX':'50%', duration:0.2 })
-        .to(elm, {
+        }).to(elm, {
           '--translateX': '101%',
           '--beforeOpacity': '0',
           backgroundColor: '#FFFFFF',
@@ -895,21 +862,6 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var Common = /*#__PURE__*/function () {
   function Common() {
     _classCallCheck(this, Common);
-    //  ワードプレス : function.phpで請け渡しているワードプレスの配列
-    //this.wp_imagePath = wp_var.imgpath;     //  画像パス
-    //this.wp_rootpath = wp_var.rootpath;    //  ルートパス
-    //this.wp_template = wp_var.templatepath;
-
-    //  静的サイト : header.phpで受け渡しているワードプレス画像のパス
-    //this.wp_imagePath = wp_imgpath;     //  画像パス
-    //this.wp_rootpath = wp_rootpath;    //  ルートパス
-    //this.wp_csspath = this.wp_rootpath + "/assets/css/";
-    //this.wp_fontpath = this.wp_rootpath + "/assets/webfonts/";
-
-    //  header.phpで受け渡しているワードプレスのテンプレートファイル名
-    //this.wp_template = wp_template;
-    //  recaptchaのキー
-    this.reCAPTCHA_site_key = "6Ld-v70lAAAAAH-rR-4E3UJISYwe2Kd7ihL7FM20";
   }
 
   //------------------------------------------------
@@ -922,13 +874,10 @@ var Common = /*#__PURE__*/function () {
       var spanText = null;
       //  タグが指定されていない場合
       if (i_tag == "" || i_tag == null) {
-        //console.log("タグ指定なし : " );
-        //console.log(i_target );
         divs = i_target;
         //  指定されている場合は取得
         spanText = divs.innerHTML;
       } else {
-        //console.log("タグ指定あり : " + i_tag );
         divs = i_target.querySelector(i_tag);
         console.log(i_target);
         spanText = divs.innerHTML;
@@ -985,15 +934,10 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var partsHeader = /*#__PURE__*/function () {
   function partsHeader(i_header) {
     _classCallCheck(this, partsHeader);
-    //this.lheader = document.querySelector(i_header);
-    //this.body = document.querySelector("body");
-
-    //this.set = 200; //  ウインドウ上部からどれぐら
     this.dispPosition = 0; // 120;    //  ヘッダーの位置による
 
     this.boxTop = new Array();
     this.current = -1;
-    //this.taskFloat();
   }
   _createClass(partsHeader, [{
     key: "scrollTask",
@@ -1015,14 +959,10 @@ var partsHeader = /*#__PURE__*/function () {
         this.lheader.dataset.float = "true";
         this.pheader.dataset.float = "true";
         this.body.dataset.float = "true";
-        //this.header.classList.add("l-header__float");
-        //this.body.classList.add("l-header__float");
       } else {
         this.lheader.dataset.float = "false";
         this.pheader.dataset.float = "false";
         this.body.dataset.float = "false";
-        //this.header.classList.remove("l-header__float");
-        //this.body.classList.remove("l-header__float");
       }
     }
 
@@ -1119,7 +1059,6 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var loadingScreen = /*#__PURE__*/function () {
   function loadingScreen() {
     _classCallCheck(this, loadingScreen);
-    //this.init();
     this.screen = null;
   }
   //--------------------------------
@@ -1132,9 +1071,6 @@ var loadingScreen = /*#__PURE__*/function () {
       //  ローディング画面の指定がある要素があれば設定
       if (scr) {
         this.screen = scr;
-        //  表示
-        //scr.style.visibility = 'visible';
-
         //  一定時間後に非表示
         window.addEventListener('load', function () {
           setTimeout(function () {
@@ -1229,11 +1165,8 @@ var swiperGroup = /*#__PURE__*/function () {
       var sname = i_swiper + ' .swiper';
       var nextname = i_swiper + ' .swiper-button-next';
       var prevname = i_swiper + ' .swiper-button-prev';
-      //console.log( "sname"+sname );
-      //this.swiperObjs[i_name] = i_swiper; //  HTMLの要素        
       this.swipers[i_name] = new Swiper(sname, {
         loop: false,
-        //initialSlide: 2,
         allowTouchMove: false,
         //  ドラッグ無効
         simulateTouch: true,
@@ -1261,11 +1194,7 @@ var swiperGroup = /*#__PURE__*/function () {
         //  ウインドウサイズ変更時自動再計算
         autoplay: false
       });
-      //this.swipers[i_name].element = i_swiper;
       this.swipers[i_name].element = document.querySelector(sname);
-      //console.log("とれてる？" + this.swipers[i_name].element);
-
-      //console.log("swiper設定 : trainer");
     }
 
     //----------------------------------------
@@ -1275,7 +1204,6 @@ var swiperGroup = /*#__PURE__*/function () {
     key: "make_works",
     value: function make_works(i_swiper, i_name) {
       var sname = i_swiper + ' .swiper';
-      //console.log( "sname"+sname );
       // swiperslider
       this.swipers[i_name] = new Swiper(sname, {
         loop: true,
@@ -1311,16 +1239,10 @@ var swiperGroup = /*#__PURE__*/function () {
     value: function registSwiper(i_swiper, i_name) {
       this.swiperObjs[i_name] = i_swiper; //  HTML swiperタグ
       switch (i_name) {
-        //case "trainer": this.make_trainer( ".p-trainer__swiper", i_name );  break;
         case "works":
           this.make_works(".p-top-works__swiper", i_name);
           break;
-        //case "studio": this.make_studio( ".p-studio__swiper", i_name );  break;
-        //case "price": this.make_works( i_swiper, i_name );  break;
       }
-      //this.swipers[i_name].element = i_swiper;    //  js swiperデータ
-
-      //console.log("swiper設定 :" + i_name );
     }
 
     //----------------------------------------
@@ -1437,12 +1359,9 @@ var tabGroup = /*#__PURE__*/function () {
   }, {
     key: "tab_setDisplay",
     value: function tab_setDisplay(i_tab, i_flag) {
-      //this.activeTab( i_tab );
-
       var elm = this.getTarget(i_tab);
       if (elm) elm.style.display = i_flag;
       //  gsapがセットされている
-      //console.log(elm.gsaptl_fadeinUp );
       if (elm.gsaptl_fadeinUp) {
         elm.gsaptl_fadeinUp.restart();
       }

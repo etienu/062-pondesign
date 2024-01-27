@@ -30,8 +30,12 @@ if( arg['pageid'] == 'index' ){
 	<!-- noindex -->
     <meta name="robots" content="<%- arg['meta']['robots'] %>">
 
+<%# 被りページの時、必要な時のみ( 記事一覧でページャーがある場合等 )
+    ※一般的な数百ページのサイトでは必須ではなく、ある程度googleが自動的に判別してくれる
+    数万ページなどの大規模サイトでは慎重に設定する。
     <!-- URL正規化 -->
-    <link rel="canonical" href="\">
+    <link rel="canonical" href="/">
+-%>
 
 	<!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
 	<script src="<%- incdir %><%- arg['dir']['lib'] %>/gsap/gsap.min.js" defer></script>

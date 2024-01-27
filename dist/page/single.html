@@ -27,8 +27,6 @@
 	<!-- noindex -->
     <meta name="robots" content="noindex,nofollow">
 
-    <!-- URL正規化 -->
-    <link rel="canonical" href="\">
 
 	<!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
 	<script src="../assets/lib/gsap/gsap.min.js" defer></script>
@@ -65,7 +63,7 @@
                     <div class="logo enff">
 
                         <picture>
-                            <source srcset="../assets/images/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="12.96">
+                            <source srcset="../assets/images/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="13">
                             <img src="../assets/images/header/pc/logo.svg" alt="PON DESIGN" width="161" height="17">
                         </picture>
 
@@ -93,11 +91,11 @@
         data-js="button" data-name="hamburger"
         data-headerid="header" data-menuid="spmenu"
         data-menubgid="spmenubg">
-        <div class="c-hamburger__inner">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <span class="c-hamburger__inner">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </span>
     </button>
     <!-- spMenu -->
     <div class="p-spmenu__wrapper" id="spmenu">
@@ -150,13 +148,11 @@
         <article class="l-body p-single__body">
             <div class="l-inner p-single__inner">
                 <div class="p-single__content">
-                    <!-- 本当はWordPressであれば記事内容は自動取得
-                        EJSでデータベースまで作っていられない。仮組みする。
-                        ※やるとしたら変数ではなく個別ページ生成となる
+                    <!-- EJSでデータベースまで作っていられないので仮組み。
+                        ※やるとしたらJSON使用した個別ページ生成
                     -->
                     <div class="p-single__heading">
                         <h1>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h1>
-                        <!--こういう細かいパーツも呼び出しにした方がいい -->
                         <div class="p-news__info">
                             <time datetime="2030-02-01">2030.02.01</time>
                             <button class="p-news__category">お知らせ</button>
@@ -173,7 +169,6 @@
                     <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>  
                 </div>
                 <div class="l-wrapper --left p-single__snswrapper">
-                    <!-- c-snsとか作った方がいい -->
                     <div class="fb">
                         <div class="fb-like" 
                         data-href="https://www.your-domain.com/your-page.html" 
@@ -187,7 +182,7 @@
                     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     
-                    <!--LINE <i class="fa-brands fa-line"></i>-->
+                    <!--LINE-->
                     <div class="line-it-button" data-lang="ja" data-type="share-b" data-env="REAL" data-url="https://developers.line.biz/ja/docs/line-social-plugins/install-guide/using-line-share-buttons/" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
                     <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
                 </div>
@@ -234,11 +229,11 @@
             <div class="l-inner p-footer__inner">
                 <!-- トップに戻るボタン -->
                 <button class="c-gotoTopButton" data-js="gotoTopButton">
-                    <div class="c-gotoTopButton__inner">
-                        <div class="c-gotoTopButton__arrow">
+                    <span class="c-gotoTopButton__inner">
+                        <span class="c-gotoTopButton__arrow">
                             <i class="fa-solid fa-arrow-up"></i>
-                        </div>
-                    </div>
+                        </span>
+                    </span>
                 </button>
                 <!-- トップに戻るボタン : END -->                
                 <ul class="p-footer__menulist">

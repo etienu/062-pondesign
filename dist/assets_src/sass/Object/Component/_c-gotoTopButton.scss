@@ -32,10 +32,12 @@
         pointer-events: auto;
     }
     .c-gotoTopButton__inner{
+        display: block;
         position:relative;
         margin: auto;
     }
     .c-gotoTopButton__arrow{
+        display: block;
         position:relative;
         width: 16px;
         height: 16px;

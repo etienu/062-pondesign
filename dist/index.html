@@ -28,8 +28,6 @@
 	<!-- noindex -->
     <meta name="robots" content="noindex,nofollow">
 
-    <!-- URL正規化 -->
-    <link rel="canonical" href="\">
 
 	<!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
 	<script src="assets/lib/gsap/gsap.min.js" defer></script>
@@ -66,7 +64,7 @@
                     <h1 class="logo enff">
 
                         <picture>
-                            <source srcset="assets/images/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="12.96">
+                            <source srcset="assets/images/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="13">
                             <img src="assets/images/header/pc/logo.svg" alt="PON DESIGN" width="161" height="17">
                         </picture>
 
@@ -94,11 +92,11 @@
         data-js="button" data-name="hamburger"
         data-headerid="header" data-menuid="spmenu"
         data-menubgid="spmenubg">
-        <div class="c-hamburger__inner">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <span class="c-hamburger__inner">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </span>
     </button>
     <!-- spMenu -->
     <div class="p-spmenu__wrapper" id="spmenu">
@@ -162,7 +160,7 @@
                                     <button class="p-top-news__category">お知らせ</button>
                                 </div>
                                 <a href="page/single.html" class="alink">
-                                    <p>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
+                                    <h3>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h3>
                                 </a>
                             </article>
                         </li>
@@ -173,7 +171,7 @@
                                     <button class="p-top-news__category">制作実績</button>
                                 </div>
                                 <a href="page/single.html" class="alink">
-                                    <p>Smoothiesta様のWebサイトを制作いたしました</p>
+                                    <h3>Smoothiesta様のWebサイトを制作いたしました</h3>
                                 </a>
                             </article>
                         </li>
@@ -184,7 +182,7 @@
                                     <button class="p-top-news__category">採用</button>
                                 </div>
                                 <a href="page/single.html" class="alink">
-                                    <p>Webデザイナーを１名募集中です！</p>
+                                    <h3>Webデザイナーを１名募集中です！</h3>
                                 </a>
                             </article>
                         </li>
@@ -327,7 +325,7 @@
                     </div>
                     <p>私たちと一緒に働きませんか？<br>
                     <div class="l-btn --center p-top-recruit__btn">
-                        <a href="page/contact.html"class="c-button__more --key">MORE</a>
+                        <a href="page/contact.html" class="c-button__more --key">MORE</a>
                     </div>
                 </div>
                 <div class="p-top-recruit__visualwrapper">
@@ -370,11 +368,11 @@
             <div class="l-inner p-footer__inner">
                 <!-- トップに戻るボタン -->
                 <button class="c-gotoTopButton" data-js="gotoTopButton">
-                    <div class="c-gotoTopButton__inner">
-                        <div class="c-gotoTopButton__arrow">
+                    <span class="c-gotoTopButton__inner">
+                        <span class="c-gotoTopButton__arrow">
                             <i class="fa-solid fa-arrow-up"></i>
-                        </div>
-                    </div>
+                        </span>
+                    </span>
                 </button>
                 <!-- トップに戻るボタン : END -->                
                 <ul class="p-footer__menulist">
