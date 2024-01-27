@@ -59,7 +59,7 @@ const ScssConfig = {
 
     // エントリーポイントの設定
     entry: {
-        'style.css': path.resolve(dir.src, 'sass/style.scss'),
+        'style.css': path.resolve(dir.src, 'scss/style.scss'),
     },
 
     output: {
