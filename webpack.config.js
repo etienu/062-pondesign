@@ -27,7 +27,7 @@ const JsConfig = {
     // エントリーポイントの設定
     entry: {
         //  配列にすれば複数のファイルを起点設定可能
-        main: path.resolve(dir.src, 'js/_myindex.js'),
+        main: path.resolve(dir.src, 'js/_index.js'),
     },
     // 出力の設定
     output: {

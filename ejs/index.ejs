@@ -7,15 +7,16 @@ $$("*").forEach(v => v.style.outline = '1px solid red')
 #
 ------------------------------------------------------ -%>
 <%
- var ary = {
+var pid = 'index';
+var ary = {
     baseUrl : './',
     incdir  : '',
-    pageid  : 'index',
+    pageid  : pid,
     page    : json['top'],
     site    : json['site'],
     dir     : json['dir'],
     meta    : json['meta']
-   };
+    };
 
 -%>
 

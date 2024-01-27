@@ -3,7 +3,7 @@
         "css" : "assets/css",
         "js" : "assets/js",
         "lib" : "assets/lib",
-        "img" : "assets/images",
+        "img" : "assets/img",
         "font" : "assets/webfonts",
         "base" : "../dist"
     },
@@ -13,15 +13,15 @@
     },
     "meta": {
         "favicon": {
-            "shortcut": "assets/images/common/favicon/favicon.ico",
-            "apple": "assets/images/common/favicon/apple-touch-icon.png",
-            "android": "assets/images/common/favicon/android-touch-icon.png"
+            "shortcut": "assets/img/favicon/favicon.ico",
+            "apple": "assets/img/favicon/apple-touch-icon.png",
+            "android": "assets/img/favicon/android-touch-icon.png"
         },
         "ogp": {
             "title": "PON DESIGN",
             "url": "https://webdesigner-go.com/coding-practice/advanced/",
             "description": "お客様の夢を叶えるWebサイトを制作",
-            "image" : "assets/images/common/ogp.png"
+            "image" : "assets/img/ogp/ogptw.png"
         },
         "robots": "noindex,nofollow"
     },
