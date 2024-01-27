@@ -61,10 +61,10 @@ const srcpath = {
 //----------------------------------------------------------------------
 function imagemin(done) {
 
-    //    src("./src/assets/images/**")
-    src(path.resolve(dir.src, "images/**"))
-        //    .pipe(changed("./assets/images/")) // 圧縮前後の比較
-        .pipe(changed(path.resolve(dir.dist, "images/"))) // 圧縮前後の比較
+    //    src("./src/assets/img/**")
+    src(path.resolve(dir.src, "img/**"))
+        //    .pipe(changed("./assets/img/")) // 圧縮前後の比較
+        .pipe(changed(path.resolve(dir.dist, "img/"))) // 圧縮前後の比較
         .pipe(
             imageMin([
                 pngquant({ // 追加
@@ -77,8 +77,8 @@ function imagemin(done) {
                 imageMin.gifsicle({ optimizationLevel: 3 }),
             ])
         )
-        .pipe(dest(path.resolve(dir.dist, "images/")));
-    //        .pipe(dest("./assets/images/"));
+        .pipe(dest(path.resolve(dir.dist, "img/")));
+    //        .pipe(dest("./assets/img/"));
 
     done();
 }
@@ -90,7 +90,7 @@ function imagemin(done) {
 //  > npx gulp imagewebp
 //----------------------------------------------------------------------
 function imagewebp(done) {
-    src(path.resolve(dir.dist, "images/**"))
+    src(path.resolve(dir.dist, "img/**"))
         // rename処理を追加
         .pipe(rename(function(path) {
             //path.basename += path.extname;    //  元拡張子を残す
@@ -102,7 +102,7 @@ function imagewebp(done) {
             quality: 70, //default : 75
             method: 6, //  default : 4
         }))
-        .pipe(dest(path.resolve(dir.dist, "images/")));
+        .pipe(dest(path.resolve(dir.dist, "img/")));
     done();
 }
 
