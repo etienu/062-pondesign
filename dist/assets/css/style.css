@@ -2394,7 +2394,7 @@ pixel-spinner, .pixel-spinner * {
     height: 50px;
   }
 }
-.p-headerbar {
+.p-header {
   width: 100%;
   height: 86px;
   display: flex;
@@ -2405,11 +2405,11 @@ pixel-spinner, .pixel-spinner * {
   transition: background-color 0.3s, height 0.3s;
   background-color: transparent;
 }
-.p-headerbar[data-float=true] {
+.p-header[data-float=true] {
   background-color: #21054D;
   height: 64px;
 }
-.p-headerbar .p-headerbar__inner {
+.p-header .p-header__inner {
   width: 100%;
   max-width: calc(100% - 70px);
   margin: auto;
@@ -2419,7 +2419,7 @@ pixel-spinner, .pixel-spinner * {
   align-items: center;
   justify-content: space-between;
 }
-.p-headerbar .logo {
+.p-header .logo {
   width: auto;
   height: auto;
   font-size: 28px;
@@ -2427,22 +2427,22 @@ pixel-spinner, .pixel-spinner * {
   line-height: 1;
   letter-spacing: 0.05em;
 }
-.p-headerbar .logo img {
+.p-header .logo img {
   display: flex;
   align-items: center;
 }
-.p-headerbar .p-headerbar__nav {
+.p-header .p-header__nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 30px;
 }
-.p-headerbar .p-headerbar__menulist {
+.p-header .p-header__menulist {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
-.p-headerbar .p-headerbar__menulist .p-headerbar__menuitem {
+.p-header .p-header__menulist .p-header__menuitem {
   position: relative;
   font-size: 16px;
   font-weight: bold;
@@ -2450,13 +2450,13 @@ pixel-spinner, .pixel-spinner * {
   letter-spacing: 0.1em;
   transition: color 0.3s, opacity 0.3s;
 }
-.p-headerbar .p-headerbar__menulist .p-headerbar__menuitem:hover {
+.p-header .p-header__menulist .p-header__menuitem:hover {
   opacity: 0.8;
 }
-.p-headerbar .p-headerbar__menulist .p-headerbar__menuitem:hover:after {
+.p-header .p-header__menulist .p-header__menuitem:hover:after {
   width: 100%;
 }
-.p-headerbar .p-headerbar__menulist .p-headerbar__menuitem:after {
+.p-header .p-header__menulist .p-header__menuitem:after {
   position: absolute;
   content: "";
   width: 0px;
@@ -2467,14 +2467,14 @@ pixel-spinner, .pixel-spinner * {
   transition: width 0.3s;
   pointer-events: none;
 }
-.p-headerbar .p-headerbar__subinner {
+.p-header .p-header__subinner {
   max-width: calc(100% - 70px);
   width: 100%;
   display: flex;
   justify-content: flex-end;
   color: #FFFFFF;
 }
-.p-headerbar .p-headerbar__subinner .p-headerbar__soundswitch {
+.p-header .p-header__subinner .p-header__soundswitch {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2482,24 +2482,26 @@ pixel-spinner, .pixel-spinner * {
   line-height: 1.2307692308;
   letter-spacing: 0;
 }
-.p-headerbar .p-headerbar__subinner .p-headerbar__soundswitch.--playing {
+.p-header .p-header__subinner .p-header__soundswitch.--playing {
   color: #391E88;
-} /*  map-get(マップ型変数,キー)で値を取得
+}
+
+/*  map-get(マップ型変数,キー)で値を取得
 @media screen and (max-width: 991px) {
  */
 @media screen and (max-width: 991px) {
   /*  呼び出しもとの値が入る */
-  .p-headerbar .p-headerbar__menulist {
+  .p-header .p-header__menulist {
     gap: 20px;
   }
-  .p-headerbar .p-headerbar__menulist .p-headerbar__menuitem {
+  .p-header .p-header__menulist .p-header__menuitem {
     font-size: 14px;
     font-weight: bold;
     line-height: 1;
     letter-spacing: 0.05em;
     transition: color 0.3s, opacity 0.3s, font-size 0.3s;
   }
-  .p-headerbar .p-headerbar__menulist .p-headerbar__menuitem:hover {
+  .p-header .p-header__menulist .p-header__menuitem:hover {
     opacity: 0.8;
   }
 }
@@ -2508,29 +2510,29 @@ pixel-spinner, .pixel-spinner * {
  */
 @media screen and (max-width: 767px) {
   /*  呼び出しもとの値が入る */
-  .p-headerbar {
+  .p-header {
     height: 64px;
   }
-  .p-headerbar .p-headerbar__inner {
+  .p-header .p-header__inner {
     width: 100%;
     height: 60px;
     max-width: calc(100% - 40px);
   }
-  .p-headerbar .logo {
+  .p-header .logo {
     margin-left: 15px;
     width: 120px;
   }
-  .p-headerbar .logo picture {
+  .p-header .logo picture {
     display: flex;
     align-items: center;
   }
-  .p-headerbar .p-headerbar__nav {
+  .p-header .p-header__nav {
     display: none;
   }
-  .p-headerbar .p-headerbar__menulist {
+  .p-header .p-header__menulist {
     gap: 20px;
   }
-  .p-headerbar .p-headerbar__menulist .p-headerbar__menuitem {
+  .p-header .p-header__menulist .p-header__menuitem {
     font-size: 13px;
     font-weight: bold;
     line-height: 1;

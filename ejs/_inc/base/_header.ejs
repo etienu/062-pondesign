@@ -8,8 +8,8 @@ if( arg['pageid'] == 'index' ){
 -%>
     <!-- Header Start -->
     <header class="l-header" data-js="header">
-        <div class="p-headerbar" id="header">
-            <div class="p-headerbar__inner">
+        <div class="p-header" id="header">
+            <div class="p-header__inner">
 <% if(arg['pageid']=='index'){ %>
                 <a href="#">
                     <h1 class="logo enff">
@@ -33,17 +33,21 @@ if( arg['pageid'] == 'index' ){
 <% } %>
                 </a>
                 
-                <nav class="p-headerbar__nav">
-                    <ul class="p-headerbar__menulist">
-                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>news.html">NEWS</a></li>
-                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>service.html">SERVICE</a></li>
-                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>works.html">WORKS</a></li>
-                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>company.html">COMPANY</a></li>
-                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>recruit.html">RECRUIT</a></li>
-                        <li class="p-headerbar__menuitem"><a href="<%- pagedir %>contact.html">CONTACT</a></li>
+                <nav class="p-header__nav">
+                    <ul class="p-header__menulist">
+                        <li class="p-header__menuitem"><a href="<%- pagedir %>news.html">NEWS</a></li>
+                        <li class="p-header__menuitem"><a href="<%- pagedir %>service.html">SERVICE</a></li>
+                        <li class="p-header__menuitem"><a href="<%- pagedir %>works.html">WORKS</a></li>
+                        <li class="p-header__menuitem"><a href="<%- pagedir %>company.html">COMPANY</a></li>
+                        <li class="p-header__menuitem"><a href="<%- pagedir %>recruit.html">RECRUIT</a></li>
+                        <li class="p-header__menuitem"><a href="<%- pagedir %>contact.html">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <!-- Header End -->
+
+<%- include('../parts/_hamburger', { arg:ary }) -%>
+<%- include('../parts/_spmenu', { arg:ary }) -%>
+    
