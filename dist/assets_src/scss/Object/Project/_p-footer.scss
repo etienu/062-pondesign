@@ -21,13 +21,13 @@
         justify-content: center;
         color : g.$color-white;
     }
-    .p-footer__menulist{
+    ul{
         display:flex;
-        flex-direction: row;
+        //flex-direction: row;
         flex-wrap:wrap;
         justify-content: flex-start;
         gap: 20px;
-        .p-footer__menuitem{
+        li{
             @include g.fz(12,21.6);
             @include g.ls(10);
         }
@@ -63,8 +63,8 @@
     .p-footer__inner {
         max-width: calc( 100% - 60px );
     }
-    .p-footer__menulist{
-        .p-footer__menuitem{
+    ul{
+        li{
             @include g.fz(12,12);
             @include g.ls(10);
         }

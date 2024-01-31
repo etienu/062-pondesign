@@ -3,54 +3,55 @@
 //    ヘッダーメニューバー
 //------------------------------------------------
 .p-header {
-    width: 100%;
-    height: g.$header-height;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: g.$header-height;
     color : g.$color-white;
-    transition : background-color 0.3s, height 0.3s;
     background-color : transparent;
+    transition : background-color 0.3s, height 0.3s;
+    //  ヘッダー浮くフラグ
     &[data-float="true"]{
-        background-color: g.$color-perple-d;
         height: g.$header-height-sp;
+        background-color: g.$color-perple-d;
     }
-    .p-header__inner {
-        width: 100%;
-        max-width: calc( 100% - 70px );
-        margin:auto;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+}
+
+.p-header__inner {
+    width: 100%;
+    max-width: calc( 100% - 70px );
+    margin:auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     .logo {
         width: auto;
         height: auto;
-        @include g.fz(28,28,bold);
-        @include g.ls(5);
+        @include g.fz( 28,28,bold );
+        @include g.ls( 5 );
         img{
             display:flex;
             align-items: center;
         }
     }
-    .p-header__nav{
+}
+
+.p-header-nav{
+    display:flex;
+    //flex-direction:row;
+    align-items:center;
+    ul{
         display:flex;
         flex-direction:row;
-        align-items: center;
         gap: 30px;
-    }
-    .p-header__menulist{
-        display:flex;
-        flex-direction:row;
-        gap: 30px;
-        .p-header__menuitem{
+        li{
             position : relative;
-            @include g.fz(16,16,bold);
-            @include g.ls(10);
-            transition : color 0.3s, opacity 0.3s;
+            @include g.fz( 16,16,bold );
+            @include g.ls( 10 );
+            transition : color 0.3s, opacity 0.3s;//, font-size 0.3s;
             &:hover{
                 opacity: 0.8;
                 &:after{
@@ -61,58 +62,35 @@
                 position : absolute;
                 content : "";
                 width: 0px;
-                height: calc( 100% + 8px );
-                top:0;
+                height: 1px;
                 left: 0;
-                border-bottom : 1px solid g.$color-white;
+                bottom : -8px;
+                background-color :  g.$color-white;
                 transition : width 0.3s;
                 pointer-events: none;
             }
         }
     }
-    .p-header__subinner{
-        //max-width: min(calc( 100% - 70px ), g.$layout-width-comp);
-        max-width: calc( 100% - 70px );
-        width: 100%;
-        display:flex;
-        justify-content: flex-end;
-        color:g.$color-white;
-        .p-header__soundswitch{
-            display:flex;
-            align-items: center;
-            gap: 8px;
-            @include g.fz(13,16);
-            @include g.ls(0);
-            &.--playing{
-                color : g.$color-key;
-            }
-        }
-    }
 }
+
+
 
 //============================================
 //  レスポンシブ
 //============================================
+//  タブレット
 @include g.mq('-lg') {    
-    .p-header {
-        .p-header__inner {
-        }
-        .logo {
-        }
-        .p-header__nav{
-        }
-        .p-header__menulist{
+.p-header {
+    .p-header-nav{
+        ul{
             gap: 20px;
-            .p-header__menuitem{
+            li{
                 @include g.fz(14,14,bold);
                 @include g.ls(5);
-                transition : color 0.3s, opacity 0.3s, font-size 0.3s;
-                &:hover{
-                    opacity: 0.8;
-                }
             }
         }
     }
+}
 }
 
 //----------------------------------------
@@ -122,28 +100,77 @@
     .p-header {
         height: g.$header-height-sp;
         .p-header__inner {
-            width: 100%;
             height: 60px;
             max-width: calc( 100% - 40px );
         }    
         .logo {
             margin-left: 15px;
             width: 120px;
-            picture{
-                display:flex;
-                align-items: center;
-            }
         }
-        .p-header__nav{
-            display:none;
-        }
-        .p-header__menulist{
-            gap:20px;
-            .p-header__menuitem{
-                @include g.fz(13,13,bold);
-                @include g.ls(0);
-            }
-        }
-    
     }
+    //----------------------------
+    //  SPメニュー
+    //----------------------------
+    .p-header-nav__wrapper {
+        display: fixed;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &[data-open="open"]{
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .p-header-nav__bg{
+                width: 100%;
+                background-color: RGBA( 0,0,0,0.5 );
+            }
+            .p-header-nav{
+                right: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .p-header-nav__bg {
+        //  spmenuから出して別で動かす
+        position: fixed;
+        width: 0;
+        height: 100%;
+        z-index: 10;
+        transition: background-color 0.3s;
+    }
+    .p-header-nav {
+        position: fixed;
+        justify-content: center;
+        right: -100vw;
+        width: 100%;
+        height: 100%;
+        transition: right 0.3s, opacity 0.3s;
+        opacity: 0;
+        background : linear-gradient(180deg, #7633A4 0%, #250D65 100%);
+        z-index: 600;
+
+        //  画面全体
+        margin-top: 0;
+        //  ヘッダー分抜く
+        //margin-top: calc( g.$header-height-sp + 30px );
+        ul {
+            flex-direction: column;
+            width: calc(100% - 160px );
+            gap: 20px;
+            li {
+                a{
+                    display : block;
+                    color : g.$color-font-w;
+                    @include g.fz( 16, 16 );
+                    @include g.ls( 5 );
+                    width: 100%;
+                    padding: 8px 0;
+                }
+            }
+        }
+    }
+
+//----
+        
+        
 }

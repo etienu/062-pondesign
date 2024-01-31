@@ -1,0 +1,18 @@
+<%
+ary = {
+    baseUrl : './',
+    incdir  : '',
+    pageid  : pid,
+    page    : json['top'],
+    site    : json['site'],
+    dir     : json['dir'],
+    meta    : json['meta']
+    };
+
+if( pid == 'index'){
+    ary['incdir'] = ''
+}else{
+    ary['incdir'] = '../'
+
+}
+-%>

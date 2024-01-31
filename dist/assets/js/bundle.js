@@ -577,8 +577,8 @@ var buttonGotoTop = /*#__PURE__*/function () {
     key: "eventRegistration",
     value: function eventRegistration() {
       var _this2 = this;
-      //  data-js="btngototop" : 全て取得
-      var itmgroup = document.querySelectorAll('[data-js="gotoTopButton"]');
+      //  data-js="gotoTopBtn" : 全て取得
+      var itmgroup = document.querySelectorAll('[data-js="gotoTopBtn"]');
       //  ボタンの数だけループ
       itmgroup.forEach(function (item) {
         _this2.items.push(item); //配列に追加

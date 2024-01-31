@@ -21,12 +21,14 @@
             }
         }
     }
+
     .p-mv__body{
         height: 100svh;
         display:flex;
         flex-direction : column;
         justify-content: space-between;
     }
+
     .p-mv__inner {
         max-width: min(calc(100% ), g.$layout-width-inner);
         width: 100%;

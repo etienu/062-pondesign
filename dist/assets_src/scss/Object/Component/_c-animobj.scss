@@ -2,21 +2,21 @@
 //------------------------------------------------
 //    アニメーションのあるオブジェクト
 //------------------------------------------------
-/*スクロールダウン全体の場所*/
+//スクロールダウン全体の場所
 .c-animobj__scrolldown{
     position:absolute;
 //    bottom:10px;
 //    left:50%;
     //  スクロールテキスト
     span{
-        /*描画位置*/
+        //描画位置
         position: absolute;
         left:10px;
         bottom:10px;
         color: g.$color-key;
         @include g.fz(12,12);
         @include g.ls(20);
-        /*縦書き設定*/
+        //縦書き設定
         -ms-writing-mode: tb-rl;
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
@@ -78,7 +78,6 @@
 
 
 @include g.mq('-md') {
-
     .c-animobj__scrolldown{
         &.--vertical{
             span{

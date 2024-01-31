@@ -2,7 +2,7 @@
 //------------------------------------------------
 //    ボタン
 //------------------------------------------------
-.c-gotoTopButton {
+.c-gotoTopBtn {
     position : fixed;
     display: flex;
     justify-content: center;
@@ -10,9 +10,9 @@
 
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     right: 40px;
     bottom : 40px;
+    border-radius: 50%;
     transition : background 0.3s, color 0.3s, opacity 0.3s;
     background : g.$color-white;
     border: 1px solid g.$color-border-gray;
@@ -31,12 +31,12 @@
         opacity: 1;
         pointer-events: auto;
     }
-    .c-gotoTopButton__inner{
+    .c-gotoTopBtn__inner{
         display: block;
         position:relative;
         margin: auto;
     }
-    .c-gotoTopButton__arrow{
+    .c-gotoTopBtn__arrow{
         display: block;
         position:relative;
         width: 16px;
@@ -69,12 +69,12 @@
 //  SP 767以下
 //----------------------------------------
 @include g.mq('-md') {
-.c-gotoTopButton {
+.c-gotoTopBtn {
     width: 50px;
     height: 50px;
     right: 20px;
     bottom : 20px;
-    .c-gotoTopButton__arrow{
+    .c-gotoTopBtn__arrow{
         position:relative;
         width: 16px;
         height: 16px;

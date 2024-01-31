@@ -56,65 +56,51 @@
 
     <!-- Header Start -->
     <header class="l-header" data-js="header">
-        <div class="p-headerbar" id="header">
-            <div class="p-headerbar__inner">
+        <div class="p-header" id="header">
+            <div class="p-header__inner">
 
                 <a href="../index.html">
                     <h1 class="logo enff">
 
                         <picture>
-                            <source srcset="../assets/img/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="13">
                             <img src="../assets/img/header/pc/logo.svg" alt="PON DESIGN" width="161" height="17">
                         </picture>
 
                     </h1>
 
                 </a>
-                
-                <nav class="p-headerbar__nav">
-                    <ul class="p-headerbar__menulist">
-                        <li class="p-headerbar__menuitem"><a href="news.html">NEWS</a></li>
-                        <li class="p-headerbar__menuitem"><a href="service.html">SERVICE</a></li>
-                        <li class="p-headerbar__menuitem"><a href="works.html">WORKS</a></li>
-                        <li class="p-headerbar__menuitem"><a href="company.html">COMPANY</a></li>
-                        <li class="p-headerbar__menuitem"><a href="recruit.html">RECRUIT</a></li>
-                        <li class="p-headerbar__menuitem"><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </nav>
+
+                <!-- ハンバーガー -->
+                <button class="c-hamburger --fixed u-display__sp"
+                    data-js="button" data-name="hamburger"
+                    data-headerid="header" data-menuid="spmenu"
+                    data-menubgid="spmenubg">
+                    <div class="c-hamburger__inner">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+                <!-- SP Menu -->
+                <div class="p-header-nav__wrapper" id="spmenu">
+                    <div class="p-header-nav__bg"></div>
+                    <!-- PC Menu -->
+                    <nav class="p-header-nav">
+                        <ul>
+                            <li><a href="news.html">NEWS</a></li>
+                            <li><a href="service.html">SERVICE</a></li>
+                            <li><a href="works.html">WORKS</a></li>
+                            <li><a href="company.html">COMPANY</a></li>
+                            <li><a href="recruit.html">RECRUIT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>  
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
-    <!-- Header End -->
-
-    <!-- SPMENUとの被りを考慮し独立している -->
-    <button class="c-hamburger fixed u-display__sp"
-        data-js="button" data-name="hamburger"
-        data-headerid="header" data-menuid="spmenu"
-        data-menubgid="spmenubg">
-        <span class="c-hamburger__inner">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </span>
-    </button>
-    <!-- spMenu -->
-    <div class="p-spmenu__wrapper" id="spmenu">
-        <div class="p-spmenu__bg">
-        </div>
-        <div class="p-spmenu">
-        <div class="p-spmenu__inner">
-            <ul class="enff">
-                <li><a href="news.html"><span>NEWS</span></a></li>
-                <li><a href="service.html"><span>SERVICE</span></a></li>
-                <li><a href="works.html"><span>WORKS</span></a></li>
-                <li><a href="company.html"><span>COMPANY</span></a></li>
-                <li><a href="recruit.html"><span>RECRUIT</span></a></li>
-                <li><a href="contact.html"><span>CONTACT</span></a></li>
-            </ul>  
-        </div>
-        </div>
-    </div>
-    <!-- spMenu : END -->
+    <!-- Header End -->    
 
     <!-- section : SUBMV -->
     <section class="l-section p-submv" id="submv">
@@ -232,22 +218,22 @@
         <div class="l-body p-footer__body">
             <div class="l-inner p-footer__inner">
                 <!-- トップに戻るボタン -->
-                <button class="c-gotoTopButton" data-js="gotoTopButton">
-                    <span class="c-gotoTopButton__inner">
-                        <span class="c-gotoTopButton__arrow">
+                <button class="c-gotoTopBtn" data-js="gotoTopBtn">
+                    <span class="c-gotoTopBtn__inner">
+                        <span class="c-gotoTopBtn__arrow">
                             <i class="fa-solid fa-arrow-up"></i>
                         </span>
                     </span>
                 </button>
                 <!-- トップに戻るボタン : END -->                
-                <ul class="p-footer__menulist">
-                    <li class="p-footer__menuitem"><a href="../index.html"   ><span>HOME</span>   </a></li>
-                    <li class="p-footer__menuitem"><a href="news.html"   ><span>NEWS</span>   </a></li>
-                    <li class="p-footer__menuitem"><a href="service.html"><span>SERVICE</span></a></li>
-                    <li class="p-footer__menuitem"><a href="works.html"  ><span>WORKS</span>  </a></li>
-                    <li class="p-footer__menuitem"><a href="company.html"><span>COMPANY</span></a></li>
-                    <li class="p-footer__menuitem"><a href="recruit.html"><span>RECRUIT</span></a></li>
-                    <li class="p-footer__menuitem"><a href="contact.html"><span>CONTACT</span></a></li>
+                <ul>
+                    <li><a href="../index.html"           >HOME</a></li>
+                    <li><a href="news.html"   >NEWS</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="works.html"  >WORKS</a></li>
+                    <li><a href="company.html">COMPANY</a></li>
+                    <li><a href="recruit.html">RECRUIT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
     
                 </ul>
                 <div class="p-footer__copylight">

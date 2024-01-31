@@ -6,26 +6,11 @@
 $$("*").forEach(v => v.style.outline = '1px solid red')    
 #
 ------------------------------------------------------ -%>
-<%
-var pid = 'index';
-var ary = {
-    baseUrl : './',
-    incdir  : '',
-    pageid  : pid,
-    page    : json['top'],
-    site    : json['site'],
-    dir     : json['dir'],
-    meta    : json['meta']
-    };
-
--%>
-
-<%- include('_inc/base/_data', { baseUrl : ary['baseUrl'] }) -%>
+<% pid = 'index'; -%>
+<%- include('_inc/base/_json') -%>
 <!DOCTYPE html>
 <html lang="ja">
-<%-
-  include('_inc/base/_head', { arg : ary  })
-%>
+<%- include('_inc/base/_head', { arg : ary  }) -%>
 
 <body>
 <%# include('_inc/parts/_loading', { arg:ary }) -%>

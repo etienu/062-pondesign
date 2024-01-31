@@ -75,8 +75,8 @@ export default class buttonGotoTop {
     //  イベント登録
     //----------------------------------------
     eventRegistration() {
-        //  data-js="btngototop" : 全て取得
-        let itmgroup = document.querySelectorAll('[data-js="gotoTopButton"]');
+        //  data-js="gotoTopBtn" : 全て取得
+        let itmgroup = document.querySelectorAll('[data-js="gotoTopBtn"]');
         //  ボタンの数だけループ
         itmgroup.forEach((item) => {
             this.items.push( item );   //配列に追加

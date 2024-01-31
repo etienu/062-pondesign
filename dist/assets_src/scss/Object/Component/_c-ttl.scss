@@ -1,10 +1,9 @@
 @use '../../global' as g;
 /* 各セクションのH2見だし */
-.c-title{
+.c-ttl{
     position : relative;
     display : block;
     color: g.$color-key;
-    //white-space:nowrap;
     @include g.fz(80,80,bold);
     @include g.ls(5);
 
@@ -16,7 +15,7 @@
     }
 }
 
-.c-title__section{
+.c-ttl__section{
     position : relative;
     display : inline-block;
     color: g.$color-key;
@@ -41,7 +40,7 @@
 
 
 @include g.mq('md-') {
-    .c-title__section{
+    .c-ttl__section{
         &.--pc-left  { text-align:left; }
         &.--pc-center{ text-align:center; }
         &.--pc-right { text-align:right; }
@@ -49,7 +48,7 @@
 }
 
 @include g.mq('-md') {
-.c-title__section{
+.c-ttl__section{
     @include g.fz(30,36,bold);
     @include g.ls(5);
 

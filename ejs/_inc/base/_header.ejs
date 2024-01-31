@@ -21,7 +21,6 @@ if( arg['pageid'] == 'index' ){
                     <h1 class="logo enff">
 <% } %>
                         <picture>
-                            <source srcset="<%- incdir %><%- arg['dir']['img'] %>/header/pc/logo.svg" media="(max-width: 768px)" width="120" height="13">
                             <img src="<%- incdir %><%- arg['dir']['img'] %>/header/pc/logo.svg" alt="<%- arg['site']['title'] %>" width="161" height="17">
                         </picture>
 <% if(arg['pageid']=='index'){ %>
@@ -32,22 +31,35 @@ if( arg['pageid'] == 'index' ){
                     </h1>
 <% } %>
                 </a>
-                
-                <nav class="p-header__nav">
-                    <ul class="p-header__menulist">
-                        <li class="p-header__menuitem"><a href="<%- pagedir %>news.html">NEWS</a></li>
-                        <li class="p-header__menuitem"><a href="<%- pagedir %>service.html">SERVICE</a></li>
-                        <li class="p-header__menuitem"><a href="<%- pagedir %>works.html">WORKS</a></li>
-                        <li class="p-header__menuitem"><a href="<%- pagedir %>company.html">COMPANY</a></li>
-                        <li class="p-header__menuitem"><a href="<%- pagedir %>recruit.html">RECRUIT</a></li>
-                        <li class="p-header__menuitem"><a href="<%- pagedir %>contact.html">CONTACT</a></li>
-                    </ul>
-                </nav>
+
+                <!-- ハンバーガー -->
+                <button class="c-hamburger --fixed u-display__sp"
+                    data-js="button" data-name="hamburger"
+                    data-headerid="header" data-menuid="spmenu"
+                    data-menubgid="spmenubg">
+                    <div class="c-hamburger__inner">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+                <!-- SP Menu -->
+                <div class="p-header-nav__wrapper" id="spmenu">
+                    <div class="p-header-nav__bg"></div>
+                    <!-- PC Menu -->
+                    <nav class="p-header-nav">
+                        <ul>
+                            <li><a href="<%- pagedir %>news.html">NEWS</a></li>
+                            <li><a href="<%- pagedir %>service.html">SERVICE</a></li>
+                            <li><a href="<%- pagedir %>works.html">WORKS</a></li>
+                            <li><a href="<%- pagedir %>company.html">COMPANY</a></li>
+                            <li><a href="<%- pagedir %>recruit.html">RECRUIT</a></li>
+                            <li><a href="<%- pagedir %>contact.html">CONTACT</a></li>
+                        </ul>  
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
-    <!-- Header End -->
-
-<%- include('../parts/_hamburger', { arg:ary }) -%>
-<%- include('../parts/_spmenu', { arg:ary }) -%>
-    
+    <!-- Header End -->    
