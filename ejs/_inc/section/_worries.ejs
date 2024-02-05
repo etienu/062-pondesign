@@ -1,0 +1,77 @@
+<%
+var id = arg['incdir']+arg['dir']['img']+'/worries';
+var ids= arg['incdir']+arg['dir']['img']+'/worries/sp';
+%>
+    <!-- section : worries -->
+    <section class="l-section p-worries" id="worries">
+        <h2 class="sec-ttl">
+            <picture class="ttl-img">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/ttl.png, <%- id %>/ttl@2x.png 2x">
+                <img src="<%- id %>/ttl.png" alt="Worries 眉のこんなお悩みありませんか？" width="711" height="130">
+            </picture>
+        </h2>
+        <div class="l-inner p-worries-befwrap" data-eff="fadein-upgroup">
+            <picture class="woman">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bef_woman.png, <%- id %>/bef_woman@2x.png 2x">
+                <img src="<%- id %>/bef_woman.png" alt="悩む女性" width="474" height="588">
+            </picture>
+            <picture class="circle circle1">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bef_circle_1.png, <%- id %>/bef_circle_1@2x.png 2x">
+                <img src="<%- id %>/bef_circle_1.png" alt="自分に合う眉デザインがわからない" width="220" height="220">
+            </picture>
+            <picture class="circle circle2">
+                <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/bef_circle_2.png">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bef_circle_2.png, <%- id %>/bef_circle_2@2x.png 2x">
+                <img src="<%- id %>/bef_circle_2.png" alt="眉メイクが苦手" width="220" height="220">
+            </picture>
+            <picture class="circle circle3">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bef_circle_3.png, <%- id %>/bef_circle_3@2x.png 2x">
+                <img src="<%- id %>/bef_circle_3.png" alt="温泉やプールがおっくう" width="220" height="220">
+            </picture>
+            <picture class="circle circle4">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bef_circle_4.png, <%- id %>/bef_circle_4@2x.png 2x">
+                <img src="<%- id %>/bef_circle_4.png" alt="すっぴんに自信が持てない" width="220" height="220">
+            </picture>
+        </div>
+        <div class="p-worries-centerwrap">
+            <picture class="txtbox1">
+                <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/txtbox_1.png, <%- ids %>/txtbox_1@2x.png 2x">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/txtbox_1.png, <%- id %>/txtbox_1@2x.png 2x">
+                <img src="<%- id %>/txtbox_1.png" alt="医療アートメイクならそのお悩みが解決できます！" width="632" height="145">
+            </picture>
+        </div>
+        <div class="l-body">
+            <picture class="bg">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/aft_bg.png, <%- id %>/aft_bg@2x.png 2x">
+                <img src="<%- id %>/aft_bg.png" alt="" width="1445" height="720">
+            </picture>
+            <div class="l-inner p-worries-aftwrap">
+                <div class="circlewrap" data-eff="fadein-upgroup">
+                    <div class="row row1">
+                        <picture class="circle circle1">
+                            <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/aft_circle_1.png, <%- id %>/aft_circle_1@2x.png 2x">
+                            <img src="<%- id %>/aft_circle_1.png" alt="メイク直しが簡単に！" width="220" height="220">
+                        </picture>
+                        <picture class="circle circle2">
+                            <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/aft_circle_2.png, <%- id %>/aft_circle_2@2x.png 2x">
+                            <img src="<%- id %>/aft_circle_2.png" alt="朝メイクの時短に" width="220" height="220">
+                        </picture>
+                    </div>
+                    <div class="row row2">
+                        <picture class="circle circle3">
+                            <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/aft_circle_3.png, <%- id %>/aft_circle_3@2x.png 2x">
+                            <img src="<%- id %>/aft_circle_3.png" alt="汗をかいても落ちない" width="220" height="220">
+                        </picture>
+                        <picture class="circle circle4">
+                            <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/aft_circle_4.png, <%- id %>/aft_circle_4@2x.png 2x">
+                            <img src="<%- id %>/aft_circle_4.png" alt="すっぴんに自信！" width="220" height="220">
+                        </picture>
+                    </div>
+                </div>
+                <picture class="woman" data-eff="fadein-up">
+                    <img src="<%- id %>/aft_woman@2x.png" alt="解決した女性" width="449" height="525">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->

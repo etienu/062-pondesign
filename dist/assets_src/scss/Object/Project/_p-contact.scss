@@ -1,100 +1,69 @@
 @use '../../global' as g;
-//------------------------------------------------
-//    ページ recruit
-//------------------------------------------------
 .p-contact {
     position:relative;
-    background-color : g.$color-white;
-
-    .p-contact__body {
-        margin-top : 70px;
-        margin-bottom : 110px;
-    }
-    .p-contact__inner {
-        max-width: min( calc(100% - 40px), calc(g.$layout-width-inner) );
-        width: 100%;
-        margin : auto;
-    }
-    .p-contact__content{
-        width: 100%;
+    .p-contact__inner{
         display: flex;
         flex-direction : column;
         align-items: center;
-        .p-contact__heading{
-            display:flex;
-            justify-content: center;
-            width: 100%;
-            p{
-                @include g.fz(15,27);
-                @include g.ls(5);
+        margin :auto;
+        padding-top: 91px;
+        padding-bottom: 100px;
+        h2{
+            .sec-ttl{
+                width: 270px;
+                height: 133px;
+                margin-bottom: 50px;
             }
         }
-        .p-contact__form{
-            max-width: 750px;
-            margin-top: 40px;
-            padding-bottom: 90px;
-            background-color : g.$color-gray;
-            dl{
-                padding: 90px 60px 0px 90px;
-                color : g.$color-black;
-            }
-        }
-
     }
-
+    .p-contact__txtwrap{
+        display:flex;
+        justify-content: center;
+        margin-bottom: 153px;
+    }
+    .p-contact__txt{
+        margin :auto;
+        width: 800px;
+        height: 60px;
+    }//.p-flow__wrap{
 }
 
 
-//----------------------------------------
 //  レスポンシブ
-//----------------------------------------
-//----------------------------------------
-//  PC版のみのCSS 768px以上
-//----------------------------------------
-@include g.mq('md-') {
-}
-
-@include g.mq('-xl') {
-}
-
 @include g.mq('-lg') {
-}
-
-//----------------------------------------
-//  SP 767以下
-//----------------------------------------
-@include g.mq('-md') {      
     .p-contact {
         position:relative;
-        background-color : g.$color-white;
-    
-        .p-contact__body {
-            margin-top : 40px;
-            margin-bottom : 40px;
+        .p-contact__inner{
+
         }
-        .p-contact__inner {
-            max-width: calc(100% - 40px);
-        }
-        .p-contact__content{
-            .p-contact__heading{
-                p{
-                    @include g.fz(14,25.2);
-                    @include g.ls(5);
-                }
-            }
-            .p-contact__form{
-                max-width: 100%;
-                margin-top: 30px;
-                padding-bottom: 40px;
-                background-color : g.$color-gray;
-                dl{
-                    padding: 30px 30px 0px 30px;
-                    color : g.$color-black;
-                }
-            }
-    
-        }
-    
+        .p-contact__txt{
+            width: g.vwml(800);
+            height: g.vwml(60);
+        }//.p-flow__wrap{
     }
-                
+}
+    
+//  SP 767以下
+@include g.mq('-md') {
+.p-contact {
+    .p-contact__inner{
+        padding-top: 41px;
+        padding-bottom: 75px;
+        h2{
+            .sec-ttl{
+                width: 120px;
+                height: 58px;
+                margin-bottom: 9px;
+            }
+        }
+    }
+    .p-contact__txtwrap{
+        margin-bottom: 66px;
+    }
+    .p-contact__txt{
+        width: 300px;
+        height: 23px;
+    }//.p-flow__wrap{
+}
+        
 }

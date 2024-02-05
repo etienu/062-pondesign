@@ -3,49 +3,39 @@ var incdir = arg['incdir'];
 if( arg['pageid'] == 'index' ){
     incdir = "";
 }
-%>
-<head>
+-%>
+<head prefix="og: https://ogp.me/ns#">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title><%- arg['page']['title'] %> | <%- arg['site']['title'] %></title>
+    <title><%- arg['page']['title'] %></title>
     <meta name="description" content="<%- arg['page']['description'] %>">
-	<meta name="keywords" content="<%- arg['page']['keyword'] %>">
 
-	<%# -- icon,Favicon %>
+	<%# -- icon,Favicon -%>
 	<link rel="shortcut icon" href="<%- incdir %><%- arg['meta']['favicon']['shortcut'] %>">
     <link rel="apple-touch-icon" href="<%- incdir %><%- arg['meta']['favicon']['apple'] %>" sizes="180x180">
     <link rel="icon" type="image/png" href="<%- incdir %><%- arg['meta']['favicon']['android'] %>" sizes="192x192">
 
-    <!-- OGP -->
-    <meta property='og:type' content='website'>
+    <%# -- OGP -- -%>
     <meta property='og:title' content="<%- arg['meta']['ogp']['title'] %>">
+    <meta property='og:description' content="<%- arg['meta']['ogp']['description'] %>">
     <meta property='og:url' content="<%- arg['meta']['ogp']['url'] %>">
-    <meta property='og:description'
-    content="<%- arg['meta']['ogp']['description'] %>">
     <meta property="og:image" content="<%- incdir %><%- arg['meta']['ogp']['image'] %>">
+    <meta property='og:type' content='website'>
+    <meta property='og:site_name' content="<%- arg['meta']['ogp']['title'] %>">
 
-	<!-- noindex -->
-    <meta name="robots" content="<%- arg['meta']['robots'] %>">
-
-<%# 被りページの時、必要な時のみ( 記事一覧でページャーがある場合等 )
-    ※一般的な数百ページのサイトでは必須ではなく、ある程度googleが自動的に判別してくれる
-    数万ページなどの大規模サイトでは慎重に設定する。
-    <!-- URL正規化 -->
+    <%# URL正規化 -%>
     <link rel="canonical" href="/">
+	<!-- noindex -->
+    <meta name="robots" content="<%- arg['meta']['robots'] %>">    
+<%#
+    <!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
 -%>
-
-	<!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
 	<script src="<%- incdir %><%- arg['dir']['lib'] %>/gsap/gsap.min.js" defer></script>
-	<script src="<%- incdir %><%- arg['dir']['lib'] %>/gsap/ScrollTrigger.min.js" defer></script>    
-	<script src="<%- incdir %><%- arg['dir']['lib'] %>/swiper/swiper-bundle.min.js" defer></script>    
+	<script src="<%- incdir %><%- arg['dir']['lib'] %>/gsap/ScrollTrigger.min.js" defer></script>
 	<script src="<%- incdir %><%- arg['dir']['js'] %>/bundle.js?v=1" defer></script>
-    <!-- css  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="<%- incdir %><%- arg['dir']['lib'] %>/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="<%- incdir %><%- arg['dir']['css'] %>/style.css?v=1">
 
 	<!-- Font -->

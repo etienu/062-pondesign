@@ -13,29 +13,27 @@ $$("*").forEach(v => v.style.outline = '1px solid red')
 <%- include('_inc/base/_head', { arg : ary  }) -%>
 
 <body>
-<%# include('_inc/parts/_loading', { arg:ary }) -%>
-
 <%- include('_inc/base/_header', { arg:ary }) -%>
 
 <%- include('_inc/section/_mv', { arg:ary }) -%>
 
     <main class="l-main" id="top">
-<%- include('_inc/section/_top_news', { arg:ary }) -%>
+<%- include('_inc/section/_worries', { arg:ary }) -%>
 
-<%- include('_inc/section/_top_service', { arg:ary }) -%>
+<%- include('_inc/section/_about', { arg:ary }) -%>
 
-<%- include('_inc/section/_top_works', { arg:ary }) -%>
+<%- include('_inc/section/_gallery', { arg:ary }) -%>
 
-<%- include('_inc/section/_top_company', { arg:ary }) -%>
+<%- include('_inc/section/_our', { arg:ary }) -%>
 
-<%- include('_inc/section/_top_recruit', { arg:ary }) -%>
+<%- include('_inc/section/_price', { arg:ary }) -%>
 
-<%- include('_inc/section/_top_contact', { arg:ary }) -%>
+<%- include('_inc/section/_stores', { arg:ary }) -%>
+
+<%- include('_inc/section/_flow', { arg:ary }) -%>
+
+<%- include('_inc/section/_contact', { arg:ary }) -%>
     </main>
-
-<%# フッター用facebookボタンプラグイン %>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0" nonce="o5PYbrrW"></script>
 
 <%- include('_inc/base/_footer', { arg:ary }) -%>
 

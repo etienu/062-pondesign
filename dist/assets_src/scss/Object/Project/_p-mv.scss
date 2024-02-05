@@ -1,12 +1,11 @@
 @use '../../global' as g;
-//------------------------------------------------
 //    セクション01 - MV
-//------------------------------------------------
 .p-mv {
     position:relative;
     overflow:hidden;
-    .p-mv__bg{
-        position: fixed;        
+    height: 553px;
+    .p-mv-bg{
+        position: absolute; 
         margin : auto;
         max-width: 100%;
         width: 100%;
@@ -17,146 +16,145 @@
             width: fit-content;
             width: 100%;
             img{
-                aspect-ratio: 1440/768;
+                width: 100%;
+                aspect-ratio: 1440/553;
+                object-fit: cover;
             }
         }
+        z-index: -1;
     }
 
-    .p-mv__body{
-        height: 100svh;
-        display:flex;
-        flex-direction : column;
-        justify-content: space-between;
-    }
-
-    .p-mv__inner {
-        max-width: min(calc(100% ), g.$layout-width-inner);
+    .p-mv-inner {
+        position : relative;
+        max-width: min(calc(100% - 40px ), g.$layout-width-inner);
         width: 100%;
         margin : auto;
-        //margin-top : 176px;
-        //margin-left: 207px;
+        margin-top : 39px;
         display:flex;
         flex-direction:column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        .p-mv__texts{
-            position : relative;
-            width : 100%;
-            color : g.$color-white;
-            text-align:center;
-            h1,h2{
-                @include g.fz(72,72,bold);
-                @include g.ls(5);
-            }
-            .sub{
-                margin-top: 20px;
-                @include g.fz(24,43.2);
-                @include g.ls(10);
-            }
-        }
-        .p-mv__buttonwrapper{
-            margin-top: 79px;
-        }
-    }
-    .c-animobj__scrolldown{
-        /*描画位置※位置は適宜調整してください*/
-        position:absolute;
-        bottom:0px;
-        right: 30px;
-    }
-
-}
-
-
-//----------------------------------------
-//  レスポンシブ
-//----------------------------------------
-//----------------------------------------
-//  PC版のみのCSS 768px以上
-//----------------------------------------
-@include g.mq('md-') {
-}
-
-@include g.mq('-xl') {
-}
-
-@include g.mq('-lg') {
-    
-}
-
-//----------------------------------------
-//  SP 767以下
-//----------------------------------------
-@include g.mq('-md') {
-    .p-mv {
-        position:relative;
-        overflow:hidden;
-        .p-mv__bg{
-            position: fixed;        
-            margin : auto;
-            max-width: 100%;
+        gap:10px;
+        .p-mv-inner__bg{
+            position:absolute;
             width: 100%;
             height: 100%;
             display:flex;
-            picture{
-                position:relative;
-                width: fit-content;
-                width: 100%;
-                img{
-                    aspect-ratio: 1440/768;
-                }
+            justify-content: flex-end;
+            z-index: -1;
+        }
+        .woman{
+            margin-top: -110px;
+            margin-right:0;
+            width: fit-content;
+            img{
+                width: 689px;
+                height: 658px;
+                aspect-ratio: 689/658;
             }
         }
-        .p-mv__body{
-            height: 100svh;
-            display:flex;
-            flex-direction : column;
-            justify-content: space-between;
-        }
-        .p-mv__inner {
-            max-width: calc( 100% - 60px );
-            width: 100%;
-            margin : auto;
-            margin-top : 283px;
-            //margin-left: 207px;
-            display:flex;
-            flex-direction:column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            .p-mv__texts{
-                position : relative;
-                width : 100%;
-                color : g.$color-white;
-                text-align:left;
-                h1,h2{
-                    @include g.fz(40,44,bold);
-                    @include g.ls(5);
-                }
-                .sub{
-                    margin-top: 20px;
-                    @include g.fz(16,28.8);
-                    @include g.ls(10);
-                }
+        .p-mv-textwrap{
+            .img1{
+                display: flex;
+                width: 495px;
+                height: 128px;
+                margin-bottom : 10px;
             }
-            .p-mv__buttonwrapper{
-                margin-top: 30px;
+            .img2{
+                width: 565px;
+                height: 38px;
+            }
+            .img3{
+                width: 512px;
+                height: 96px;
             }
         }
-        .c-animobj__scrolldown{
-            /*描画位置※位置は適宜調整してください*/
-            position:absolute;
-            bottom:0px;
-            right: 15px;
+        .p-mv-circlewrap{
+            display: flex;
+            flex-direction : row;
+            gap:10px;
+            .img1,
+            .img2,
+            .img3{
+                width: 200px;
+                height: 200px;
+            }
         }
-    
     }
-                
+
+}
+
+
+//  レスポンシブ
+//  SP 767以下
+@include g.mq('-md') {
+    .p-mv {
+        height: g.vwms(573);
+        .p-mv-bg{
+            picture{
+                img{
+                    object-position: 65% 0%;
+                }
+            }
+        }
+        .p-mv-inner {
+            max-width: calc(100% - g.vwms(30) );
+            margin:auto;
+            margin-left: g.vwms( 10 );
+            margin-top : 17px;
+            height: 100%;
+            .p-mv-inner__bg{
+                justify-content: center;
+                .woman{
+                    margin-top: auto;
+                    bottom:0;
+                    margin-right:g.vwms(-10);
+                    width: fit-content;
+                    img{
+                        width: g.vwms(410);
+                        height: g.vwms(410);
+                    }
+                }
+    
+            }
+            .p-mv-textwrap{
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap:g.vwms(6);
+                width: fit-content;
+                margin : auto;
+                margin-top:0;
+                .img1{
+                    width: g.vwms(320);
+                    height: g.vwms(90);
+                    margin-bottom: 4px;
+                }
+                .img2{
+                    width: g.vwms(267);
+                    height: g.vwms(58);
+                }
+                .img3{
+                    width: g.vwms(325);
+                    height: g.vwms(46);
+                }
+            }
+            .p-mv-circlewrap{
+                margin : auto;
+                margin-bottom:5px;
+                display: flex;
+                flex-direction : row;
+                gap:g.vwms(10);
+                .img1,
+                .img2,
+                .img3{
+                    width: g.vwms(110);
+                    height: g.vwms(110);
+                }
+            }
+        }
+    }
 }
 
 @include g.mq('-xs') {
     .p-mv {
-        .p-mv__inner {
-            max-width: calc( 100% - 40px );
-        }
     }
 }

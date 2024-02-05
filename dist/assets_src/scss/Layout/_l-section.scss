@@ -65,18 +65,13 @@
 //  インナーはボディ中、カンプで統一された幅を指定する場合に使用
 .l-inner {
     position:relative;
-    margin:auto;
     max-width: g.$layout-width-inner;   /*  カンプ幅 */
     width: 100%;
-    //max-width: 100%;
-    /*  セクションによって隠したくない時もある為 */
-    &.--ofh{
-        overflow: hidden;
-    }
+    margin:auto;
+    display:flex;
 }
 
 
-//  フッター
 //  汎用ボタン枠
 .l-btn{
     position: relative;

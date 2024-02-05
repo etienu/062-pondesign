@@ -1,0 +1,76 @@
+@use '../../global' as g;
+.p-gallery {
+    position:relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .p-gallery__inner{
+        display: flex;
+        flex-direction : column;
+    }
+    .p-gallery__wrap{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        margin :auto;
+        margin-bottom : 204px;
+        background-color : g.$color-white;
+        .ttl{
+            width: 156px;
+            height: 160px;
+            margin-bottom: 50px;
+        }
+        .p-gallery__list{
+            display:flex;
+            justify-content: center;
+            flex-wrap:wrap;
+            margin-bottom: 6px;
+            li{
+                .box{
+                    //width: 300px;
+                    //height: 300px;
+                    width: 240px;
+                    height: 240px;
+                    margin :30px;
+                }
+            }
+        }
+        .txt{
+            width: g.vwml(840);
+            height: g.vwml(96);
+        }
+    }
+}
+
+//  SP 767以下
+@include g.mq('-md') {
+.p-gallery {
+    position:relative;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    .p-gallery__inner{
+        gap: 86px;
+    }
+    .p-gallery__wrap{
+        margin-bottom : 0px;
+        .ttl{
+            width: 60px;
+            height: 77px;
+            margin-bottom: 0px;
+        }
+        .p-gallery__list{
+            flex-direction: column;
+            li{
+                .box{
+                    width: g.vwms(300);
+                    height: g.vwms(300);
+                }
+            }
+        }
+        .txt{
+            width: g.vwms(338);
+            height: g.vwms(84);
+        }
+    }
+}
+
+}

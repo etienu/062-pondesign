@@ -1,0 +1,18 @@
+<%
+var idcv = arg['incdir']+arg['dir']['img']+'/cv';
+var idcvs= arg['incdir']+arg['dir']['img']+'/cv/sp';
+%>
+            <div class="l-btn" data-eff="fadein-up">
+                <a href="#" class="p-cvbtn">
+                    <picture class="box">
+                        <source media="(max-width: 767px)" type="image/png" srcset="<%- idcvs %>/box@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="<%- idcv %>/box.png, <%- idcv %>/box@2x.png 2x">
+                        <img src="<%- idcv %>/box.png" alt="無料カウンセリング・ご予約はコチラ！" width="659" height="150">
+                    </picture>
+                    <picture class="txt">
+                        <source media="(max-width: 767px)" type="image/png" srcset="<%- idcvs %>/txt@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="<%- idcv %>/txt.png, <%- idcv %>/txt@2x.png 2x">
+                        <img src="<%- idcv %>/txt.png" alt="LINE問い合わせ 24時間365日対応" width="551" height="188">
+                    </picture>
+                </a>
+            </div>

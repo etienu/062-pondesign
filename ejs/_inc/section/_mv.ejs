@@ -1,30 +1,54 @@
 <%
-var incdir = arg['incdir'];
-if( arg['pageid'] == 'index' ){
-    incdir = "";
-}
+var id = arg['incdir']+arg['dir']['img']+'/mv';
+var ids= arg['incdir']+arg['dir']['img']+'/mv/sp';
 %>
     <!-- MV -->
     <div class="l-section p-mv" id="mv">
-        <div class="p-mv__bg">
-            <picture>
-                <img src="<%- incdir %><%- arg['dir']['img'] %>/mv/pc/hero.png" alt="" width="1440" height="768">
+        <div class="p-mv-bg">
+            <picture class="bg">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bg.png, <%- id %>/bg@2x.png 2x">
+                <img src="<%- id %>/bg.png" alt="" width="1440" height="553">
             </picture>
         </div>
-        <div class="l-body p-mv__body">
-            <div class="p-mv__inner">
-                <div class="p-mv__texts">
-                    <h2 class="enff" lang="en">
-                        <span>WEB DESIGN SPECIALIST</span>
-                    </h2>
-                    <p class="sub">お客様の夢を叶える<br class="u-display__sp">Webサイトを制作</p>
-                </div>
-                <div class="l-btn --pc-center --sp-left p-mv__buttonwrapper">
-                    <a class="c-button__contact --mv" href="page/contact.html"><span>CONTACT</span></a>
-                </div>
+        <div class="p-mv-inner">
+            <div class="p-mv-inner__bg">
+                <picture class="woman" data-eff="fadein-left">
+                    <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/woman@2x.png 2x">
+                    <img src="<%- id %>/woman.png" alt="女性" width="689" height="658">
+                </picture>
             </div>
-            <div class="c-animobj__scrolldown --vertical">
-                <span>SCROLL</span>
+            <div class="p-mv-textwrap" data-eff="fadein-right">
+                <h2 class="img1">
+                    <picture>
+                        <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/txt_1.png, <%- ids %>/txt_1@2x.png 2x">
+                        <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/txt_1.png, <%- id %>/txt_1@2x.png 2x">
+                        <img src="<%- id %>/txt_1.png" alt="40代からの美しさは、自信がある眉毛から。" width="495" height="128">
+                    </picture>
+                </h2>
+                <picture class="img2">
+                    <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/txt_2.png, <%- ids %>/txt_2@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/txt_2.png, <%- id %>/txt_2@2x.png 2x">
+                    <img src="<%- id %>/txt_2.png" alt="自分へのご褒美に、美しい眉を手に入れませんか？" width="565" height="38">
+                </picture>
+                <picture class="img3">
+                    <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/txt_3.png, <%- ids %>/txt_3@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/txt_3.png, <%- id %>/txt_3@2x.png 2x">
+                    <img src="<%- id %>/txt_3.png" alt="医療アートメイク" width="512" height="96">
+                </picture>
+            </div>
+            <div class="p-mv-circlewrap" data-eff="fadein-up">
+                <picture class="img1">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/circle_1.png, <%- id %>/circle_1@2x.png 2x">
+                    <img src="<%- id %>/circle_1.png" alt="眉の黄金比に基づいた施術" width="200" height="200">
+                </picture>
+                <picture class="img2">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/circle_2.png, <%- id %>/circle_2@2x.png 2x">
+                    <img src="<%- id %>/circle_2.png" alt="仕事終わりに22時まで営業！" width="200" height="200">
+                </picture>
+                <picture class="img3">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/circle_3.png, <%- id %>/circle_3@2x.png 2x">
+                    <img src="<%- id %>/circle_3.png" alt="LINEで24時間質問受付可能！" width="200" height="200">
+                </picture>
             </div>
         </div>
     </div>

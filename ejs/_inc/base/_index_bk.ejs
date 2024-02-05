@@ -1,0 +1,42 @@
+<%# ----------------------------------------------------
+#
+#   EJSテンプレート
+# --------------------------------
+※ CSSはみ出し確認
+$$("*").forEach(v => v.style.outline = '1px solid red')    
+#
+------------------------------------------------------ -%>
+<% pid = 'index'; -%>
+<%- include('_inc/base/_json') -%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('_inc/base/_head', { arg : ary  }) %>
+
+<body>
+<%- include('_inc/base/_header', { arg:ary }) %>
+
+<%- include('_inc/section/_mv', { arg:ary }) -%>
+
+    <main class="l-main" id="top">
+<%- include('_inc/section/_worries', { arg:ary }) %>
+
+<%# include('_inc/section/_about', { arg:ary }) %>
+
+<%# include('_inc/section/_gallary', { arg:ary }) %>
+
+<%# include('_inc/section/_our', { arg:ary }) %>
+
+<%# include('_inc/section/_price', { arg:ary }) %>
+
+<%# include('_inc/section/_stores', { arg:ary }) %>
+
+<%# include('_inc/section/_flow', { arg:ary }) %>
+
+<%# include('_inc/section/_contact', { arg:ary }) %>
+    </main>
+
+<%- include('_inc/base/_footer', { arg:ary }) -%>
+
+</body>
+
+</html>

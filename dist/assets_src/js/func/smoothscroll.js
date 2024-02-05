@@ -8,12 +8,14 @@ let alinks = document.querySelectorAll('a[href^="#"]');
 //  全てのaにクリックイベント設定
 alinks.forEach((anchor) => {
     anchor.addEventListener('click', function(e) {
+        var target = null;
         // クリックされたときのデフォルトの挙動を防ぐ
         e.preventDefault();
         let href = anchor.getAttribute("href");
-
+        let rep = href.replace('#', '');
         // href属性の#を取り除いた部分と一致するIDを取得
-        const target = document.getElementById(href.replace('#', ''));
+        if( rep != "" ) 
+            target = document.getElementById(rep);
 
         //取得した要素の位置を取得するために、getBoundingClientRect()を呼び出し、ページ上の位置を計算。
         //headerの高さを引いて、スクロール位置がヘッダーの下になるように調整します。

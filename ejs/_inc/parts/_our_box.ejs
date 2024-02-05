@@ -1,0 +1,51 @@
+<%
+//  id,ids
+var id = arg['incdir']+arg['dir']['img']+'/our';
+var ids= arg['incdir']+arg['dir']['img']+'/our/sp';
+
+var frev = "";
+if( rev ) frev = " --rev";
+var bnum = num;
+
+var alt= [];
+alt[0] = {ttl:"", txt:""};
+alt[1] = {ttl:"眉の黄金比に基づいたハイクラスな施術", txt:"「黄金比」と呼ばれる言葉をご存知でしょうか？ひとが無意識に美しいと感じるデザイン比のことです。眉のアートメイクを施す際、この黄金比に加え、骨格、肌色、眉の生え方などに配慮しながら理想的なデザインを作り上げます。"};
+alt[2] = {ttl:"丁寧なヒアリングとカウンセリング", txt:"当サロンは、丁寧なヒアリング・カウンセリングを実施し、お客様の要望や悩みに寄り添い、最適なアートメイクを提案安全・効果的な施術と持続的な美しさをサポートします。"};
+alt[3] = {ttl:"オシャレでアットホームなサロン", txt:"当サロンは、アートメイクをクリニックではなく、オシャレでアットホームなサロンで提供しています。医療行為ではありますが、気軽に来店いただける雰囲気を大切にし、お客様にリラックスしていただける空間を提供しています。"};
+alt[4] = {ttl:"２２時まで営業", txt:"営業時間が10時から22時までの12時間営業で、他のクリニックと比べて営業時間が長いのが強みです。仕事帰りの主婦層や働く女性にもアクセスしやすく、忙しい方々のニーズにも柔軟に対応しています。"};
+alt[5] = {ttl:"予約が取りやすい", txt:"他のクリニックと比べて予約が取りやすいのが、当サロンの魅力です。スケジュールの調整が容易であり、お客様の都合に合わせた施術が受けられます。"};
+alt[6] = {ttl:"診療のカウンセリングがオンラインで可能", txt:"診療のカウンセリングはオンラインで自宅から受けることができます。これにより、来店する手間や時間を節約し、リラックスした状態で相談が可能となっています。"};
+alt[7] = {ttl:"真心のこもったサービスと丁寧なサポート", txt:"フリーランスの看護師が、真心込めたサービスと丁寧なサポートを提供します。施術後の肌トラブルにも、LINEで24時間体制で質問受付が可能であり、安心して施術を受けられます。"};
+alt[8] = {ttl:"アートメイクスクール", txt:"全国でも有数のアートメイクを学べるサロンです。研修生によるモニター募集も行われており、安価な価格でアートメイクに挑戦できるプランもあります。"};
+-%>
+                    <!-- 0<%- bnum %> -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box<%- frev %> --no0<%-bnum%>">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="<%- ids %>/box_<%- bnum %>_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/box_<%- bnum %>_img.jpg, <%- id %>/box_<%- bnum %>_img@2x.jpg 2x">
+                                <img src="<%- id %>/box_<%- bnum %>_img.jpg" alt="特徴<%- bnum %>イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/box_<%- bnum %>_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/box_<%- bnum %>_num.png, <%- id %>/box_<%- bnum %>_num@2x.png 2x">
+                                        <img src="<%- id %>/box_<%- bnum %>_num.png" alt="0<%- bnum %>" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/box_<%- bnum %>_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/box_<%- bnum %>_ttl.png, <%- id %>/box_<%- bnum %>_ttl@2x.png 2x">
+                                            <img src="<%- id %>/box_<%- bnum %>_ttl.png" alt="<%- alt[bnum].ttl %>" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/box_<%- bnum %>_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/box_<%- bnum %>_txt.png, <%- id %>/box_<%- bnum %>_txt@2x.png 2x">
+                                    <img src="<%- id %>/box_<%- bnum %>_txt.png" alt="<%- alt[bnum].txt %>" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>

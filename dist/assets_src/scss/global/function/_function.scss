@@ -87,6 +87,29 @@ $baseFontSize: 16;
 @function vwsp($size, $viewport:375) {
     @return vw($size, $viewport);
 }
+//  実務用レスポンシブごとの簡略化
+// xl
+@function vwx($size, $viewport:1280) {
+    @return vw($size, $viewport);
+}
+// lg
+@function vwl($size, $viewport:1080) {
+    @return vw($size, $viewport);
+}
+// md
+@function vwm($size, $viewport:768) {
+    @return vw($size, $viewport);
+}
+// sp
+@function vws($size, $viewport:390) {
+    @return vw($size, $viewport);
+}
+//iphone
+@function vwi($size, $viewport:320) {
+    @return vw($size, $viewport);
+}
+
+
 
 /* ------------------------------------------------
 // 最大値指定
@@ -113,6 +136,29 @@ $baseFontSize: 16;
 @function vwmaxsp($size, $viewport:375) {
     @return vwmax($size, $viewport);
 }
+
+//  実務用レスポンシブごとの簡略化
+// xl
+@function vwmx($size, $viewport:1280) {
+    @return vwmax($size, $viewport);
+}
+// lg
+@function vwml($size, $viewport:1080) {
+    @return vwmax($size, $viewport);
+}
+// md
+@function vwmm($size, $viewport:768) {
+    @return vwmax($size, $viewport);
+}
+// sp
+@function vwms($size, $viewport:390) {
+    @return vwmax($size, $viewport);
+}
+//iphone
+@function vwmi($size, $viewport:320) {
+    @return vwmax($size, $viewport);
+}
+
 
 /* ------------------------------------------------
 // PC用 

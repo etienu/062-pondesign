@@ -1,0 +1,35 @@
+<%
+var d = dir;
+var f = fname;
+var e = ext;
+var spfn = d+"sp/"+f;
+var pcfn = d+f;
+
+if( ext =="jpg" ){
+%>
+<source media="(max-width: 767px)" type="image/webp" srcset="<%- spfn %>.webp, <%- spfn %>@2x.webp 2x">
+<source media="(max-width: 767px)" type="image/jpg" srcset="<%- spfn %>.jpg, <%- spfn %>@2x.jpg 2x">
+<source media="(min-width: 768px)" type="image/webp" srcset="<%- pcfn %>.webp, <%- pcfn %>@2x.webp 2x">
+<source media="(min-width: 768px)" type="image/jpg" srcset="<%- pcfn %>.jpg, <%- pcfn %>@2x.jpg 2x">
+<img src="<%- pcfn %>.<%- ext %>" width="<%- w %>" height="<%- h %>" alt="<%- alt %>">
+<%
+}
+%>
+<%
+if( ext =="png" ){
+%>
+    <source media="(max-width: 767px)" type="image/webp" srcset="<%- spfn %>.webp, <%- spfn %>@2x.webp 2x">
+    <source media="(max-width: 767px)" type="image/png" srcset="<%- spfn %>.png, <%- spfn %>@2x.png 2x">
+    <source media="(min-width: 768px)" type="image/webp" srcset="<%- pcfn %>.webp, <%- pcfn %>@2x.webp 2x">
+    <source media="(min-width: 768px)" type="image/png" srcset="<%- pcfn %>.png, <%- pcfn %>@2x.png 2x">
+    <img src="<%- pcfn %>.<%- ext %>" width="<%- w %>" height="<%- h %>" alt="<%- alt %>">
+<%
+}
+%>
+<%
+if( ext =="svg" ){
+%>
+    <img src="<%- pcfn %>.<%- ext %>" width="<%- w %>" height="<%- h %>" alt="<%- alt %>">
+<%
+}
+%>

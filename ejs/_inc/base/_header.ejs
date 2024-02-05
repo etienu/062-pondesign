@@ -1,65 +1,34 @@
 <%
-var incdir = arg['incdir'];
-var pagedir = "";
-if( arg['pageid'] == 'index' ){
-    incdir = "";
-    pagedir = "page/";
-}
+var id = arg['incdir']+arg['dir']['img']+'/header';
 -%>
     <!-- Header Start -->
     <header class="l-header" data-js="header">
         <div class="p-header" id="header">
             <div class="p-header__inner">
-<% if(arg['pageid']=='index'){ %>
-                <a href="#">
-                    <h1 class="logo enff">
-<% }else if( arg['pageid']=='single' ){ %>
-                <a href="<%- incdir %>index.html">
-                    <div class="logo enff">
-<% }else{ %>
-                <a href="<%- incdir %>index.html">
-                    <h1 class="logo enff">
-<% } %>
-                        <picture>
-                            <img src="<%- incdir %><%- arg['dir']['img'] %>/header/pc/logo.svg" alt="<%- arg['site']['title'] %>" width="161" height="17">
+                <div class="p-header__leftwrap">
+                    <a href="#">
+                        <picture class="logo">
+                            <img src="<%- id %>/logo@2x.png" width="94" height="94" alt="medical salon μ">
                         </picture>
-<% if(arg['pageid']=='index'){ %>
+                    </a>
+                    <h1 class="p-header__ttl">
+                        <picture>
+                            <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/ttl.png, <%- id %>/ttl@2x.png 2x">
+                            <img src="<%- id %>/ttl.png"
+                            width="252" height="87" alt="medical salon μ −miuex 札幌中央 −">
+                        </picture>
                     </h1>
-<% }else if( arg['pageid']=='single' ){ %>
-                    </div>
-<% }else{ %>
-                    </h1>
-<% } %>
-                </a>
+            </div>
 
-                <!-- ハンバーガー -->
-                <button class="c-hamburger --fixed u-display__sp"
-                    data-js="button" data-name="hamburger"
-                    data-headerid="header" data-menuid="spmenu"
-                    data-menubgid="spmenubg">
-                    <div class="c-hamburger__inner">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
-
-                <!-- SP Menu -->
-                <div class="p-header-nav__wrapper" id="spmenu">
-                    <div class="p-header-nav__bg"></div>
-                    <!-- PC Menu -->
-                    <nav class="p-header-nav">
-                        <ul>
-                            <li><a href="<%- pagedir %>news.html">NEWS</a></li>
-                            <li><a href="<%- pagedir %>service.html">SERVICE</a></li>
-                            <li><a href="<%- pagedir %>works.html">WORKS</a></li>
-                            <li><a href="<%- pagedir %>company.html">COMPANY</a></li>
-                            <li><a href="<%- pagedir %>recruit.html">RECRUIT</a></li>
-                            <li><a href="<%- pagedir %>contact.html">CONTACT</a></li>
-                        </ul>  
-                    </nav>
+                <div class="p-header-btn__wrapper u-display__tab-pc">
+                    <a href="#" class="c-btn">
+                        <picture>
+                            <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/line.png, <%- id %>/line@2x.png 2x">
+                            <img src="<%- id %>/line@2x.png" width="112" height="30" alt="LINE問い合わせ">
+                        </picture>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Header End -->    
+    <!-- Header End -->

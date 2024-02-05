@@ -3,22 +3,13 @@
 
 
 @use 'p-mv';
-@use 'p-submv';
-@use 'p-accordion';
-
-@use 'p-breadcrumb';
-
-@use 'p-top-news';
-@use 'p-top-service';
-@use 'p-top-works';
-@use 'p-top-company';
-@use 'p-top-recruit';
-@use 'p-top-contact';
-
-@use 'p-news';
-@use 'p-single';
-@use 'p-service';
-@use 'p-works';
-@use 'p-company';
-@use 'p-recruit';
+@use 'p-worries';
+@use 'p-about';
+@use 'p-gallery';
+@use 'p-our';
+@use 'p-price';
+@use 'p-stores';
+@use 'p-flow';
 @use 'p-contact';
+
+@use 'p-cvbtn';

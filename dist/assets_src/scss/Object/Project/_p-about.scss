@@ -1,187 +1,208 @@
 @use '../../global' as g;
-//------------------------------------------------
-//    top- セクション02 - about
-//------------------------------------------------
 .p-about {
     position:relative;
-    //background-color : g.$color-black;
-    padding-top: 110px;
-    padding-bottom : 60px;
-    .p-about__inner {
-        max-width: 100%;//min( calc(100% - 40px), calc(g.$layout-width-inner) );
-        //max-width: min( calc(100% - 40px), calc(g.$layout-width-inner) );
-        //max-width: min( calc( 100% - 256pxa ),  g.$layout-width-inner  );
-        width: 100%;
-        margin : auto;
+    overflow:hidden;
+    background-image : url( "../img/about/bg.png" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 148px;
+    padding-bottom: 105px;
+
+    .p-about-inner{
+        display: flex;
+        flex-direction : column;
+        gap: 120px;
+        max-width: 1040px;
+    }
+    .p-about__wrap{
         display:flex;
         flex-direction:column;
         align-items: center;
-    }
-    .p-about__title{
-        @include g.fz(20,20);
-        @include g.ls(5);
-        color : g.$color-white;
-        span{
-            margin-bottom :11px;
+        margin :auto;
+        padding : 74px 0px 81px;
+        width: calc(100% - 40px );
+        background-color : g.$color-white;
+        h2{
+            display:inline-block;
+        }
+        .ttl{
+            width: 438px;
+            height: 133px;
+            margin-bottom: 60px;
+        }
+        .img{
+            width: g.vwml(750);
+            height: g.vwml(350);
+            margin-bottom: 51px;
+        }
+        .txt{
+            width: g.vwml(771);
+            height: g.vwml(324);
         }
     }
-
-    .p-about__lists{
+    .p-about-type__wrap{
         display:flex;
         flex-direction:column;
-        gap: 100px;
-        .listitem{
-            display:flex;
-            flex-direction:row;
-            align-items: flex-end;
-            width: 100%;
-            .p-about__texts{
-                z-index: 1;
-                order : 1;
-                text-align:left;
-                //max-width: min( calc(100% - 40px ), g.vw(555) );
-                max-width: 555px;
-                background-color : g.$color-white;
-                border-radius: 8px;
-                padding: 60px;
-                box-shadow: 0 0 4px RGBA(0,0,0,0.4);
-                margin-right: 20px;
-                margin-left:-85px;
-                margin-bottom:-10px;
-                .title{
-                    .c-title{
-
-                    }
-                    .c-subtitle{
-                        display:block;
-                        margin-top:20px;
-                    }
+        align-items: center;
+        margin :auto;
+        padding : 56px 15px 24px;
+        width: calc(100% - 40px );
+        background-color : g.$color-white;
+        h2{
+            display:inline-block;
+        }
+        .ttl{
+            width: 438px;
+            height: 133px;
+            margin-bottom: 50px;
+        }
+        .p-about-type__list{
+            display: flex;
+            flex-direction : row;
+            .box{
+                display:flex;
+                flex-direction : column;
+                align-items: center;
+                border: 1px solid g.$color-font-b;
+                max-width: g.vwml(314);
+                height: g.vwml(460);
+                padding: g.vwml(40) g.vwml(15) g.vwml(15);
+                .box-ttl{
+                    width: g.vwml(71);
+                    height: g.vwml(80);
+                    margin-bottom: g.vwml(30);
                 }
-                .lead{
-                    @include g.fz(15,27);
-                    @include g.ls(1);
-                    margin-top:15px;
-                    width: 100%;
+                .box-img{
+                    width: g.vwml(241);
+                    height: g.vwml(120);
                 }
-            }
-            .p-about__image{
-                z-index: 0;
-                order :0;
-                img{
-                    width: g.vw(950);
+                .box-txt{
                 }
             }
-            &.--rev{
-                .p-about__texts{
-                    order : 0;
-                    margin-left:20px;
-                    margin-right:-85px;
-                }
-                .p-about__image{
-                    order : 1;
+            &.--first{
+                gap: 15px;
+                margin-bottom : 16px;
+            }
+            &.--second{
+                gap: g.vwml(5);
+                .box{
+                    max-width: g.vwml(255);
+                    height: g.vwml(489);
+                    padding: g.vwml(16) g.vwml(16) g.vwml(15);
+                    gap: g.vwml(20);
+                    .box-ttl{
+                        width: g.vwml(210);
+                        height: g.vwml(53);
+                        margin-bottom : 0;
+                    }
+                    .box-img{
+                        width: g.vwml(200);
+                        height: g.vwml(100);
+                        margin-bottom: 4px;
+                    }
+                    .box-txt{
+                        width: g.vwml(200);
+                    }
+                    &.box-5{
+                        .box-ttl{
+                            width: g.vwml(140);
+                        }
+                    }
+                    &.box-7{
+                        .box-ttl{
+                            width: g.vwml(175);
+                        }
+                    }
                 }
             }
         }
     }
-    .p-about__buttonwrapper{
-        margin-top: 70px;
-    }
-
 }
 
-
-//----------------------------------------
-//  レスポンシブ
-//----------------------------------------
-//----------------------------------------
-//  PC版のみのCSS 768px以上
-//----------------------------------------
-@include g.mq('md-') {
-}
-
-@include g.mq('-xl') {
-}
-
-@include g.mq('-lg') {
-}
-
-//----------------------------------------
 //  SP 767以下
-//----------------------------------------
 @include g.mq('-md') {
 .p-about {
-    position:relative;
-    padding-top: 0px;
-    padding-bottom : 0px;
-    .p-about__inner {
-        max-width: 100%;
-        width: 100%;
-        margin : auto;
-        display:flex;
-        flex-direction:column;
-        align-items: center;
+    padding-top: 52px;
+    padding-bottom: 48px;
+    .p-about-inner{
+        gap: 50px;
     }
-    .p-about__title{
+    .p-about__wrap{
+        padding : 20px 21px 12px 13px;
+        .ttl{
+            width: 195px;
+            height: 63px;
+            margin-bottom: 10px;
+        }
+        .img{
+            width: g.vwsp(188); //  画像は大き目に
+            height: g.vwsp(96);
+            margin-bottom: 24px;
+        }
+        .txt{
+            width: g.vwms(296);
+            height: g.vwms(124);
+        }
     }
-
-    .p-about__lists{
-        display:flex;
-        flex-direction:column;
-        gap: 30px;
-        .listitem{
-            display:flex;
-            flex-direction:column;
-            align-items: center;
-            width: 100%;
-            .p-about__texts{
-                z-index: 1;
-                order : 1;
-                text-align:left;
-                max-width: calc(100% - 40px );
-                padding: 40px 30px 30px;
-                //box-shadow: 0 0 4px RGBA(0,0,0,0.4);
-                margin : -10px 0 0 0;
-                .title{
-                    .c-title{
-
+    .p-about-type__wrap{
+        padding : 30px 30px 52px;
+        .ttl{
+            width: g.vwms(126);
+            height: g.vwms(58);
+            margin-bottom:30px;
+        }
+        .p-about-type__list{
+            display: flex;
+            flex-direction : column;
+            &.--first{
+                gap: 10px;
+                margin-bottom : 50px;
+                .box{
+                    max-width: none;
+                    width:g.vwms(270);
+                    height:auto;
+                    padding: 20px 15px 20px;
+                    .box-ttl{
+                        width: 44px;
+                        height: 50px;
+                        margin-bottom : 0px;
                     }
-                    .c-subtitle{
-                        display:block;
-                        margin-top:20px;
-                        @include g.fz(22,33,bold);
-                        @include g.ls(0);
+                    .box-img{
+                        width: g.vwms(200);
+                        height: g.vwms(100);
+                        margin-bottom : 10px;
                     }
-                }
-                .lead{
-                    @include g.fz(14,23.8);
-                    @include g.ls(0);
-                    margin-top:15px;
-                    width: 100%;
+                    .box-txt{
+                        width: g.vwms(165);
+                    }
                 }
             }
-            .p-about__image{
-                z-index: 0;
-                order :0;
-                img{
-                    width: 100%;
-                }
-            }
-            &.--rev{
-                .p-about__texts{
-                    order : 1;
-                    margin-left:0px;
-                    margin-right:0px;
-                }
-                .p-about__image{
-                    order : 0;
+            &.--second{
+                gap: 15px;
+                .box{
+                    width:g.vwms(270);
+                    height:auto;
+                    padding: 35px 15px 40px;
+                    max-width: none;
+                    .box-ttl{
+                        width: 150px;
+                        height: 38px;
+                        margin-bottom : 0px;
+                    }
+                    .box-img{
+                        width: 150px;
+                        height: 75px;
+                        margin-bottom : 0px;
+                    }
+                    .box-txt{
+                        width: g.vwms(180);
+                    }
+
                 }
             }
         }
     }
-    .p-about__buttonwrapper{
-        margin-top: 40px;
-    }
-
 }
     
 }

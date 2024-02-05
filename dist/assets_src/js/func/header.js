@@ -90,7 +90,7 @@ export default class partsHeader {
         let cr = itm.getBoundingClientRect();
         this.dispPosition = cr.bottom;   //  ヘッダーの下超えたら浮かす
         this.lheader = itm;
-        this.pheader = this.lheader.querySelector('.p-headerbar')
+        this.pheader = this.lheader.querySelector('.p-header')
         if( !this.pheader ) return;
         this.registItem( itm );
     }

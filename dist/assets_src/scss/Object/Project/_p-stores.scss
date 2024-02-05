@@ -1,0 +1,521 @@
+@use '../../global' as g;
+.p-stores {
+    position:relative;
+    .p-stores__inner{
+        display: flex;
+        flex-direction : column;
+        align-items: center;
+        width: fit-content;
+        max-width: 915px;
+        margin :auto;
+        padding-top: 220px;
+        padding-bottom: 120px;
+        h2{
+            .sec-ttl{
+                width: g.vwml(668);
+                height: g.vwml(133);
+                margin-bottom: 81px;
+            }
+        }
+    }
+    .p-stores__tblwrap{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+        margin :auto;
+        margin-bottom : 32px;
+        width: fit-content;
+        border-bottom : 1px solid g.$color-brown;
+        .grid{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:not(&:last-child){
+                background-image : g.$grad-dotted-bw;
+                background-size: 6px 3px;
+                background-repeat: repeat-x; 
+                background-position: left bottom;                
+            }
+        }
+        .tbl-col1{
+            border-top : 1px solid g.$color-brown;
+            border-left : 2px solid g.$color-brown;
+            .grid{
+                &:not(&.--top){
+                    background-color : g.$color-brown-05;
+                    height: 200px;
+                }
+                &.--top{
+                    height: 104px;
+                }
+                width: g.vwml(158);
+                .tbl-2-1,
+                .tbl-3-1,
+                .tbl-4-1,
+                .tbl-5-1{
+                    width:60px;
+                    height:45px;
+                }
+
+            }
+        }
+        .tbl-col2{
+            display:flex;
+            flex-direction : column;
+            //  グラデーション線
+            border : 5px solid;
+            border-image:g.$grad-goldline;
+            border-image-slice: 1;
+            border-image-width: 1.2;    //  1だとクロス線が見えてしまうため
+            width: g.vwml(441);
+
+            .grid-row{
+                justify-content: center;
+                margin:auto;
+                width: calc(100% - 0px);
+                display: grid;
+                grid-template-columns: g.vwml(245) g.vwml(195);  //  横
+                &:not(&:first-child):not(&:last-child){
+                    height: 200px;
+                    background : g.$color-white;
+                    grid-template-rows : 1fr;   //  縦
+                    grid-auto-flow: row;
+                    grid-auto-rows:object-fit;
+
+                }
+                //  top
+                &:first-child{
+                    height: calc(104px - 4px);
+                    background : g.$grad-gold;
+                    grid-template-rows : 58px 42px;   //  縦
+                    grid-auto-flow: row;
+                    grid-auto-rows:object-fit;
+                }
+                &:last-child{
+                    height: calc(200px - 5px);
+                    background : g.$color-white;
+                }
+                &:not(&:last-child){
+                    position : relative;
+                    //  貫通破線(逆方向)
+                    &:after{
+                        position : absolute;
+                        content : "";
+                        left: -5px;
+                        width: calc( 100% + 10px );
+                        height: 100%;
+                        background-image : g.$grad-dotted-bw;
+                        background-size: 6px 3px;
+                        background-repeat: repeat-x;
+                        background-position: right bottom;
+                        pointer-events: none;
+                    }
+                }
+                .grid-store{
+                    position : relative;
+                    grid-column : 1/3; // 横ライン
+                    grid-row : 1/2; // 縦ライン
+                    .tbl-1-21{
+                        width: g.vwml(178);
+                        height: 50px;
+                        filter : drop-shadow( 0px 4px 4px g.$shadow5 );
+                    }
+                    &:after{
+                        position : absolute;
+                        content : "";
+                        left: 5px;
+                        width: calc(100% - 10px );
+                        bottom: 0;
+                        border-bottom : 1px solid g.$color-white;
+                    }
+                }
+                .grid-plan1{
+                    position : relative;
+                    grid-column : 1/2; // 横ライン
+                    grid-row : 2/3; // 縦ライン
+                    .tbl-1-221{
+                        width: g.vwml(210);
+                        height: g.vwml(40);
+                    }
+                    filter : drop-shadow( 0px 4px 4px g.$shadow5 );
+                    &:after{
+                        position : absolute;
+                        content : "";
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                        height: calc(100% - 6px);
+                        border-right : 1px solid g.$color-white;
+                    }
+                }
+                .grid-plan2{
+                    grid-column : 2/3; // 横ライン
+                    grid-row : 2/3; // 縦ライン
+                    .tbl-1-222{
+                        width: g.vwml(160);
+                        height: g.vwml(40);
+                        filter : drop-shadow( 0px 4px 4px g.$shadow5 );
+                    }
+                }
+                .grid-pprice1,
+                .grid-pprice2{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                }
+                .grid-pprice1{
+                    border-right : 1px solid g.$color-white;
+                    border-image:g.$grad-goldline2;
+                    border-image-slice: 1;
+                }
+                .tbl-ppricetxt{
+                    width: 132px;
+                    height: 50px;
+                }
+                .tbl-2-3-1,
+                .tbl-3-3-1,
+                .tbl-4-3-1{
+                    width: g.vwml(131);
+                }
+                .tbl-2-3-2,
+                .tbl-3-3-2,
+                .tbl-4-3-2{
+                    width: g.vwml(133);
+                }
+                .tbl-2-3-3,
+                .tbl-3-3-3,
+                .tbl-4-3-3{
+                    width: g.vwml(131);
+                }
+                .tbl-y66000{
+                    width: 111px;
+                    height: 60px;
+                }
+                .tbl-y110000{
+                    width: 127px;
+                    height: 60px;
+                }
+                .tbl-y110000b{
+                    width: 150px;
+                    height: 90px;
+                }
+                .tbl-y130000{
+                    width: 121px;
+                    height: 60px;
+                }
+                .tbl-5-2-1{
+                    width: g.vwml(220);
+                    height: 40px;
+                }
+                .tbl-5-2-2{
+                    width: 126px;
+                    height: 40px;
+                }
+                .tbl-5-2-4{
+                    width: 105px;
+                    height: 30px;
+                }
+                .tbl-none{
+                    width:15px;
+                    height:50px;
+                }
+
+            }
+        }// tbl-col2
+        .tbl-col3{
+        }
+        .tbl-col4{
+            border-left : 2px solid g.$color-brown;
+        }
+        .tbl-col3, 
+        .tbl-col4{
+            border-top : 1px solid g.$color-brown;
+            border-right : 2px solid g.$color-brown;
+            .grid{
+                &:first-child{
+                    background-color : g.$color-lightgray;
+                    height: 104px;
+                }
+                &:not(&:first-child){
+                    height: 200px;
+                }
+                &:not(&:last-child ){
+                }
+                width: g.vwml(150);
+                .tbl-none{
+                    width:15px;
+                    height:50px;
+                }
+                .tbl-1-4{
+                    width:51px;
+                    height:45px;
+                }
+                .tbl-1-5{
+                    width:51px;
+                    height:45px;
+                }
+                .tbl-y72000{
+                    width:87px;
+                    height:50px;
+                }
+                .tbl-y120000{
+                    width:99px;
+                    height:50px;
+                }
+            }
+        }
+    }
+    .tbl-txt{
+        display:flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 204px;
+        img{
+            width: g.vwml(874);
+            height: g.vwml(169);
+        }
+    }
+}
+
+
+//  SP 767以下
+@include g.mq('-md') {
+.p-stores {
+    position:relative;
+    .p-stores__inner{
+        display: flex;
+        flex-direction : column;
+        align-items: center;
+        max-width: calc(100% - 32px );
+        margin :auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h2{
+            .sec-ttl{
+                width: 251px;
+                height: 58px;
+                margin-bottom: 43px;
+            }
+        }
+    }
+    .p-stores__tblwrap{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        margin :auto;
+        margin-bottom : 17px;
+        width: 100%;
+        border-bottom : 1px solid g.$color-brown;
+        .grid{
+            &:not(&:last-child){
+                background-image : g.$grad-dotted-bw;
+                background-size: 6px 2px;
+            }
+        }
+        .tbl-col1{
+            .grid{
+                &:not(&.--top){
+                    height: 78px;
+                }
+                &.--top{
+                    height: 40px;
+                }
+                width: g.vwms(61);
+                .tbl-2-1,
+                .tbl-3-1,
+                .tbl-4-1,
+                .tbl-5-1{
+                    width:g.vwms(31);
+                    height:g.vwms(33);
+                }
+
+            }
+        }
+        .tbl-col2{
+            //  グラデーション線
+            border : 3px solid;
+            border-image:g.$grad-goldline;
+            border-image-slice: 1;
+            border-image-width: 1.2;
+            .grid-row{
+                grid-template-columns: g.vwms(97) g.vwms(76);  //  横
+                &:not(&:first-child):not(&:last-child){
+                    height: 78px;
+                }
+                //  top
+                &:first-child{
+                    height: calc(40px - 2px);
+                    grid-template-rows : 17px 17px;   //  縦
+                }
+                &:last-child{
+                    height: calc(78px - 3px);
+                }
+                &:not(&:last-child){
+                    //  貫通破線(逆方向)
+                    &:after{
+                        left: -3px;
+                        width: calc( 100% + 6px );
+                        background-image : g.$grad-dotted-bw;
+                        background-size: 6px 2px;
+                    }
+                }
+                .grid-store{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    .tbl-1-21{
+                        width: g.vwms(72);
+                        height: g.vwms(20);
+                    }
+                    &:after{
+                        position : absolute;
+                        content : "";
+                        left: 5px;
+                        width: calc(100% - 10px );
+                        height: 100%;
+                        border-bottom : 1px solid g.$color-white;
+                    }
+                }
+                .grid-plan1{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .tbl-1-221{
+                        width: g.vwms(74);
+                        height: g.vwms(14);
+                    }
+                    &:after{
+                        height: calc(100% - 2px);
+                    }
+                }
+                .grid-plan2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    .tbl-1-222{
+                        width: g.vwms(54);
+                        height: g.vwms(14);
+                    }
+                }
+                .grid-pprice1{
+                    border-right : 1px solid g.$color-white;
+                    border-image:g.$grad-goldline2;
+                    border-image-slice: 1;
+                }
+                .tbl-ppricetxt{
+                    width: g.vwms(61);
+                    height: g.vwms(20);
+                }
+                .tbl-2-3-1,
+                .tbl-3-3-1,
+                .tbl-4-3-1{
+                    width: g.vwms(61);
+                }
+                .tbl-2-3-2,
+                .tbl-3-3-2,
+                .tbl-4-3-2{
+                    width: g.vwms(62);
+                }
+                .tbl-2-3-3,
+                .tbl-3-3-3,
+                .tbl-4-3-3{
+                    width: g.vwms(61);
+                }
+
+                .tbl-y66000{
+                    width: g.vwms(56);
+                    height: g.vwms(30);
+                }
+                .tbl-y110000{
+                    width: g.vwms(64);
+                    height: g.vwms(30);
+                }
+                .tbl-y110000b{
+                    width: g.vwms(80);
+                    height: g.vwms(46);
+                }
+                .tbl-y130000{
+                    width: g.vwms(61);
+                    height: g.vwms(20);
+                }
+                .tbl-5-2-1{
+                    width: g.vwms(88);
+                    height: g.vwms(16);
+                }
+                .tbl-5-2-2{
+                    width: g.vwms(56);
+                    height: g.vwms(16);
+                }
+                .tbl-5-2-4{
+                    width: g.vwms(56);
+                    height: g.vwms(16);
+                }
+                .tbl-none{
+                    width:g.vwms(10);
+                    height:g.vwms(20);
+                }
+
+            }
+            width: g.vwms(171);
+        }
+        .tbl-col3, 
+        .tbl-col4{
+            border-top : 1px solid g.$color-brown;
+            .grid{
+                &:first-child{
+                    background-color : g.$color-lightgray;
+                    height: 40px;
+                }
+                &:not(&:first-child){
+                    height: 78px;
+                }
+                &:not(&:last-child ){
+                }
+                width: g.vwms(60);
+                .tbl-none{
+                    width:g.vwms(10);
+                    height:g.vwms(20);
+                }
+                .tbl-1-4{
+                    width:g.vwms(19);
+                    height:g.vwms(15);
+                }
+                .tbl-1-5{
+                    width:g.vwms(17);
+                    height:g.vwms(15);
+                }
+                .tbl-y72000{
+                    width:g.vwms(35);
+                    height:g.vwms(20);
+                }
+                .tbl-y120000{
+                    width:g.vwms(40);
+                    height:g.vwms(20);
+                }
+            }
+        }
+        .tbl-col3{
+            border-right : 1px solid g.$color-brown;
+        }
+        .tbl-col4{
+            border-left : 1px solid g.$color-brown;
+            border-right : 2px solid g.$color-brown;
+        }
+    }
+    .tbl-txt{
+        display:flex;
+        justify-content: flex-start;
+        width: calc(100% - 8px );
+        margin-bottom: 86px;
+        img{
+            width: g.vwms(348);
+            height: g.vwms(157);
+        }
+    }
+}
+        
+}

@@ -1,0 +1,86 @@
+<%
+var id = arg['incdir']+arg['dir']['img']+'/about';
+var ids= arg['incdir']+arg['dir']['img']+'/about/sp';
+%>
+    <!-- section : about -->
+    <section class="l-section p-about" id="about">
+        <div class="l-inner p-about-inner">
+            <div class="p-about__wrap" data-eff="fadein-up">
+                <h2>
+                    <picture class="ttl">
+                        <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/about_ttl.png, <%- id %>/about_ttl@2x.png 2x">
+                        <img src="<%- id %>/about_ttl.png" alt="About Art Make アートメイクとは？" width="438" height="133">
+                    </picture>
+                </h2>
+                <picture class="img">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/about_img.png, <%- id %>/about_img@2x.png 2x">
+                    <img src="<%- id %>/about_img.png" alt="メイク中のお客様" width="725" height="350">
+                </picture>
+                <picture class="txt">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/about_txt.png, <%- id %>/about_txt@2x.png 2x">
+                    <img src="<%- id %>/about_txt.png" alt="専用の針を用い、色素を注入してメイク施す技法を医療 アートメイクといいます。 医師による事前診断を受け、その指示のもと美容看護師 が施術を行います。 medical salon μ では医療機関であるM＆Mクリニック と提供し、医療アートメイクを提供しています。" width="771" height="324">
+                </picture>
+            </div>
+            <div class="p-about-type__wrap">
+                <h2>
+                    <picture class="ttl">
+                        <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/type_ttl.png, <%- id %>/type_ttl@2x.png 2x">
+                        <img src="<%- id %>/type_ttl.png" alt="" width="306" height="133">
+                    </picture>
+                </h2>
+                <ul class="p-about-type__list --first" data-eff="fadein-up">
+                    <li class="box">
+                        <img class="box-ttl" src="<%- id %>/box_1_ttl.png" alt="2D" width="71" height="80">
+                        <img class="box-img" src="<%- id %>/box_1_img.png" alt="2Dイメージ" width="241" height="120">
+                        <img class="box-txt" src="<%- id %>/box_1_txt.png" alt="現代の技法は昔のように海苔を貼ったような仕上がりにはならず、メイクで描いたような仕上がりになります。" width="275" height="190">
+                    </li>
+                    <li class="box">
+                        <img class="box-ttl" src="<%- id %>/box_2_ttl.png" alt="3D" width="71" height="80">
+                        <img class="box-img" src="<%- id %>/box_2_img.png" alt="3Dイメージ" width="241" height="120">
+                        <img class="box-txt" src="<%- id %>/box_2_txt.png" alt="値段は少々高めだが、眉毛を一本一本丁寧に描いていく今主流の毛並み眉。まるで本物の眉毛を再現できます。" width="275" height="190">
+                    </li>
+                    <li class="box">
+                        <img class="box-ttl" src="<%- id %>/box_3_ttl.png" alt="4D" width="71" height="80">
+                        <img class="box-img" src="<%- id %>/box_3_img.png" alt="4Dイメージ" width="241" height="120">
+                        <img class="box-txt" src="<%- id %>/box_3_txt.png" alt="3D+パウダー技法毛並みのみよりメイク感も出て、より白眉毛と馴染んだ仕上がりになります。" width="275" height="190">
+                    </li>
+                </ul>
+                <ul class="p-about-type__list --second" data-eff="fadein-up">
+                    <li class="box box-4">
+                        <img class="box-ttl" src="<%- id %>/box_4_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="<%- id %>/box_4_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="<%- ids %>/box_4_txt@2x.png">
+                            <img src="<%- id %>/box_4_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                    <li class="box box-5">
+                        <img class="box-ttl" src="<%- id %>/box_5_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="<%- id %>/box_5_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="<%- ids %>/box_5_txt@2x.png">
+                            <img src="<%- id %>/box_5_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                    <li class="box box-6">
+                        <img class="box-ttl" src="<%- id %>/box_6_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="<%- id %>/box_6_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="<%- ids %>/box_6_txt@2x.png">
+                            <img src="<%- id %>/box_6_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                    <li class="box box-7">
+                        <img class="box-ttl" src="<%- id %>/box_7_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="<%- id %>/box_7_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="<%- ids %>/box_7_txt@2x.png">
+                            <img src="<%- id %>/box_7_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <!-- section:END -->

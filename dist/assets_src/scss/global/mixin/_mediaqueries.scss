@@ -21,10 +21,11 @@ xl: 1280 /*  xl  X-Large */
 /*  bootstrap5式 */
 //  スマホファースト式のレスポンシブは768ではなく1024など分岐点が変わる
 $bp_bs5:(
-xs: 375, /*  X-small : SPカンプ幅(375) */
+xs: 390, /*  X-small : SPカンプ幅(375) */
 sm: 576, /*  Small : SPカンプ中間で調整したい場合の位置 */
 md: 768, /*  md  Medium : SPカンプとtab-pcの境目、md以下がSPカンプ、以上がPCカンプ */
-lg: 992, /*  lg  Large :  tab-pc中間で調整したい場合の位置 */
+//lg: 992, /*  lg  Large :  tab-pc中間で調整したい場合の位置 */
+lg: 1080, /*  lg  Large :  tab-pc中間で調整したい場合の位置 */
 //md:1024, /*  md  Medium : SPカンプとtab-pcの境目、md以下がSPカンプ、以上がPCカンプ */
 //lg:1124, /*  lg  Large :  tab-pc中間で調整したい場合の位置 */
 xl: 1280, /*  xl  X-Large : ノートPC幅(1280) */

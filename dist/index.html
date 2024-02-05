@@ -1,373 +1,1072 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
+<head prefix="og: https://ogp.me/ns#">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>PON DESIGN | PON DESIGN</title>
-    <meta name="description" content="お客様の夢を叶えるWebサイトを制作">
-	<meta name="keywords" content="">
+    <title>medical salon μ - miuex 札幌中央 -</title>
+    <meta name="description" content="40代からの美しさは、自信がある眉毛から。自分へのご褒美に、美しい眉を手に入れませんか？">
 
-	
-	<link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
+		<link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
     <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" type="image/png" href="assets/img/favicon/android-touch-icon.png" sizes="192x192">
 
-    <!-- OGP -->
-    <meta property='og:type' content='website'>
-    <meta property='og:title' content="PON DESIGN">
-    <meta property='og:url' content="https://webdesigner-go.com/coding-practice/advanced/">
-    <meta property='og:description'
-    content="お客様の夢を叶えるWebサイトを制作">
+        <meta property='og:title' content="medical salon μ - miuex 札幌中央 -">
+    <meta property='og:description' content="40代からの美しさは、自信がある眉毛から。自分へのご褒美に、美しい眉を手に入れませんか？">
+    <meta property='og:url' content="">
     <meta property="og:image" content="assets/img/ogp/ogptw.png">
+    <meta property='og:type' content='website'>
+    <meta property='og:site_name' content="medical salon μ - miuex 札幌中央 -">
 
+        <link rel="canonical" href="/">
 	<!-- noindex -->
-    <meta name="robots" content="noindex,nofollow">
-
-
-	<!-- js : defer指定 : 遅延読み込みの為、headに記述  -->
+    <meta name="robots" content="noindex,nofollow">    
 	<script src="assets/lib/gsap/gsap.min.js" defer></script>
-	<script src="assets/lib/gsap/ScrollTrigger.min.js" defer></script>    
-	<script src="assets/lib/swiper/swiper-bundle.min.js" defer></script>    
+	<script src="assets/lib/gsap/ScrollTrigger.min.js" defer></script>
 	<script src="assets/js/bundle.js?v=1" defer></script>
-    <!-- css  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="assets/css/style.css?v=1">
 
 	<!-- Font -->
 </head>
 <!-- Head : END -->
 <body>
-
     <!-- Header Start -->
     <header class="l-header" data-js="header">
         <div class="p-header" id="header">
             <div class="p-header__inner">
-
-                <a href="#">
-                    <h1 class="logo enff">
-
-                        <picture>
-                            <img src="assets/img/header/pc/logo.svg" alt="PON DESIGN" width="161" height="17">
+                <div class="p-header__leftwrap">
+                    <a href="#">
+                        <picture class="logo">
+                            <img src="assets/img/header/logo@2x.png" width="94" height="94" alt="medical salon μ">
                         </picture>
-
+                    </a>
+                    <h1 class="p-header__ttl">
+                        <picture>
+                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/header/ttl.png, assets/img/header/ttl@2x.png 2x">
+                            <img src="assets/img/header/ttl.png"
+                            width="252" height="87" alt="medical salon μ −miuex 札幌中央 −">
+                        </picture>
                     </h1>
+            </div>
 
-                </a>
-
-                <!-- ハンバーガー -->
-                <button class="c-hamburger --fixed u-display__sp"
-                    data-js="button" data-name="hamburger"
-                    data-headerid="header" data-menuid="spmenu"
-                    data-menubgid="spmenubg">
-                    <div class="c-hamburger__inner">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
-
-                <!-- SP Menu -->
-                <div class="p-header-nav__wrapper" id="spmenu">
-                    <div class="p-header-nav__bg"></div>
-                    <!-- PC Menu -->
-                    <nav class="p-header-nav">
-                        <ul>
-                            <li><a href="page/news.html">NEWS</a></li>
-                            <li><a href="page/service.html">SERVICE</a></li>
-                            <li><a href="page/works.html">WORKS</a></li>
-                            <li><a href="page/company.html">COMPANY</a></li>
-                            <li><a href="page/recruit.html">RECRUIT</a></li>
-                            <li><a href="page/contact.html">CONTACT</a></li>
-                        </ul>  
-                    </nav>
+                <div class="p-header-btn__wrapper u-display__tab-pc">
+                    <a href="#" class="c-btn">
+                        <picture>
+                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/header/line.png, assets/img/header/line@2x.png 2x">
+                            <img src="assets/img/header/line@2x.png" width="112" height="30" alt="LINE問い合わせ">
+                        </picture>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Header End -->    
+    <!-- Header End -->
+
 
     <!-- MV -->
     <div class="l-section p-mv" id="mv">
-        <div class="p-mv__bg">
-            <picture>
-                <img src="assets/img/mv/pc/hero.png" alt="" width="1440" height="768">
+        <div class="p-mv-bg">
+            <picture class="bg">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/mv/bg.png, assets/img/mv/bg@2x.png 2x">
+                <img src="assets/img/mv/bg.png" alt="" width="1440" height="553">
             </picture>
         </div>
-        <div class="l-body p-mv__body">
-            <div class="p-mv__inner">
-                <div class="p-mv__texts">
-                    <h2 class="enff" lang="en">
-                        <span>WEB DESIGN SPECIALIST</span>
-                    </h2>
-                    <p class="sub">お客様の夢を叶える<br class="u-display__sp">Webサイトを制作</p>
-                </div>
-                <div class="l-btn --pc-center --sp-left p-mv__buttonwrapper">
-                    <a class="c-button__contact --mv" href="page/contact.html"><span>CONTACT</span></a>
-                </div>
+        <div class="p-mv-inner">
+            <div class="p-mv-inner__bg">
+                <picture class="woman" data-eff="fadein-left">
+                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/mv/sp/woman@2x.png 2x">
+                    <img src="assets/img/mv/woman.png" alt="女性" width="689" height="658">
+                </picture>
             </div>
-            <div class="c-animobj__scrolldown --vertical">
-                <span>SCROLL</span>
+            <div class="p-mv-textwrap" data-eff="fadein-right">
+                <h2 class="img1">
+                    <picture>
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/mv/sp/txt_1.png, assets/img/mv/sp/txt_1@2x.png 2x">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/mv/txt_1.png, assets/img/mv/txt_1@2x.png 2x">
+                        <img src="assets/img/mv/txt_1.png" alt="40代からの美しさは、自信がある眉毛から。" width="495" height="128">
+                    </picture>
+                </h2>
+                <picture class="img2">
+                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/mv/sp/txt_2.png, assets/img/mv/sp/txt_2@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/mv/txt_2.png, assets/img/mv/txt_2@2x.png 2x">
+                    <img src="assets/img/mv/txt_2.png" alt="自分へのご褒美に、美しい眉を手に入れませんか？" width="565" height="38">
+                </picture>
+                <picture class="img3">
+                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/mv/sp/txt_3.png, assets/img/mv/sp/txt_3@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/mv/txt_3.png, assets/img/mv/txt_3@2x.png 2x">
+                    <img src="assets/img/mv/txt_3.png" alt="医療アートメイク" width="512" height="96">
+                </picture>
+            </div>
+            <div class="p-mv-circlewrap" data-eff="fadein-up">
+                <picture class="img1">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/mv/circle_1.png, assets/img/mv/circle_1@2x.png 2x">
+                    <img src="assets/img/mv/circle_1.png" alt="眉の黄金比に基づいた施術" width="200" height="200">
+                </picture>
+                <picture class="img2">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/mv/circle_2.png, assets/img/mv/circle_2@2x.png 2x">
+                    <img src="assets/img/mv/circle_2.png" alt="仕事終わりに22時まで営業！" width="200" height="200">
+                </picture>
+                <picture class="img3">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/mv/circle_3.png, assets/img/mv/circle_3@2x.png 2x">
+                    <img src="assets/img/mv/circle_3.png" alt="LINEで24時間質問受付可能！" width="200" height="200">
+                </picture>
             </div>
         </div>
     </div>
     <!-- div:END -->
 
     <main class="l-main" id="top">
-    <!-- section : NEWS -->
-    <section class="l-section p-top-news" id="news">
-        <div class="l-body p-top-news__body">
-            <div class="l-inner p-top-news__inner">
-                <div class="p-top-news__content">
-                    <div class="l-heading --pc-left --sp-center p-top-news__heading">
-                        <h2 class="c-title__section --key --pc-left --sp-center">NEWS<span>お知らせ</span></h2>
-                    </div>
-                    <ul class="p-top-news__list">
-                        <li class="p-top-news__box">
-                            <article class="p-top-news__article">
-                                <div class="p-top-news__info">
-                                    <time datetime="2030-02-01">2030.02.01</time>
-                                    <button class="p-top-news__category">お知らせ</button>
-                                </div>
-                                <a href="page/single.html" class="alink">
-                                    <h3>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h3>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="p-top-news__box">
-                                <article class="p-top-news__article">
-                                <div class="p-top-news__info">
-                                    <time datetime="2030-01-25">2030.01.25</time>
-                                    <button class="p-top-news__category">制作実績</button>
-                                </div>
-                                <a href="page/single.html" class="alink">
-                                    <h3>Smoothiesta様のWebサイトを制作いたしました</h3>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="p-top-news__box">
-                            <article class="p-top-news__article">
-                                <div class="p-top-news__info">
-                                    <time datetime="2030-01-20">2030.01.20</time>
-                                    <button class="p-top-news__category">採用</button>
-                                </div>
-                                <a href="page/single.html" class="alink">
-                                    <h3>Webデザイナーを１名募集中です！</h3>
-                                </a>
-                            </article>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- section:END -->
 
-
-    <!-- section : service -->
-    <section class="l-section p-top-service" id="service">
-        <div class="l-body p-top-service__body">
-            <div class="p-top-service__inner">
-                <div class="l-heading --center p-top-service__heading">
-                    <h2 class="c-title__section --center --key">SERVICE<span>事業内容</span></h2>
-                </div>
-                <ul class="p-top-service__list">
-                    <li class="p-top-service__box">
-                        <picture>
-                            <img src="assets/img/top/pc/service01.png" alt="work01" width="350" height="220">
-                        </picture>
-                        <h3>Webサイト制作</h3>
-                        <p>新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。</p>
-                    </li>
-                    <li class="p-top-service__box">
-                        <picture>
-                            <img src="assets/img/top/pc/service02.png" alt="work02" width="350" height="220">
-                        </picture>
-                        <h3>Webサイト運用</h3>
-                        <p>サイトの更新作業や独自のアクセス解析に基づいたサイト改善のご提案をいたします。</p>
-                    </li>
-                    <li class="p-top-service__box">
-                        <picture>
-                            <img src="assets/img/top/pc/service03.png" alt="work03" width="350" height="220">
-                        </picture>
-                        <h3>アプリ開発</h3>
-                        <p>スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
-                    </li>
-                </ul>
-                <div class="l-btn --center p-top-service__btn">
-                    <a href="page/service.html" class="c-button__more --key">MORE</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- section:END -->
-
-
-    <!-- section : works -->
-    <section class="l-section p-top-works" id="works">
-        <div class="l-body p-top-works__body">
-            <div class="p-top-works__inner">
-                <div class="p-top-works__bg">
-                    <div class="p-top-works__bgfill"></div>
-                </div>
-                <!-- スワイパー-->
-                <div class="p-top-works__swiper">
-                    <div class="swiper" data-name="works">
-                        <div class="swiper-wrapper">
-                            <!-- Slides 1 -->
-                            <div class="swiper-slide">
-                                <picture class="p-works__image">
-                                    <img src="assets/img/works/pc/works01.jpg" alt="works1" width="750" height="540">
-                                </picture>
-                            </div>
-                            <!-- Slides 2 -->
-                            <div class="swiper-slide">
-                                <picture class="p-works__image">
-                                    <img src="assets/img/works/pc/works02.jpg" alt="works2" width="750" height="540">
-                                </picture>
-                            </div>
-                            <!-- Slides 3 -->
-                            <div class="swiper-slide">
-                                <picture class="p-works__image">
-                                    <img src="assets/img/works/pc/works03.jpg" alt="works3" width="750" height="540">
-                                </picture>
-                            </div>
-                        </div>
-                    </div><!-- swiper -->
-                        <!-- navigation buttons -->
-                        <div class="swiper-button-prev">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </div>
-                        <div class="swiper-button-next">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </div>
-                    <!-- pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="p-top-works__infowrapper">
-                    <div class="l-heading --center p-top-works__heading">
-                        <h2 class="c-title__section --key">WORKS<span>制作実績</span></h2>
-                    </div>
-                    <p>様々なジャンルのWebサイト制作が可能です。<br>
-                    ご購入やお申込み数の増加などを実現します！</p>
-                    <div class="l-btn --center p-top-works__btn">
-                        <a href="page/works.html" class="c-button__more --key">MORE</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- section:END -->
-
-
-    <!-- section : company -->
-    <section class="l-section p-top-company" id="company">
-        <div class="p-top-company__bg">
-            <picture>
-                <source srcset="assets/img/company/sp/bg_circle_sp.png" media="(max-width: 768px)" width="375" height="574">
-                <img src="assets/img/company/pc/bg_company.png" alt="" width="1300" height="416">
+    <!-- section : worries -->
+    <section class="l-section p-worries" id="worries">
+        <h2 class="sec-ttl">
+            <picture class="ttl-img">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/ttl.png, assets/img/worries/ttl@2x.png 2x">
+                <img src="assets/img/worries/ttl.png" alt="Worries 眉のこんなお悩みありませんか？" width="711" height="130">
+            </picture>
+        </h2>
+        <div class="l-inner p-worries-befwrap" data-eff="fadein-upgroup">
+            <picture class="woman">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/bef_woman.png, assets/img/worries/bef_woman@2x.png 2x">
+                <img src="assets/img/worries/bef_woman.png" alt="悩む女性" width="474" height="588">
+            </picture>
+            <picture class="circle circle1">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/bef_circle_1.png, assets/img/worries/bef_circle_1@2x.png 2x">
+                <img src="assets/img/worries/bef_circle_1.png" alt="自分に合う眉デザインがわからない" width="220" height="220">
+            </picture>
+            <picture class="circle circle2">
+                <source media="(max-width: 767px)" type="image/png" srcset="assets/img/worries/sp/bef_circle_2.png">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/bef_circle_2.png, assets/img/worries/bef_circle_2@2x.png 2x">
+                <img src="assets/img/worries/bef_circle_2.png" alt="眉メイクが苦手" width="220" height="220">
+            </picture>
+            <picture class="circle circle3">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/bef_circle_3.png, assets/img/worries/bef_circle_3@2x.png 2x">
+                <img src="assets/img/worries/bef_circle_3.png" alt="温泉やプールがおっくう" width="220" height="220">
+            </picture>
+            <picture class="circle circle4">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/bef_circle_4.png, assets/img/worries/bef_circle_4@2x.png 2x">
+                <img src="assets/img/worries/bef_circle_4.png" alt="すっぴんに自信が持てない" width="220" height="220">
             </picture>
         </div>
-        <div class="l-body p-top-company__body">
-            <div class="p-top-company__inner">
-                <div class="l-heading --center p-top-company__heading">
-    <h2 class="c-title__section --center --key">COMPANY<span>私たちについて</span></h2>
+        <div class="p-worries-centerwrap">
+            <picture class="txtbox1">
+                <source media="(max-width: 767px)" type="image/png" srcset="assets/img/worries/sp/txtbox_1.png, assets/img/worries/sp/txtbox_1@2x.png 2x">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/txtbox_1.png, assets/img/worries/txtbox_1@2x.png 2x">
+                <img src="assets/img/worries/txtbox_1.png" alt="医療アートメイクならそのお悩みが解決できます！" width="632" height="145">
+            </picture>
+        </div>
+        <div class="l-body">
+            <picture class="bg">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/aft_bg.png, assets/img/worries/aft_bg@2x.png 2x">
+                <img src="assets/img/worries/aft_bg.png" alt="" width="1445" height="720">
+            </picture>
+            <div class="l-inner p-worries-aftwrap">
+                <div class="circlewrap" data-eff="fadein-upgroup">
+                    <div class="row row1">
+                        <picture class="circle circle1">
+                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/aft_circle_1.png, assets/img/worries/aft_circle_1@2x.png 2x">
+                            <img src="assets/img/worries/aft_circle_1.png" alt="メイク直しが簡単に！" width="220" height="220">
+                        </picture>
+                        <picture class="circle circle2">
+                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/aft_circle_2.png, assets/img/worries/aft_circle_2@2x.png 2x">
+                            <img src="assets/img/worries/aft_circle_2.png" alt="朝メイクの時短に" width="220" height="220">
+                        </picture>
+                    </div>
+                    <div class="row row2">
+                        <picture class="circle circle3">
+                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/aft_circle_3.png, assets/img/worries/aft_circle_3@2x.png 2x">
+                            <img src="assets/img/worries/aft_circle_3.png" alt="汗をかいても落ちない" width="220" height="220">
+                        </picture>
+                        <picture class="circle circle4">
+                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/worries/aft_circle_4.png, assets/img/worries/aft_circle_4@2x.png 2x">
+                            <img src="assets/img/worries/aft_circle_4.png" alt="すっぴんに自信！" width="220" height="220">
+                        </picture>
+                    </div>
                 </div>
-                <h3>サイトのゴール =<br class="u-display__sp"> 夢を叶えること</h3>
-                <p>お客様の夢を叶えること。<br>
-                それがWebサイトのゴールであり、<br class="u-display__sp">私たちが目指すことです。<br>
-                だからこそちゃんと成果を出すサイトを<br class="u-display__sp">全力でお作りします。<br>
-                お客様の笑顔を見たい。<br>
-                夢を実現する手助けをさせてください。</p>
-                <div class="l-btn --center p-top-company__btn">
-                    <a href="page/company.html" class="c-button__more --key">MORE</a>
-                </div>
+                <picture class="woman" data-eff="fadein-up">
+                    <img src="assets/img/worries/aft_woman@2x.png" alt="解決した女性" width="449" height="525">
+                </picture>
             </div>
         </div>
     </section>
     <!-- section:END -->
 
-    <!-- section : recruit -->
-    <section class="l-section p-top-recruit" id="recruit">
-        <div class="l-body p-top-recruit__body">
-            <div class="l-inner p-top-recruit__inner">
-                <div class="p-top-recruit__infowrapper">
-                    <div class="l-heading --center p-top-recruit__heading">
-                        <h2 class="c-title__section --center --key">RECRUIT<span>採用情報</span></h2>
-                    </div>
-                    <p>私たちと一緒に働きませんか？<br>
-                    <div class="l-btn --center p-top-recruit__btn">
-                        <a href="page/contact.html" class="c-button__more --key">MORE</a>
-                    </div>
-                </div>
-                <div class="p-top-recruit__visualwrapper">
-                    <picture>
-                        <img src="assets/img/top/pc/recruit.png" alt="部下を指導する女性" width="666" height="346">
+
+    <!-- section : about -->
+    <section class="l-section p-about" id="about">
+        <div class="l-inner p-about-inner">
+            <div class="p-about__wrap" data-eff="fadein-up">
+                <h2>
+                    <picture class="ttl">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/about/about_ttl.png, assets/img/about/about_ttl@2x.png 2x">
+                        <img src="assets/img/about/about_ttl.png" alt="About Art Make アートメイクとは？" width="438" height="133">
                     </picture>
+                </h2>
+                <picture class="img">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/about/about_img.png, assets/img/about/about_img@2x.png 2x">
+                    <img src="assets/img/about/about_img.png" alt="メイク中のお客様" width="725" height="350">
+                </picture>
+                <picture class="txt">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/about/about_txt.png, assets/img/about/about_txt@2x.png 2x">
+                    <img src="assets/img/about/about_txt.png" alt="専用の針を用い、色素を注入してメイク施す技法を医療 アートメイクといいます。 医師による事前診断を受け、その指示のもと美容看護師 が施術を行います。 medical salon μ では医療機関であるM＆Mクリニック と提供し、医療アートメイクを提供しています。" width="771" height="324">
+                </picture>
+            </div>
+            <div class="p-about-type__wrap">
+                <h2>
+                    <picture class="ttl">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/about/type_ttl.png, assets/img/about/type_ttl@2x.png 2x">
+                        <img src="assets/img/about/type_ttl.png" alt="" width="306" height="133">
+                    </picture>
+                </h2>
+                <ul class="p-about-type__list --first" data-eff="fadein-up">
+                    <li class="box">
+                        <img class="box-ttl" src="assets/img/about/box_1_ttl.png" alt="2D" width="71" height="80">
+                        <img class="box-img" src="assets/img/about/box_1_img.png" alt="2Dイメージ" width="241" height="120">
+                        <img class="box-txt" src="assets/img/about/box_1_txt.png" alt="現代の技法は昔のように海苔を貼ったような仕上がりにはならず、メイクで描いたような仕上がりになります。" width="275" height="190">
+                    </li>
+                    <li class="box">
+                        <img class="box-ttl" src="assets/img/about/box_2_ttl.png" alt="3D" width="71" height="80">
+                        <img class="box-img" src="assets/img/about/box_2_img.png" alt="3Dイメージ" width="241" height="120">
+                        <img class="box-txt" src="assets/img/about/box_2_txt.png" alt="値段は少々高めだが、眉毛を一本一本丁寧に描いていく今主流の毛並み眉。まるで本物の眉毛を再現できます。" width="275" height="190">
+                    </li>
+                    <li class="box">
+                        <img class="box-ttl" src="assets/img/about/box_3_ttl.png" alt="4D" width="71" height="80">
+                        <img class="box-img" src="assets/img/about/box_3_img.png" alt="4Dイメージ" width="241" height="120">
+                        <img class="box-txt" src="assets/img/about/box_3_txt.png" alt="3D+パウダー技法毛並みのみよりメイク感も出て、より白眉毛と馴染んだ仕上がりになります。" width="275" height="190">
+                    </li>
+                </ul>
+                <ul class="p-about-type__list --second" data-eff="fadein-up">
+                    <li class="box box-4">
+                        <img class="box-ttl" src="assets/img/about/box_4_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="assets/img/about/box_4_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/about/sp/box_4_txt@2x.png">
+                            <img src="assets/img/about/box_4_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                    <li class="box box-5">
+                        <img class="box-ttl" src="assets/img/about/box_5_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="assets/img/about/box_5_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/about/sp/box_5_txt@2x.png">
+                            <img src="assets/img/about/box_5_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                    <li class="box box-6">
+                        <img class="box-ttl" src="assets/img/about/box_6_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="assets/img/about/box_6_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/about/sp/box_6_txt@2x.png">
+                            <img src="assets/img/about/box_6_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                    <li class="box box-7">
+                        <img class="box-ttl" src="assets/img/about/box_7_ttl.png" alt="" width="71" height="80">
+                        <img class="box-img" src="assets/img/about/box_7_img.png" alt="" width="241" height="120">
+                        <picture class="box-txt">
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/about/sp/box_7_txt@2x.png">
+                            <img src="assets/img/about/box_7_txt.png" alt="" width="255" height="489">
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <!-- section:END -->
+
+
+    <!-- section : about -->
+    <section class="l-section p-gallery" id="gallery">
+        <div class="l-inner p-gallery__inner">
+            <div class="p-gallery__wrap">
+                <h2 data-eff="fadein-up">
+                    <picture class="ttl">
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/gallery/ttl@2x.jpg 2x">
+                        <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/ttl.jpg, assets/img/gallery/ttl@2x.jpg 2x">
+                        <img src="assets/img/gallery/ttl.jpg" alt="About Art Make アートメイクとは？" width="438" height="133">
+                    </picture>
+                </h2>
+                <ul class="p-gallery__list" data-eff="fadein-upgroup">
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_1.jpg, assets/img/gallery/imgc_1@2x.jpg">
+                            <img src="assets/img/gallery/imgc_1@2x.jpg" alt="施術例1" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_2.jpg, assets/img/gallery/imgc_2@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_2@2x.jpg" alt="施術例2" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_3.jpg, assets/img/gallery/imgc_3@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_3@2x.jpg" alt="施術例3" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_4.jpg, assets/img/gallery/imgc_4@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_4@2x.jpg" alt="施術例4" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_5.jpg, assets/img/gallery/imgc_5@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_5@2x.jpg" alt="施術例5" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_6.jpg, assets/img/gallery/imgc_6@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_6@2x.jpg" alt="施術例6" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_7.jpg, assets/img/gallery/imgc_7@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_7@2x.jpg" alt="施術例7" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_8.jpg, assets/img/gallery/imgc_8@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_8@2x.jpg" alt="施術例8" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/gallery/imgc_9.jpg, assets/img/gallery/imgc_9@2x.jpg 2x">
+                            <img src="assets/img/gallery/imgc_9@2x.jpg" alt="施術例9" width="300" height="300">
+                        </picture>
+                    </li>
+                </ul>
+                <picture class="txt">
+                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/gallery/sp/txt@2x.png">
+                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/gallery/txt.png, assets/img/gallery/txt@2x.png 2x">
+                    <img src="assets/img/gallery/txt.png" alt="アートメイクは通常２回以上で完成する施術になります。１回目は土台作りで定着率は５０％前後です。２回目の施術の際にデザインや色の変更、長さや足りない箇所の修正をさせていただきます。" width="840" height="96">
+                </picture>
+            </div>
+            
+            <div class="l-btn" data-eff="fadein-up">
+                <a href="#" class="p-cvbtn">
+                    <picture class="box">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/box@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/box.png, assets/img/cv/box@2x.png 2x">
+                        <img src="assets/img/cv/box.png" alt="無料カウンセリング・ご予約はコチラ！" width="659" height="150">
+                    </picture>
+                    <picture class="txt">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/txt@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/txt.png, assets/img/cv/txt@2x.png 2x">
+                        <img src="assets/img/cv/txt.png" alt="LINE問い合わせ 24時間365日対応" width="551" height="188">
+                    </picture>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <!-- section:END -->
+
+
+    <!-- section : our -->
+    <section class="l-section p-our" id="our">
+        <div class="l-inner p-our__inner">
+            <div class="p-our__wrap">
+                <h2 data-eff="fadein-up">
+                    <picture class="sec-ttl">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/sec_ttl.png 1x, assets/img/our/sp/sec_ttl@2x.png 2x">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/sec_ttl.png 1x, assets/img/our/sec_ttl@2x.png 2x">
+                        <img src="assets/img/our/sec_ttl.png" alt="OurStrength 当院の特徴" width="293" height="133">
+                    </picture>
+                </h2>
+                <ul class="p-our__list">
+                                        <!-- 01 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --no01">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_1_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_1_img.jpg, assets/img/our/box_1_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_1_img.jpg" alt="特徴1イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_1_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_1_num.png, assets/img/our/box_1_num@2x.png 2x">
+                                        <img src="assets/img/our/box_1_num.png" alt="01" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_1_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_1_ttl.png, assets/img/our/box_1_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_1_ttl.png" alt="眉の黄金比に基づいたハイクラスな施術" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_1_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_1_txt.png, assets/img/our/box_1_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_1_txt.png" alt="「黄金比」と呼ばれる言葉をご存知でしょうか？ひとが無意識に美しいと感じるデザイン比のことです。眉のアートメイクを施す際、この黄金比に加え、骨格、肌色、眉の生え方などに配慮しながら理想的なデザインを作り上げます。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                                        <!-- 02 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --rev --no02">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_2_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_2_img.jpg, assets/img/our/box_2_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_2_img.jpg" alt="特徴2イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_2_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_2_num.png, assets/img/our/box_2_num@2x.png 2x">
+                                        <img src="assets/img/our/box_2_num.png" alt="02" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_2_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_2_ttl.png, assets/img/our/box_2_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_2_ttl.png" alt="丁寧なヒアリングとカウンセリング" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_2_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_2_txt.png, assets/img/our/box_2_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_2_txt.png" alt="当サロンは、丁寧なヒアリング・カウンセリングを実施し、お客様の要望や悩みに寄り添い、最適なアートメイクを提案安全・効果的な施術と持続的な美しさをサポートします。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                                        <!-- 03 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --no03">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_3_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_3_img.jpg, assets/img/our/box_3_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_3_img.jpg" alt="特徴3イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_3_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_3_num.png, assets/img/our/box_3_num@2x.png 2x">
+                                        <img src="assets/img/our/box_3_num.png" alt="03" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_3_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_3_ttl.png, assets/img/our/box_3_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_3_ttl.png" alt="オシャレでアットホームなサロン" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_3_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_3_txt.png, assets/img/our/box_3_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_3_txt.png" alt="当サロンは、アートメイクをクリニックではなく、オシャレでアットホームなサロンで提供しています。医療行為ではありますが、気軽に来店いただける雰囲気を大切にし、お客様にリラックスしていただける空間を提供しています。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                                        <!-- 04 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --rev --no04">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_4_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_4_img.jpg, assets/img/our/box_4_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_4_img.jpg" alt="特徴4イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_4_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_4_num.png, assets/img/our/box_4_num@2x.png 2x">
+                                        <img src="assets/img/our/box_4_num.png" alt="04" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_4_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_4_ttl.png, assets/img/our/box_4_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_4_ttl.png" alt="２２時まで営業" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_4_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_4_txt.png, assets/img/our/box_4_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_4_txt.png" alt="営業時間が10時から22時までの12時間営業で、他のクリニックと比べて営業時間が長いのが強みです。仕事帰りの主婦層や働く女性にもアクセスしやすく、忙しい方々のニーズにも柔軟に対応しています。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                                        <!-- 05 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --no05">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_5_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_5_img.jpg, assets/img/our/box_5_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_5_img.jpg" alt="特徴5イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_5_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_5_num.png, assets/img/our/box_5_num@2x.png 2x">
+                                        <img src="assets/img/our/box_5_num.png" alt="05" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_5_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_5_ttl.png, assets/img/our/box_5_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_5_ttl.png" alt="予約が取りやすい" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_5_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_5_txt.png, assets/img/our/box_5_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_5_txt.png" alt="他のクリニックと比べて予約が取りやすいのが、当サロンの魅力です。スケジュールの調整が容易であり、お客様の都合に合わせた施術が受けられます。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                                        <!-- 06 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --rev --no06">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_6_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_6_img.jpg, assets/img/our/box_6_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_6_img.jpg" alt="特徴6イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_6_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_6_num.png, assets/img/our/box_6_num@2x.png 2x">
+                                        <img src="assets/img/our/box_6_num.png" alt="06" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_6_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_6_ttl.png, assets/img/our/box_6_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_6_ttl.png" alt="診療のカウンセリングがオンラインで可能" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_6_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_6_txt.png, assets/img/our/box_6_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_6_txt.png" alt="診療のカウンセリングはオンラインで自宅から受けることができます。これにより、来店する手間や時間を節約し、リラックスした状態で相談が可能となっています。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                                        <!-- 07 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --no07">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_7_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_7_img.jpg, assets/img/our/box_7_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_7_img.jpg" alt="特徴7イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_7_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_7_num.png, assets/img/our/box_7_num@2x.png 2x">
+                                        <img src="assets/img/our/box_7_num.png" alt="07" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_7_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_7_ttl.png, assets/img/our/box_7_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_7_ttl.png" alt="真心のこもったサービスと丁寧なサポート" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_7_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_7_txt.png, assets/img/our/box_7_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_7_txt.png" alt="フリーランスの看護師が、真心込めたサービスと丁寧なサポートを提供します。施術後の肌トラブルにも、LINEで24時間体制で質問受付が可能であり、安心して施術を受けられます。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+                                        <!-- 08 -->
+                    <li class="boxwrap" data-eff="fadein-up">
+                        <div class="box --rev --no08">
+                            <picture class="img">
+                                <source media="(max-width: 767px)" type="image/jpg" srcset="assets/img/our/sp/box_8_img@2x.jpg ">
+                                <source media="(min-width: 768px)" type="image/jpg" srcset="assets/img/our/box_8_img.jpg, assets/img/our/box_8_img@2x.jpg 2x">
+                                <img src="assets/img/our/box_8_img.jpg" alt="特徴8イメージ" width="300" height="320">
+                            </picture>
+                            <div class="txtwrap">
+                                <div class="heading">
+                                    <picture class="num">
+                                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_8_num@2x.png">
+                                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_8_num.png, assets/img/our/box_8_num@2x.png 2x">
+                                        <img src="assets/img/our/box_8_num.png" alt="08" width="50" height="42">
+                                    </picture>
+                                    <h3>
+                                        <picture class="ttl">
+                                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_8_ttl@2x.png">
+                                            <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_8_ttl.png, assets/img/our/box_8_ttl@2x.png 2x">
+                                            <img src="assets/img/our/box_8_ttl.png" alt="アートメイクスクール" width="540" height="45">
+                                        </picture>
+                                    </h3>
+                                </div>
+                                <picture class="txt">
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/our/sp/box_8_txt@2x.png">
+                                    <source media="(min-width: 768px)" type="image/png" srcset="assets/img/our/box_8_txt.png, assets/img/our/box_8_txt@2x.png 2x">
+                                    <img src="assets/img/our/box_8_txt.png" alt="全国でも有数のアートメイクを学べるサロンです。研修生によるモニター募集も行われており、安価な価格でアートメイクに挑戦できるプランもあります。" width="540" height="120">
+                                </picture>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            
+            <div class="l-btn" data-eff="fadein-up">
+                <a href="#" class="p-cvbtn">
+                    <picture class="box">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/box@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/box.png, assets/img/cv/box@2x.png 2x">
+                        <img src="assets/img/cv/box.png" alt="無料カウンセリング・ご予約はコチラ！" width="659" height="150">
+                    </picture>
+                    <picture class="txt">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/txt@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/txt.png, assets/img/cv/txt@2x.png 2x">
+                        <img src="assets/img/cv/txt.png" alt="LINE問い合わせ 24時間365日対応" width="551" height="188">
+                    </picture>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <!-- section:END -->
+
+
+    <!-- section : price -->
+    <section class="l-section p-price" id="price">
+        <div class="p-price__bgwrap">
+            <picture class="bg-woman1">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/price/bg_woman1.png 1x, assets/img/price/bg_woman1@2x.png 2x">
+                <img src="assets/img/price/bg_woman1.png" alt="" width="335" height="403">
+            </picture>
+            <picture class="bg-woman2">
+                <source media="(min-width: 768px)" type="image/png" srcset="assets/img/price/bg_woman2.png 1x, assets/img/price/bg_woman2@2x.png 2x">
+                <img src="assets/img/price/bg_woman2.png" alt="" width="335" height="403">
+            </picture>
+        </div>
+        <div class="l-inner p-price__inner">
+            <h2 data-eff="fadein-up">
+                <picture class="sec-ttl">
+                    <img src="assets/img/price/sec_ttl@2x.png" alt="Price List 料金表" width="293" height="133">
+                </picture>
+            </h2>
+            <!-- tbl 1 -->
+            <div class="p-price__tblwrap --tbl1" data-eff="fadein-up">
+                <h3>
+                    <img class="tbl-ttl" src="assets/img/price/tbl_1_ttl@2x.png" alt="ハイクラスアーティスト" width="385" height="53">
+                </h3>
+                <div class="tbl-grid">
+                    <div class="grid-box-ttl">
+                        <img src="assets/img/price/tbl_1_box_ttl@2x.png" alt="デザイン・料金（税込）" width="220" height="30">
+                    </div>
+                    <div class="grid --top --left"></div>
+                    <div class="grid --top">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/price/sp/tbl_1_cnt_1@2x.png">
+                            <img class="tbl-1-12" src="assets/img/price/tbl_cnt_1@2x.png" alt="１回コース" width="125" height="38">
+                        </picture>
+                    </div>
+                    <div class="grid --top">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/price/sp/tbl_1_cnt_2@2x.png">
+                            <img class="tbl-1-13" src="assets/img/price/tbl_cnt_2@2x.png" alt="２回コース" width="125" height="38">
+                        </picture>
+                    </div>
+                    <div class="grid --top">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/price/sp/tbl_1_cnt_s@2x.png">
+                            <img class="tbl-1-14" src="assets/img/price/tbl_cnt_s@2x.png" alt="修正(１回)" width="113" height="38">
+                        </picture>
+                    </div>
+                    <div class="grid --left">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/price/sp/tbl_1_course_1@2x.png">
+                            <img class="tbl-1-21" src="assets/img/price/tbl_1_course_1@2x.png" alt="eyeblow 2D/3D" width="213" height="45">
+                        </picture>
+                    </div>
+                    <div class="grid"><img class="tbl-1-22" src="assets/img/price/tbl_y66000@2x.png" alt="￥66,000"></div>
+                    <div class="grid"><img class="tbl-1-23" src="assets/img/price/tbl_y110000@2x.png" alt="￥110,000"></div>
+                    <div class="grid"><img class="tbl-1-24" src="assets/img/price/tbl_y66000@2x.png" alt="￥66,000"></div>
+                    <div class="grid --left">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="assets/img/price/sp/tbl_1_course_2@2x.png">
+                            <img class="tbl-1-31" src="assets/img/price/tbl_1_course_2@2x.png" alt="eyeblow 4D" width="160" height="45">
+                        </picture>
+                    </div>
+                    <div class="grid"><img class="tbl-1-32" src="assets/img/price/tbl_y77000@2x.png" alt="￥77,000"></div>
+                    <div class="grid"><img class="tbl-1-33" src="assets/img/price/tbl_y132000@2x.png" alt="￥132,000"></div>
+                    <div class="grid"><img class="tbl-1-34" src="assets/img/price/tbl_y77000@2x.png" alt="￥77,000"></div>
                 </div>
+                <p class="tbl-txt-wrap">
+                    <img class="tbl-txt" src="assets/img/price/tbl_1_txt@2x.png" alt="※2回コースの方が1回コースに比べ¥22,000お得になっております。※2Dと3Dは同一料金です。" width="762" height="81">
+                </p>
+            </div>
+
+            <!-- tbl 2 -->
+            <div class="p-price__tblwrap --tbl2" data-eff="fadein-up">
+                <h3>
+                    <img class="tbl-ttl" src="assets/img/price/tbl_2_ttl@2x.png" alt="トレーニープラン～eyeblow 3D～ ※施術事例50名未満のアーティストの価格です" width="541" height="96">
+                </h3>
+                <div class="tbl-grid">
+                    <div class="grid-box-ttl">
+                        <img src="assets/img/price/tbl_2_box_ttl@2x.png" alt="コース・料金（税込）" width="200" height="30">
+                    </div>
+                    <div class="grid --top --left"></div>
+                    <div class="grid --top"><img class="tbl-2-12" src="assets/img/price/tbl_cnt_1@2x.png" alt="１回コース" width="125" height="38"></div>
+                    <div class="grid --top"><img class="tbl-2-13" src="assets/img/price/tbl_cnt_2@2x.png" alt="２回コース" width="125" height="38"></div>
+                    <div class="grid --top"><img class="tbl-2-14" src="assets/img/price/tbl_cnt_3@2x.png" alt="３回コース" width="125" height="38"></div>
+
+                    <div class="grid --left --spl2"><img class="tbl-2-21" src="assets/img/price/tbl_2_course_1@2x.png" alt="梅" width="213" height="45"></div>
+                    <div class="grid --spl2">
+                        <img class="--sp u-display__sp" src="assets/img/price/sp/tbl_2_cnt_1@2x.png" alt="１回コース" width="85" height="26">
+                        <img class="tbl-2-22" src="assets/img/price/tbl_y11000@2x.png" alt="￥11,000" width="88" height="38">
+                    </div>
+                    <div class="grid --spl2">
+                        <img class="--sp u-display__sp" src="assets/img/price/sp/tbl_2_cnt_2@2x.png" alt="２回コース" width="85" height="26">
+                        <img class="tbl-2-23" src="assets/img/price/tbl_y18000@2x.png" alt="￥18,000">
+                    </div>
+                    <div class="grid --spl2">
+                        <img class="--sp u-display__sp" src="assets/img/price/sp/tbl_2_cnt_3@2x.png" alt="３回コース" width="85" height="26">
+                        <img class="tbl-2-24" src="assets/img/price/tbl_y28000@2x.png" alt="￥28,000">
+                    </div>
+
+                    <div class="grid --left"><img class="tbl-2-31" src="assets/img/price/tbl_2_course_2@2x.png" alt="竹" width="160" height="45"></div>
+                    <div class="grid"><img class="tbl-2-32" src="assets/img/price/tbl_y22000@2x.png" alt="￥22,000"></div>
+                    <div class="grid"><img class="tbl-2-33" src="assets/img/price/tbl_y42000@2x.png" alt="￥42,000"></div>
+                    <div class="grid"><img class="tbl-2-34" src="assets/img/price/tbl_y63000@2x.png" alt="￥63,000"></div>
+
+                    <div class="grid --left"><img class="tbl-2-41" src="assets/img/price/tbl_2_course_3@2x.png" alt="松" width="160" height="45"></div>
+                    <div class="grid"><img class="tbl-2-42" src="assets/img/price/tbl_y33000@2x.png" alt="￥33,000"></div>
+                    <div class="grid"><img class="tbl-2-43" src="assets/img/price/tbl_y63000@2x.png" alt="￥63,000"></div>
+                    <div class="grid"><img class="tbl-2-44" src="assets/img/price/tbl_y94000@2x.png" alt="￥94,000"></div>
+                </div>
+                <p class="tbl-txt-wrap">
+                    <img class="tbl-txt" src="assets/img/price/tbl_2_txt@2x.png" alt="アートメイクは通常2回以上で完成する施術になります。1回目は土台作りで定着率は50%前後です。2回目の施術の際にデザインや色の変更、長さや足りない箇所の修正をさせていただきます。" width="510" height="120">
+                </p>
             </div>
         </div>
     </section>
     <!-- section:END -->
 
 
+    <!-- section : stores -->
+    <section class="l-section p-stores" id="stores">
+        <div class="l-inner p-stores__inner">
+            <h2 data-eff="fadein-up">
+                <picture class="sec-ttl">
+                    <img src="assets/img/stores/sec_ttl@2x.png" alt="Price List 料金表" width="293" height="133">
+                </picture>
+            </h2>
 
-    <!-- section : CONTACT -->
-    <section class="l-section p-top-contact" id="contact">
-        <div class="l-body p-top-contact__body">
-            <div class="p-top-contact__inner">
-                <div class="l-heading --center p-top-contact__heading">
-                    <h2 class="c-title__section --key">CONTACT<span>お問い合わせ</span></h2>
+            <!-- tbl 1 -->
+            <div class="p-stores__content">
+                <div class="p-stores__tblwrap" data-eff="fadein-up">
+                    <div class="tbl-col1">
+                        <div class="grid --top"></div>
+                        <div class="grid"><img class="tbl-2-1" src="assets/img/stores/tbl_2_1@2x.png" alt="１回" width="60" height="45"></div>
+                        <div class="grid"><img class="tbl-3-1" src="assets/img/stores/tbl_3_1@2x.png" alt="２回" width="60" height="45"></div>
+                        <div class="grid"><img class="tbl-4-1" src="assets/img/stores/tbl_4_1@2x.png" alt="３回" width="60" height="45"></div>
+                        <div class="grid"><img class="tbl-5-1" src="assets/img/stores/tbl_5_1@2x.png" alt="４回" width="60" height="45"></div>
+                    </div>
+                    <div class="tbl-col2">
+                        <div class="grid-row --top">
+                            <div class="grid-store">
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/stores/sp/tbl_1_21@2x.png">
+                                    <img class="tbl-1-21" src="assets/img/stores/tbl_1_21@2x.png"  alt="miuex 札幌中央" width="178" height="50">
+                                </picture>
+                            </div>
+                            <div class="grid-plan1">
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/stores/sp/tbl_1_221@2x.png">
+                                    <img class="tbl-1-221" src="assets/img/stores/tbl_1_221@2x.png" alt="ハイクラスアーティスト" width="210" height="40">
+                                </picture>
+                            </div>
+                            <div class="grid-plan2">
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/stores/sp/tbl_1_222@2x.png">
+                                    <img class="tbl-1-222" src="assets/img/stores/tbl_1_222@2x.png" alt="トレーニープラン" width="160" height="40">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-pprice1"><img class="tbl-y66000" src="assets/img/stores/tbl_y66000@2x.png" alt="¥66,000" width="110" height="40"></div>
+                            <div class="grid-pprice2">
+                                <img class="tbl-ppricetxt tbl-2-3-1" src="assets/img/stores/tbl_2_3_1@2x.png" alt="梅 ¥11,000" width="132" height="50">
+                                <img class="tbl-ppricetxt tbl-2-3-2" src="assets/img/stores/tbl_2_3_2@2x.png" alt="竹 ¥22,000" width="132" height="50">
+                                <img class="tbl-ppricetxt tbl-2-3-3" src="assets/img/stores/tbl_2_3_3@2x.png" alt="松 ¥33,000" width="132" height="50">
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-pprice1"><img class="tbl-y110000" src="assets/img/stores/tbl_y110000@2x.png" alt="¥110,000" width="127" height="40"></div>
+                            <div class="grid-pprice2">
+                                <img class="tbl-ppricetxt tbl-3-3-1" src="assets/img/stores/tbl_3_3_1@2x.png" alt="梅 ¥18,000" width="132" height="50">
+                                <img class="tbl-ppricetxt tbl-3-3-2" src="assets/img/stores/tbl_3_3_2@2x.png" alt="竹 ¥42,000" width="132" height="50">
+                                <img class="tbl-ppricetxt tbl-3-3-3" src="assets/img/stores/tbl_3_3_3@2x.png" alt="松 ¥63,000" width="132" height="50">
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-pprice1"><img class="tbl-y110000b" src="assets/img/stores/tbl_y110000b@2x.png" alt="¥110,000 ※ご紹介をした方のみ" width="150" height="90"></div>
+                            <div class="grid-pprice2">
+                                <img class="tbl-ppricetxt tbl-4-3-1" src="assets/img/stores/tbl_4_3_1@2x.png" alt="梅 ¥28,000" width="132" height="50">
+                                <img class="tbl-ppricetxt tbl-4-3-2" src="assets/img/stores/tbl_4_3_2@2x.png" alt="竹 ¥63,000" width="132" height="50">
+                                <img class="tbl-ppricetxt tbl-4-3-3" src="assets/img/stores/tbl_4_3_3@2x.png" alt="松 ¥94,000" width="132" height="50">
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-pprice1">
+                                <img class="tbl-5-2-1" src="assets/img/stores/tbl_5_2_1@2x.png" alt="★アートメイクし放題★" width="220" height="40">
+                                <img class="tbl-5-2-2" src="assets/img/stores/tbl_5_2_2@2x.png" alt="当店オリジナル" width="126" height="40">
+                                <img class="tbl-y130000" src="assets/img/stores/tbl_y130000@2x.png" alt="¥130,000" width="121" height="60">
+                                <img class="tbl-5-2-4" src="assets/img/stores/tbl_5_2_4@2x.png" alt="※有効期限２年" width="105" height="30">
+                            </div>
+                            <div class="grid-pprice2"><img class="tbl-none" src="assets/img/stores/tbl_none.png" alt="-" width="25" height="50"></div>
+                        </div>
+                    </div>
+                    <div class="tbl-col3">
+                        <div class="grid --top"><img class="tbl-1-4" src="assets/img/stores/tbl_1_4@2x.png" alt="A社" width="25" height="50"></div>
+                        <div class="grid"><img class="tbl-y72000" src="assets/img/stores/tbl_y72000@2x.png" alt="￥72,000" width="87" height="50"></div>
+                        <div class="grid"><img class="tbl-y120000" src="assets/img/stores/tbl_y120000@2x.png" alt="￥120,000" width="99" height="50"></div>
+                        <div class="grid"><img class="tbl-y120000" src="assets/img/stores/tbl_y120000@2x.png" alt="￥120,000" width="99" height="50"></div>
+                        <div class="grid"><img class="tbl-y120000" src="assets/img/stores/tbl_y120000@2x.png" alt="￥120,000" width="99" height="50"></div>
+                    </div>
+                    <div class="tbl-col4">
+                        <div class="grid --top"><img class="tbl-1-5" src="assets/img/stores/tbl_1_5@2x.png" alt="B社" width="25" height="50"></div>
+                        <div class="grid"><img class="tbl-none" src="assets/img/stores/tbl_none.png" alt="-" width="25" height="50"></div>
+                        <div class="grid"><img class="tbl-y72000" src="assets/img/stores/tbl_y72000@2x.png" alt="￥72,000" width="87" height="50"></div>
+                        <div class="grid"><img class="tbl-none" src="assets/img/stores/tbl_none.png" alt="-" width="25" height="50"></div>
+                        <div class="grid"><img class="tbl-none" src="assets/img/stores/tbl_none.png" alt="-" width="25" height="50"></div>
+                    </div>
                 </div>
-                <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。<br>
-                <div class="l-btn --center p-top-contact__btn">
-                    <a href="page/contact.html" class="c-button__more --key">MORE</a>
-                </div>
+                <picture class="tbl-txt">
+                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/stores/sp/tbl_txt@2x.png">
+                    <img src="assets/img/stores/tbl_txt@2x.png" alt="◆トレーニーランクについて◆ 梅：１ヶ月以内のアーティスト 竹：国内外のディプロマ保有の認定講師から合格をもらったアーティスト 松：竹の条件をクリアした後にお客様から好評を３以上または、指名顧客が３名以上いるアーティスト" width="874" height="169">
+                </picture>
+            </div>
+
+            
+            <div class="l-btn" data-eff="fadein-up">
+                <a href="#" class="p-cvbtn">
+                    <picture class="box">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/box@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/box.png, assets/img/cv/box@2x.png 2x">
+                        <img src="assets/img/cv/box.png" alt="無料カウンセリング・ご予約はコチラ！" width="659" height="150">
+                    </picture>
+                    <picture class="txt">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/txt@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/txt.png, assets/img/cv/txt@2x.png 2x">
+                        <img src="assets/img/cv/txt.png" alt="LINE問い合わせ 24時間365日対応" width="551" height="188">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->
+
+
+    <!-- section : flow -->
+    <section class="l-section p-flow" id="flow">
+        <div class="l-inner p-flow__inner">
+            <h2 data-eff="fadein-up">
+                <picture class="sec-ttl">
+                    <img src="assets/img/flow/sec_ttl@2x.png" alt="Treatment Flow 施術の流れ" width="293" height="133">
+                </picture>
+            </h2>
+            <!-- tbl -->
+            <div class="p-flow__wrap">
+                <ul class="p-flow__list">
+                    <li class="p-flow__item --step01" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_01@2x.png" alt="Step 01" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_01_ttl@2x.png" alt="事前問診票の記入" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_01_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_01_txt@2x.png" alt="メディカルサロンミュー公式LINEより事前に問診票の記入をしていただきます" width="293" height="76">
+                                </picture>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="p-flow__item --step02" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_02@2x.png" alt="Step 02" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_02_ttl@2x.png" alt="オンライン診療" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_02_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_02_txt@2x.png" alt="メディカルサロンミュー提携のドクターとオンライン診療を行います。アートメイクに関する説明などが行われます。※スマホ、タブレット、パソコンなどから簡単にオンライン診療可能です。" width="293" height="190">
+                                </picture>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="p-flow__item --step03" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_03@2x.png" alt="Step 03" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_03_ttl@2x.png" alt="来店特約" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_03_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_03_txt@2x.png" alt="あなたのスケジュールに合わせて来店予約が可能です。※来店予約もLINE公式アカウントより簡単にご利用いただけます。※１～３まではLINEで簡単に手続き可能です。" width="293" height="152">
+                                </picture>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="p-flow__item --step04" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_04@2x.png" alt="Step 04" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_04_ttl@2x.png" alt="ご来店" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_04_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_04_txt@2x.png" alt="店舗にご来店いただきます。予約制となっておりますので、時間に遅れないようお気をつけてお越しくださいませ。" width="293" height="114">
+                                </picture>
+                            </p>
+
+                        </div>
+                    </li>
+                    <li class="p-flow__item --step05" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_05@2x.png" alt="Step 05" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_05_ttl@2x.png" alt="カウンセリング" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_05_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_05_txt@2x.png" alt="専門のアートメイクナースがあなたのご希望を伺い理想の眉になるためのカウンセリングを行います。" width="293" height="76">
+                                </picture>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="p-flow__item --step06" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_06@2x.png" alt="Step 06" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_06_ttl@2x.png" alt="デザインカラー決め" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_06_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_06_txt@2x.png" alt="ご要望に合わせて最適なデザイン・カラーを決定します。" width="293" height="38">
+                                </picture>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="p-flow__item --step07" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_07@2x.png" alt="Step 07" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_07_ttl@2x.png" alt="麻酔" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_07_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_07_txt@2x.png" alt="アートメイクナースが安全にクリームタイプの麻酔を塗布します。" width="293" height="76">
+                                </picture>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="p-flow__item --step08" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_08@2x.png" alt="Step 08" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_08_ttl@2x.png" alt="施術" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_08_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_08_txt@2x.png" alt="アートメイクの施術を行います。施術時間は、2時間30分程度です。※個人差があります。" width="293" height="114">
+                                </picture>
+                            </p>
+                    </div>
+                    </li>
+                    <li class="p-flow__item --step09" data-eff="fadein-up">
+                        <div class="list-num"><img src="assets/img/flow/step_09@2x.png" alt="Step 09" width="385" height="53"></div>
+                        <div class="p-flow__txtwrap">
+                            <h3><img class="flow-ttl" src="assets/img/flow/step_09_ttl@2x.png" alt="アフターケア" width="293" height="133"></h3>
+                            <p>
+                                <picture>
+                                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/flow/sp/step_09_txt@2x.png">
+                                    <img class="flow-txt" src="assets/img/flow/step_09_txt@2x.png" alt="施術当日、施術後の注意点などについてご説明いたします。" width="293" height="76">
+                                </picture>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->
+
+
+    <!-- section : flow -->
+    <section class="l-section p-contact" id="contact">
+        <div class="l-inner p-contact__inner">
+            <h2 data-eff="fadein-up">
+                <picture class="sec-ttl">
+                    <img src="assets/img/contact/sec_ttl@2x.png" alt="Contact お問い合わせ" width="270" height="133">
+                </picture>
+            </h2>
+            <div class="p-contact__txtwrap" data-eff="fadein-up">
+                <p>
+                    <picture>
+                        <img class="p-contact__txt" src="assets/img/contact/sec_txt@2x.png" alt="〈まずは、お気軽にお問い合わせください〉" width="800" height="60">
+                    </picture>
+                </p>
+            </div>
+            
+            <div class="l-btn" data-eff="fadein-up">
+                <a href="#" class="p-cvbtn">
+                    <picture class="box">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/box@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/box.png, assets/img/cv/box@2x.png 2x">
+                        <img src="assets/img/cv/box.png" alt="無料カウンセリング・ご予約はコチラ！" width="659" height="150">
+                    </picture>
+                    <picture class="txt">
+                        <source media="(max-width: 767px)" type="image/png" srcset="assets/img/cv/sp/txt@2x.png">
+                        <source media="(min-width: 768px)" type="image/png" srcset="assets/img/cv/txt.png, assets/img/cv/txt@2x.png 2x">
+                        <img src="assets/img/cv/txt.png" alt="LINE問い合わせ 24時間365日対応" width="551" height="188">
+                    </picture>
+                </a>
             </div>
         </div>
     </section>
     <!-- section:END -->
     </main>
 
-
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0" nonce="o5PYbrrW"></script>
-
-
     <!-- footer -->
     <footer id="footer" class="l-section p-footer">
-        <div class="l-body p-footer__body">
-            <div class="l-inner p-footer__inner">
-                <!-- トップに戻るボタン -->
-                <button class="c-gotoTopBtn" data-js="gotoTopBtn">
-                    <span class="c-gotoTopBtn__inner">
-                        <span class="c-gotoTopBtn__arrow">
-                            <i class="fa-solid fa-arrow-up"></i>
-                        </span>
-                    </span>
-                </button>
-                <!-- トップに戻るボタン : END -->                
-                <ul>
-                    <li><a href="#"           >HOME</a></li>
-                    <li><a href="page/news.html"   >NEWS</a></li>
-                    <li><a href="page/service.html">SERVICE</a></li>
-                    <li><a href="page/works.html"  >WORKS</a></li>
-                    <li><a href="page/company.html">COMPANY</a></li>
-                    <li><a href="page/recruit.html">RECRUIT</a></li>
-                    <li><a href="page/contact.html">CONTACT</a></li>
-    
-                </ul>
-                <div class="p-footer__copylight">
-                    <a href="#"><small>© PON DESIGN</small></a>
-                </div>
+        <div class="l-inner p-footer__inner">
+            <div class="p-footer__copylight">
+                <picture class="txt">
+                    <source media="(max-width: 767px)" type="image/png" srcset="assets/img/footer/sp/txt@2x.png">
+                    <img src="assets/img/footer/txt@2x.png" alt="©運営M＆Mクリニック クリニック院長　管理医師　柳井亮介" width="874" height="45">
+                </picture>
             </div>
         </div>
-    </footer><!-- /footer -->
+        <a href="#" class="p-footer__link">
+            <div class="p-footer__btn u-display__sp">
+                <img class="btntxt1" src="assets/img/footer/sp/btn_txt_1@2x.png" alt="無料カウンセリング・ご予約はコチラ！" width="289" height="21">
+                <img class="btntxt2" src="assets/img/footer/sp/btn_txt_2@2x.png" alt="LINE問い合わせ" width="261" height="61">
+            </div>
+        </a>
+</footer><!-- /footer -->
 
 </body>
 

@@ -1,0 +1,32 @@
+<%
+var id = arg['incdir']+arg['dir']['img']+'/our';
+var ids= arg['incdir']+arg['dir']['img']+'/our/sp';
+%>
+    <!-- section : our -->
+    <section class="l-section p-our" id="our">
+        <div class="l-inner p-our__inner">
+            <div class="p-our__wrap">
+                <h2 data-eff="fadein-up">
+                    <picture class="sec-ttl">
+                        <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/sec_ttl.png 1x, <%- ids %>/sec_ttl@2x.png 2x">
+                        <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/sec_ttl.png 1x, <%- id %>/sec_ttl@2x.png 2x">
+                        <img src="<%- id %>/sec_ttl.png" alt="OurStrength 当院の特徴" width="293" height="133">
+                    </picture>
+                </h2>
+                <ul class="p-our__list">
+                    <%- include('../parts/_our_box', { num:1,rev:false }) -%>
+                    <%- include('../parts/_our_box', { num:2,rev:true }) -%>
+                    <%- include('../parts/_our_box', { num:3,rev:false }) -%>
+                    <%- include('../parts/_our_box', { num:4,rev:true }) -%>
+                    <%- include('../parts/_our_box', { num:5,rev:false }) -%>
+                    <%- include('../parts/_our_box', { num:6,rev:true }) -%>
+                    <%- include('../parts/_our_box', { num:7,rev:false }) -%>
+                    <%- include('../parts/_our_box', { num:8,rev:true }) -%>
+
+                </ul>
+            </div>
+            <%- include('../parts/_cvbtn', { arg:ary }) -%>
+        </div>
+
+    </section>
+    <!-- section:END -->

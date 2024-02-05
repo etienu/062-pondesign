@@ -1,37 +1,21 @@
 <%
-var href_home = '../index.html';
-var href_dir = '';
-if( arg['pageid'] =='index'){
-     href_home ='#';
-     href_dir = 'page/'
-}
-%>
+var id = arg['incdir']+arg['dir']['img']+'/footer';
+var ids= arg['incdir']+arg['dir']['img']+'/footer/sp';
+-%>
     <!-- footer -->
     <footer id="footer" class="l-section p-footer">
-        <div class="l-body p-footer__body">
-            <div class="l-inner p-footer__inner">
-                <!-- トップに戻るボタン -->
-                <button class="c-gotoTopBtn" data-js="gotoTopBtn">
-                    <span class="c-gotoTopBtn__inner">
-                        <span class="c-gotoTopBtn__arrow">
-                            <i class="fa-solid fa-arrow-up"></i>
-                        </span>
-                    </span>
-                </button>
-                <!-- トップに戻るボタン : END -->                
-                <ul>
-                    <li><a href="<%- href_home %>"           >HOME</a></li>
-                    <li><a href="<%- href_dir %>news.html"   >NEWS</a></li>
-                    <li><a href="<%- href_dir %>service.html">SERVICE</a></li>
-                    <li><a href="<%- href_dir %>works.html"  >WORKS</a></li>
-                    <li><a href="<%- href_dir %>company.html">COMPANY</a></li>
-                    <li><a href="<%- href_dir %>recruit.html">RECRUIT</a></li>
-                    <li><a href="<%- href_dir %>contact.html">CONTACT</a></li>
-    
-                </ul>
-                <div class="p-footer__copylight">
-                    <a href="<%- href_home %>"><small>© PON DESIGN</small></a>
-                </div>
+        <div class="l-inner p-footer__inner">
+            <div class="p-footer__copylight">
+                <picture class="txt">
+                    <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/txt@2x.png">
+                    <img src="<%- id %>/txt@2x.png" alt="©運営M＆Mクリニック クリニック院長　管理医師　柳井亮介" width="874" height="45">
+                </picture>
             </div>
         </div>
-    </footer><!-- /footer -->
+        <a href="#" class="p-footer__link">
+            <div class="p-footer__btn u-display__sp">
+                <img class="btntxt1" src="<%- ids %>/btn_txt_1@2x.png" alt="無料カウンセリング・ご予約はコチラ！" width="289" height="21">
+                <img class="btntxt2" src="<%- ids %>/btn_txt_2@2x.png" alt="LINE問い合わせ" width="261" height="61">
+            </div>
+        </a>
+</footer><!-- /footer -->

@@ -1,0 +1,84 @@
+<%
+var id = arg['incdir']+arg['dir']['img']+'/gallery';
+var ids= arg['incdir']+arg['dir']['img']+'/gallery/sp';
+var idcv = arg['incdir']+arg['dir']['img']+'/cv';
+var idcvs= arg['incdir']+arg['dir']['img']+'/cv/sp';
+%>
+    <!-- section : about -->
+    <section class="l-section p-gallery" id="gallery">
+        <div class="l-inner p-gallery__inner">
+            <div class="p-gallery__wrap">
+                <h2 data-eff="fadein-up">
+                    <picture class="ttl">
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="<%- id %>/ttl@2x.jpg 2x">
+                        <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/ttl.jpg, <%- id %>/ttl@2x.jpg 2x">
+                        <img src="<%- id %>/ttl.jpg" alt="About Art Make アートメイクとは？" width="438" height="133">
+                    </picture>
+                </h2>
+                <ul class="p-gallery__list" data-eff="fadein-upgroup">
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_1.jpg, <%- id %>/imgc_1@2x.jpg">
+                            <img src="<%- id %>/imgc_1@2x.jpg" alt="施術例1" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_2.jpg, <%- id %>/imgc_2@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_2@2x.jpg" alt="施術例2" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_3.jpg, <%- id %>/imgc_3@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_3@2x.jpg" alt="施術例3" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_4.jpg, <%- id %>/imgc_4@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_4@2x.jpg" alt="施術例4" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_5.jpg, <%- id %>/imgc_5@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_5@2x.jpg" alt="施術例5" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_6.jpg, <%- id %>/imgc_6@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_6@2x.jpg" alt="施術例6" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_7.jpg, <%- id %>/imgc_7@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_7@2x.jpg" alt="施術例7" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_8.jpg, <%- id %>/imgc_8@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_8@2x.jpg" alt="施術例8" width="300" height="300">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture class="box">
+                            <source media="(min-width: 768px)" type="image/jpg" srcset="<%- id %>/imgc_9.jpg, <%- id %>/imgc_9@2x.jpg 2x">
+                            <img src="<%- id %>/imgc_9@2x.jpg" alt="施術例9" width="300" height="300">
+                        </picture>
+                    </li>
+                </ul>
+                <picture class="txt">
+                    <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/txt@2x.png">
+                    <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/txt.png, <%- id %>/txt@2x.png 2x">
+                    <img src="<%- id %>/txt.png" alt="アートメイクは通常２回以上で完成する施術になります。１回目は土台作りで定着率は５０％前後です。２回目の施術の際にデザインや色の変更、長さや足りない箇所の修正をさせていただきます。" width="840" height="96">
+                </picture>
+            </div>
+            <%- include('../parts/_cvbtn', { arg:ary }) -%>
+        </div>
+
+    </section>
+    <!-- section:END -->

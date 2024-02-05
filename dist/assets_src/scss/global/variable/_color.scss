@@ -1,42 +1,41 @@
 /*----------------------------------------
         色
 ----------------------------------------*/
-$color-perple : #391e88;
-$color-perple-d : #21054d;
-$color-key : $color-perple;
+$color-beige : #e5d5b4;
+$color-brown : #66472b;
+$color-brown-05 : rgba(102,71,43,0.5);
+$color-green: #52b302;
+$color-green-hover: rgba( 82, 179, 2, 0.7 );
+$color-red: #9e0404;
+
+
+$color-main : $color-beige;
+$color-main-d: $color-brown;
+
+$color-acc : $color-green;
+$color-acc2 : $color-red;
 
 $color-white: #fff;
-$color-lightgray:#f1eBf8;
-$color-bordergray:#d9d9d9;
-$color-bordergray2:#b8aed5;
-$color-borderperple:#b067cf;
-$color-lightgray2:#ddd;
-$color-gray:#f0f0f0;
-$color-gray2:#f7f7f7;
-$color-darkgray:#a798b7;
-$color-green: #669988;
-$color-water :#00fff5;
-$color-blue: #349bf4;
 $color-black: #120e19;
-$color-black-a: rgba(86, 89, 86, 0.08); /* 透明度8% */
 $color-trueblack: #000;
-$color-fontblack: #333;
-$color-darkgreen: rgba(49,69,45,1);
+$color-lightgray:#D9D9D9;
+$grad-gold : linear-gradient(90deg, #f9f295 0%, #e0aa3e 33%,#faf398 66%, #b88a44 100%);
+$grad-gold2 : linear-gradient(90deg, #dfbd69 0%, #926f34 100%);
+$grad-goldline : linear-gradient(45deg, #f9f295 0%, #e0aa3e 33%,#faf398 66%, #b88a44 100%);
+$grad-goldline2: linear-gradient(-95deg, #f9f295 0%, #e0aa3e 33%,#faf398 66%, #b88a44 100%);
+$grad-dotted-bw : linear-gradient(90deg, $color-brown 3px, $color-white 3px);
+$shadow : rgba(0,0,0,0.25);
+$shadow2 : rgba(0,0,0,0.3);
+$shadow3 : rgba(0,0,0,0.3);
+$shadow4 : rgba(0,0,0,0.4);
+$shadow5 : rgba(0,0,0,0.5);
 
 /*  文字色 */
-$color-font:$color-black;
-$color-font-w:$color-white; /* white */
-$color-font-b:$color-fontblack; /* black */
-$color-font-d:$color-black; /* dark */
+$color-font-w: #fff;
+$color-font-b: #3b3623;
+$color-font-b-hover: rgba(29,54,35,0.7);
 
 /* 場面別 */
-$color-hreflink : $color-blue;
-$color-formborder:$color-bordergray;
-
-$color-main : $color-white;
-$color-border-gray:$color-gray;
-$color-font-headlineh2-eng: $color-darkgreen;
-$color-font-headlineh2-jp: $color-black;
-$color-headlineh3-box: $color-black;
-$color-font-headlineh3-eng: $color-black;
-$color-font-headlineh3-jp: $color-black;
+$color-btn : $color-green;
+$color-btn-hover : $color-green-hover;
+$color-hreflink : $color-font-b;

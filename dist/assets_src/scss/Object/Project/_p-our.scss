@@ -1,0 +1,429 @@
+@use '../../global' as g;
+.p-our {
+    position:relative;
+    padding-top: 58px;
+    padding-bottom: 50px;
+
+    background-image : url( "../img/our/bg.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .p-our__inner{
+        display: flex;
+        flex-direction : column;
+    }
+    .p-our__wrap{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        margin :auto;
+        margin-bottom : 200px;
+        .sec-ttl{
+            width: 293px;
+            height: 133px;
+            margin-bottom: 80px;
+        }
+        .p-our__list{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap:wrap;
+            margin-bottom: 6px;
+            gap: 50px;
+            .boxwrap{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background : g.$grad-gold;
+                box-shadow: 0 4px 4px g.$shadow;
+                width: g.vwml(900);
+                height: g.vwml(330);
+                .box{
+                    display: flex;
+                    flex-direction : row;
+                    justify-content: space-between;
+                    width:calc( 100% - 10px );
+                    height:calc( 100% - 10px );
+                    overflow : hidden;
+                    background-color : g.$color-white;                    
+                    .img{
+                        width: auto;
+                        height: g.vwml(320);
+                    }
+                    .txtwrap{
+                        flex: 1;
+                        width: 100%;
+                        height: 100%;
+                        display : flex;
+                        flex-grow:1;
+                        flex-direction : column;
+                        align-items : flex-start;
+                        justify-content : center;
+                        margin : 0 30px;
+                        gap: 16px;
+                        .heading{
+                            display:flex;
+                            flex-direction:column;
+                            align-items : flex-start;
+                            justify-content : flex-start;
+                            gap: g.vwml(16);
+                            .num{
+                                width: g.vwml(50);
+                                height: g.vwml(42);
+                                margin-bottom: 10px;
+                            }
+                            .ttl{
+                                width: auto;
+                                height: auto;
+                                margin-bottom: 10px;
+                            }
+                        }
+                        .txt{
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                    &.--rev{
+                        .img{
+                            order: 1;
+                        }
+                        .txtwrap{
+                            order: 0;
+                            margin : 0 30px;
+                        }
+                    }
+                    &.--no01{
+                        .img{
+                            width:g.vwml(281);
+                        }
+                    }
+                    &.--no02{
+                        .img{
+                            width:g.vwml(300);
+                        }
+                    }
+                    &.--no03{
+                        .img{
+                            width:g.vwml(300);
+                        }
+                    }
+                    &.--no04{
+                        .img{
+                            width:g.vwml(295);
+                        }
+                    }
+                    &.--no05{
+                        .img{
+                            width:g.vwml(300);
+                        }
+                    }
+                    &.--no06{
+                        .img{
+                            width:g.vwml(300);
+                        }
+                        .txtwrap{
+                            .heading{
+                                .ttl{
+                                    height: g.vwml(90);
+                                }
+                            }
+                        }
+                    }// --no06
+                    &.--no07{
+                        .img{
+                            width:g.vwml(300);
+                        }
+                        .txtwrap{
+                            .heading{
+                                .ttl{
+                                    height: g.vwml(90);
+                                }
+                            }
+                        }
+                    }// --no07
+                    &.--no08{
+                        .img{
+                            width:g.vwml(289);
+                        }
+                    }
+
+                }// .box
+            }// .boxwrap
+        }// .p-our__list
+    }
+}
+
+
+//----------------------------------------
+//  レスポンシブ
+//----------------------------------------
+//----------------------------------------
+//  PC版のみのCSS 768px以上
+//----------------------------------------
+@include g.mq('md-') {
+}
+
+@include g.mq('-xl') {
+}
+
+@include g.mq('-lg') {
+}
+
+//----------------------------------------
+//  SP 767以下
+//----------------------------------------
+@include g.mq('-md') {
+.p-our {
+    position:relative;
+    padding-top: 36px;
+    padding-bottom: 64px;
+
+    .p-our__inner{
+    }
+    .p-our__wrap{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        margin :auto;
+        margin-bottom : 86px;
+        .sec-ttl{
+            width: 110px;
+            height: 58px;
+            margin-bottom: 62px;
+        }
+        .p-our__list{
+            align-items:center;
+            gap: 50px;
+            .boxwrap{
+                width: calc(100% - 30px);
+                height: auto;
+                .box{
+                    display: flex;
+                    flex-direction : column;
+                    justify-content: space-between;
+                    width:calc( 100% - 10px );
+                    height:calc( 100% - 10px );
+                    padding: 5px 0;
+                    background-color : transparent;
+                    overflow : hidden;
+                    gap: 5px;
+                    .img{
+                        width: 100%;
+                        height: auto;
+                        margin:auto;
+                        background-color : g.$color-white;
+                    }
+                    .txtwrap{
+                        display : flex;
+                        flex-direction : column;
+                        align-items : flex-start;
+                        justify-content : center;
+                        margin : 0 auto 0px;
+                        padding: 18px 9px 22px;
+                        gap: 15px;
+                        background-color : g.$color-white;
+                        .heading{
+                            flex:1;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            margin:auto;
+                            gap:20px;
+                            .num{
+                                width: fit-content;
+                                height: 34px;
+                                margin-bottom: 0px;
+                            }
+                            .ttl{
+                                width: fit-content;
+                                height: 66px;
+                                margin-bottom: 0px;
+                            }
+                        }
+                        .txt{
+                            width: 100%;
+                            height: auto;
+                            img{
+                                width: g.vwmm(600);
+                                max-width: 400px;
+                            }
+    
+                        }
+                    }
+                    &.--rev{
+                        .img{
+                            order: 0;
+                        }
+                        .txtwrap{
+                            order: 1;
+                            margin : 0px auto;
+                        }
+                    }
+                    //----------------
+                    //  個別調整が必要
+                    //----------------
+                    &.--no01{
+                        .img{
+                            width: 100%;
+                            height: auto;
+                        }
+                        .txtwrap{
+                            .heading{
+                                .num{
+                                    width: 34px;
+                                    height: 25px;
+                                }
+                                .ttl{
+                                    width: g.vwms(220);
+                                    height: g.vwms(66);
+                                }
+                            }
+                            .txt{
+                            }
+                        }
+                    }// --no01
+                    &.--no02{
+                        .img{
+                            width: 100%;
+                            height: auto;
+                        }
+                        .txtwrap{
+                            .heading{
+                                .num{
+                                    width: 40px;
+                                    height: 31px;
+                                }
+                                .ttl{
+                                    width: g.vwms(198);
+                                    height: g.vwms(66);
+                                }
+                            }
+                        }
+                    }// --no02
+                    &.--no03{
+                        .img{
+                            width: 100%;
+                            height: auto;
+                        }
+                        .txtwrap{
+                            .heading{
+                                .num{
+                                    width: 40px;
+                                    height: 39px;
+                                    transform:translateY(5px);
+                                }
+                                .ttl{
+                                    width: g.vwms(220);
+                                    height: g.vwms(66);
+                                }
+                            }
+                        }
+                    }// --no03
+                    &.--no04{
+                        .img{
+                            width: 100%;
+                            height: auto;
+                        }
+                        .txtwrap{
+                            .heading{
+                                padding: 8px 0; //  1行の場所に余白
+                                .num{
+                                    width: 41px;
+                                    height: 33px;
+                                    transform:translateY(5px);
+                                }
+                                .ttl{
+                                    width: g.vwms(154);
+                                    height: g.vwms(33);
+                                }
+                            }
+                        }
+                    }// --no04
+                    &.--no05{
+                        .img{
+                            width: 100%;
+                            height:auto;
+                        }
+                        .txtwrap{
+                            .heading{
+                                padding: 4px 0; //  1行の場所に余白
+                                .num{
+                                    width: 45px;
+                                    height: 40px;
+                                    transform:translateY(5px);
+                                }
+                                .ttl{
+                                    width: g.vwms(176);
+                                    height: g.vwms(33);
+                                }
+                            }
+                        }
+                    }// --no05
+                    &.--no06{
+                        .img{
+                            width: 100%;
+                            height:auto;
+                        }
+                        .txtwrap{
+                            .heading{
+                                .num{
+                                    width: 46px;
+                                    height: 34px;
+                                    transform:translateY(-4px);
+                                }
+                                .ttl{
+                                    width: g.vwms(220);
+                                    height: g.vwms(66);
+                                }
+                            }
+                        }
+                    }// --no06
+                    &.--no07{
+                        .img{
+                            width: 100%;
+                            height:auto;
+
+                        }
+                        .txtwrap{
+                            .heading{
+                                .num{
+                                    width: 38px;
+                                    height: 32px;
+                                    transform:translateY(3px);
+                                }
+                                .ttl{
+                                    width: g.vwms(242);
+                                    height: g.vwms(66);
+                                }
+                            }
+                        }
+                    }// --no07
+                    &.--no08{
+                        .img{
+                            width: 100%;
+                            height:auto;
+                        }
+                        .txtwrap{
+                            .heading{
+                                .num{
+                                    width: 39px;
+                                    height: 44px;
+                                    transform:translateY(-2px);
+                                }
+                                .ttl{
+                                    width: g.vwms(220);
+                                    height: g.vwms(28);
+                                }
+                            }
+                        }
+                    }// --no08
+                }// .box
+            }// .boxwrap
+        }// .p-our__list
+    }
+}
+}
+
+@include g.mq('-xs') {
+}

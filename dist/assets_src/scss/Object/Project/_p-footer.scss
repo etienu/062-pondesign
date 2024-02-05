@@ -4,14 +4,10 @@
 //------------------------------------------------
 .p-footer {
     width: 100%;
-    background-color : g.$color-black;
+    background-color : g.$color-beige;
 
-    .p-footer__body {
-        width: 100%;
-        margin-top: 60px;
-        margin-bottom:60px;
-    }
     .p-footer__inner {
+        padding : 40px 0 41px;
         width: 100%;
         max-width: min( calc( 100% - 40px ),  (g.$layout-width-comp ) );
         margin : auto;
@@ -21,59 +17,68 @@
         justify-content: center;
         color : g.$color-white;
     }
-    ul{
-        display:flex;
-        //flex-direction: row;
-        flex-wrap:wrap;
-        justify-content: flex-start;
-        gap: 20px;
-        li{
-            @include g.fz(12,21.6);
-            @include g.ls(10);
-        }
-    }
 
     .p-footer__copylight{
-        margin-top : 30px;
         display:flex;
+        flex-direction: row;
         justify-content: center;
-        color : g.$color-darkgray;
-        small{
-            @include g.fz(10,18,300);
-            @include g.ls(5);
+        .txt{
+            width: 874px;
+            height: 45px;
         }
     }
 }
 
 
-
-//----------------------------------------
 //  レスポンシブ
-//----------------------------------------
 @include g.mq('-lg') {
+.p-footer {
+    .p-footer__copylight{
+        .txt{
+            width: g.vwml(874);
+            height: g.vwml(45);
+        }
+    }
+}
+    
 }
 
 @include g.mq('-md') {
 .p-footer {
-    .p-footer__body {
-        width: 100%;
-        margin-top: 60px;
-        margin-bottom:60px;
-    }
     .p-footer__inner {
         max-width: calc( 100% - 60px );
-    }
-    ul{
-        li{
-            @include g.fz(12,12);
-            @include g.ls(10);
-        }
+        padding : 9px 0;
+
     }
     .p-footer__copylight{
-        margin-top : 30px;
-        small{
-            @include g.fz(11,14,bold);
-            @include g.ls(5);
+        .txt{
+            width: 221px;
+            height: 42px;
+        }
+    }
+    .p-footer__link{
+        width: 100%;
+        transition : opacity 0.3s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    .p-footer__btn{
+        width: 100%;
+        display: flex;
+        flex-direction : column;
+        align-items: center;
+        padding-top : 11px;
+        padding-bottom: 11px;
+        background-color : g.$color-green-hover;
+        gap: 2px;
+        .btntxt1{
+            width: 289px;
+            height: 21px;
+        }
+        .btntxt2{
+            width: 261px;
+            height: 41px;
         }
     }
 }

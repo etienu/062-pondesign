@@ -1,0 +1,119 @@
+<%
+var id = arg['incdir']+arg['dir']['img']+'/price';
+var ids= arg['incdir']+arg['dir']['img']+'/price/sp';
+%>
+    <!-- section : price -->
+    <section class="l-section p-price" id="price">
+        <div class="p-price__bgwrap">
+            <picture class="bg-woman1">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bg_woman1.png 1x, <%- id %>/bg_woman1@2x.png 2x">
+                <img src="<%- id %>/bg_woman1.png" alt="" width="335" height="403">
+            </picture>
+            <picture class="bg-woman2">
+                <source media="(min-width: 768px)" type="image/png" srcset="<%- id %>/bg_woman2.png 1x, <%- id %>/bg_woman2@2x.png 2x">
+                <img src="<%- id %>/bg_woman2.png" alt="" width="335" height="403">
+            </picture>
+        </div>
+        <div class="l-inner p-price__inner">
+            <h2 data-eff="fadein-up">
+                <picture class="sec-ttl">
+                    <img src="<%- id %>/sec_ttl@2x.png" alt="Price List 料金表" width="293" height="133">
+                </picture>
+            </h2>
+            <!-- tbl 1 -->
+            <div class="p-price__tblwrap --tbl1" data-eff="fadein-up">
+                <h3>
+                    <img class="tbl-ttl" src="<%- id %>/tbl_1_ttl@2x.png" alt="ハイクラスアーティスト" width="385" height="53">
+                </h3>
+                <div class="tbl-grid">
+                    <div class="grid-box-ttl">
+                        <img src="<%- id %>/tbl_1_box_ttl@2x.png" alt="デザイン・料金（税込）" width="220" height="30">
+                    </div>
+                    <div class="grid --top --left"></div>
+                    <div class="grid --top">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/tbl_1_cnt_1@2x.png">
+                            <img class="tbl-1-12" src="<%- id %>/tbl_cnt_1@2x.png" alt="１回コース" width="125" height="38">
+                        </picture>
+                    </div>
+                    <div class="grid --top">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/tbl_1_cnt_2@2x.png">
+                            <img class="tbl-1-13" src="<%- id %>/tbl_cnt_2@2x.png" alt="２回コース" width="125" height="38">
+                        </picture>
+                    </div>
+                    <div class="grid --top">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/tbl_1_cnt_s@2x.png">
+                            <img class="tbl-1-14" src="<%- id %>/tbl_cnt_s@2x.png" alt="修正(１回)" width="113" height="38">
+                        </picture>
+                    </div>
+                    <div class="grid --left">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/tbl_1_course_1@2x.png">
+                            <img class="tbl-1-21" src="<%- id %>/tbl_1_course_1@2x.png" alt="eyeblow 2D/3D" width="213" height="45">
+                        </picture>
+                    </div>
+                    <div class="grid"><img class="tbl-1-22" src="<%- id %>/tbl_y66000@2x.png" alt="￥66,000"></div>
+                    <div class="grid"><img class="tbl-1-23" src="<%- id %>/tbl_y110000@2x.png" alt="￥110,000"></div>
+                    <div class="grid"><img class="tbl-1-24" src="<%- id %>/tbl_y66000@2x.png" alt="￥66,000"></div>
+                    <div class="grid --left">
+                        <picture>
+                            <source media="(max-width: 767px)" type="image/png" srcset="<%- ids %>/tbl_1_course_2@2x.png">
+                            <img class="tbl-1-31" src="<%- id %>/tbl_1_course_2@2x.png" alt="eyeblow 4D" width="160" height="45">
+                        </picture>
+                    </div>
+                    <div class="grid"><img class="tbl-1-32" src="<%- id %>/tbl_y77000@2x.png" alt="￥77,000"></div>
+                    <div class="grid"><img class="tbl-1-33" src="<%- id %>/tbl_y132000@2x.png" alt="￥132,000"></div>
+                    <div class="grid"><img class="tbl-1-34" src="<%- id %>/tbl_y77000@2x.png" alt="￥77,000"></div>
+                </div>
+                <p class="tbl-txt-wrap">
+                    <img class="tbl-txt" src="<%- id %>/tbl_1_txt@2x.png" alt="※2回コースの方が1回コースに比べ¥22,000お得になっております。※2Dと3Dは同一料金です。" width="762" height="81">
+                </p>
+            </div>
+
+            <!-- tbl 2 -->
+            <div class="p-price__tblwrap --tbl2" data-eff="fadein-up">
+                <h3>
+                    <img class="tbl-ttl" src="<%- id %>/tbl_2_ttl@2x.png" alt="トレーニープラン～eyeblow 3D～ ※施術事例50名未満のアーティストの価格です" width="541" height="96">
+                </h3>
+                <div class="tbl-grid">
+                    <div class="grid-box-ttl">
+                        <img src="<%- id %>/tbl_2_box_ttl@2x.png" alt="コース・料金（税込）" width="200" height="30">
+                    </div>
+                    <div class="grid --top --left"></div>
+                    <div class="grid --top"><img class="tbl-2-12" src="<%- id %>/tbl_cnt_1@2x.png" alt="１回コース" width="125" height="38"></div>
+                    <div class="grid --top"><img class="tbl-2-13" src="<%- id %>/tbl_cnt_2@2x.png" alt="２回コース" width="125" height="38"></div>
+                    <div class="grid --top"><img class="tbl-2-14" src="<%- id %>/tbl_cnt_3@2x.png" alt="３回コース" width="125" height="38"></div>
+
+                    <div class="grid --left --spl2"><img class="tbl-2-21" src="<%- id %>/tbl_2_course_1@2x.png" alt="梅" width="213" height="45"></div>
+                    <div class="grid --spl2">
+                        <img class="--sp u-display__sp" src="<%- ids %>/tbl_2_cnt_1@2x.png" alt="１回コース" width="85" height="26">
+                        <img class="tbl-2-22" src="<%- id %>/tbl_y11000@2x.png" alt="￥11,000" width="88" height="38">
+                    </div>
+                    <div class="grid --spl2">
+                        <img class="--sp u-display__sp" src="<%- ids %>/tbl_2_cnt_2@2x.png" alt="２回コース" width="85" height="26">
+                        <img class="tbl-2-23" src="<%- id %>/tbl_y18000@2x.png" alt="￥18,000">
+                    </div>
+                    <div class="grid --spl2">
+                        <img class="--sp u-display__sp" src="<%- ids %>/tbl_2_cnt_3@2x.png" alt="３回コース" width="85" height="26">
+                        <img class="tbl-2-24" src="<%- id %>/tbl_y28000@2x.png" alt="￥28,000">
+                    </div>
+
+                    <div class="grid --left"><img class="tbl-2-31" src="<%- id %>/tbl_2_course_2@2x.png" alt="竹" width="160" height="45"></div>
+                    <div class="grid"><img class="tbl-2-32" src="<%- id %>/tbl_y22000@2x.png" alt="￥22,000"></div>
+                    <div class="grid"><img class="tbl-2-33" src="<%- id %>/tbl_y42000@2x.png" alt="￥42,000"></div>
+                    <div class="grid"><img class="tbl-2-34" src="<%- id %>/tbl_y63000@2x.png" alt="￥63,000"></div>
+
+                    <div class="grid --left"><img class="tbl-2-41" src="<%- id %>/tbl_2_course_3@2x.png" alt="松" width="160" height="45"></div>
+                    <div class="grid"><img class="tbl-2-42" src="<%- id %>/tbl_y33000@2x.png" alt="￥33,000"></div>
+                    <div class="grid"><img class="tbl-2-43" src="<%- id %>/tbl_y63000@2x.png" alt="￥63,000"></div>
+                    <div class="grid"><img class="tbl-2-44" src="<%- id %>/tbl_y94000@2x.png" alt="￥94,000"></div>
+                </div>
+                <p class="tbl-txt-wrap">
+                    <img class="tbl-txt" src="<%- id %>/tbl_2_txt@2x.png" alt="アートメイクは通常2回以上で完成する施術になります。1回目は土台作りで定着率は50%前後です。2回目の施術の際にデザインや色の変更、長さや足りない箇所の修正をさせていただきます。" width="510" height="120">
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- section:END -->
